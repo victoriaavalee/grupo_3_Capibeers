@@ -10,6 +10,9 @@ INTEGRANTES
 
 * Hola! Soy Paola Toconás, tengo 19 años. Soy diseñadora gráfica y estudiante de programación. Me gusta jugar en PC, dibujar y pasar tiempo con mis gatos.
 
+*  buenas , mi nombre es Maximiliano Leandro Antenor tengo 21 años estudio programacion trabajo en atencion al cliente y en mis tiempos libres juego al lol o veo animes 
+
+
   
 SITIOS DE REFERENCIA   
   
