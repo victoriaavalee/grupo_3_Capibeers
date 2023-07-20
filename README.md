@@ -8,8 +8,8 @@ INTEGRANTES
   
 SITIOS DE REFERENCIA   
   
-https://cheverry.com.ar   // por su estética y menú de opciones.
-https://beermarket.com.ar/  // por su presentación de productos.
-https://www.gooseisland.com/age-gate //por su estética.
-https://www.lagranjadegoose.com/blog/  //por su presentación de información sobre el producto.
- https://www.cervezasalta.com.ar/index.html // por su la descripción de productos.
+https://cheverry.com.ar   // por su estética y menú de opciones.  
+https://beermarket.com.ar/  // por su presentación de productos.  
+https://www.gooseisland.com/age-gate //por su estética.  
+https://www.lagranjadegoose.com/blog/  //por su presentación de información sobre el producto.  
+ https://www.cervezasalta.com.ar/index.html // por su la descripción de productos.  
