@@ -8,6 +8,8 @@ INTEGRANTES
 
 * Buenas,soy Rodrigo Villega tengo 22 años y soy estudiante de progrmacion,me gusta mucha jugar en la pc y hacer directos en twitch.
 
+* Hola! Soy Paola Toconás, tengo 19 años. Soy diseñadora gráfica y estudiante de programación. Me gusta jugar en PC, dibujar y pasar tiempo con mis gatos.
+
   
 SITIOS DE REFERENCIA   
   
