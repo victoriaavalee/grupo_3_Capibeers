@@ -5,6 +5,8 @@ INTEGRANTES
 * Hola, soy Valencia Victoria tengo 18 años y soy estudiante de programación, en mis tiempos libres me gusta escuchar música.
 * Buenas, soy Brian Axel Cañari Arias, miembro del grupo Capibeers. Soy estudiante universitario, me gusta jugar videojuegos, la edición tanto de vídeos como de imágenes, leer manga y pasar tiempo con mis seres queridos.
 
+* Buenas,soy rodrigo tengo 22 años y soy estudiante de progrmacion,me gusta mucha jugar en la pc y hacer directos en twitch.
+
   
 SITIOS DE REFERENCIA   
   
