@@ -1,19 +1,19 @@
 # grupo_3_Capibeers
 CAPIBEERS  
-Somos una empresa de venta de cervezas. Nuestros servicios van dirigidos a un público joven y adulto. Nuestras ofertas se verán reflejadas en un sitio simple e innovador. Los productos que ofrecemos son: cervezas (latas, botellas), accesorios (vasos, botellones) e indumentaria (gorras remeras).    
+La temática del sitio se basa en la venta de cervezas. Los sevicios van dirigidos a un público joven y adulto. Las ofertas se verán reflejadas en una pagina simple e innovadora. Los productos que se ofreceran son: cervezas (latas, botellas), accesorios (vasos, botellones) e indumentaria (gorras, remeras).  
+
 INTEGRANTES  
-* Hola, soy Valencia Victoria tengo 18 años y soy estudiante de programación, en mis tiempos libres me gusta escuchar música.
+* Hola, soy  Victoria Valencia tengo 18 años y soy estudiante de programación, en mis tiempos libres me gusta escuchar música.
 
 * Buenas, soy Brian Axel Cañari Arias, miembro del grupo Capibeers. Soy estudiante universitario, tengo 20 años, me gusta jugar videojuegos, la edición tanto de vídeos como de imágenes, leer manga y pasar tiempo con mis seres queridos.
 
-* Buenas,soy Rodrigo Villega tengo 22 años y soy estudiante de progrmacion,me gusta mucha jugar en la pc y hacer directos en twitch.
+* Buenas,soy Rodrigo Villega tengo 22 años y soy estudiante de programacion, me gusta mucha jugar en la pc y hacer directos en twitch.
 
 * Hola! Soy Paola Toconás, tengo 19 años. Soy diseñadora gráfica y estudiante de programación. Me gusta jugar en PC, dibujar y pasar tiempo con mis gatos.
 
-*  buenas , mi nombre es Maximiliano Leandro Antenor tengo 21 años estudio programacion trabajo en atencion al cliente y en mis tiempos libres juego al lol o veo animes 
+*  Buenas , mi nombre es Maximiliano Leandro Antenor tengo 21 años estudio programación trabajo en atención al cliente y en mis tiempos libres juego al lol o veo animes.  
 
 
-  
 SITIOS DE REFERENCIA   
   
 https://cheverry.com.ar   // por su estética y menú de opciones.  
