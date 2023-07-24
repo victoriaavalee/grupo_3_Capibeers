@@ -21,3 +21,9 @@ https://beermarket.com.ar/  // por su presentación de productos.
 https://www.gooseisland.com/age-gate //por su estética.  
 https://www.lagranjadegoose.com/blog/  //por su presentación de información sobre el producto.  
  https://www.cervezasalta.com.ar/index.html // por su la descripción de productos.  
+
+WIREFRAME DE LA PAGINA
+
+HOME
+
+https://drive.google.com/file/d/1bdYDt7i2xxs3J45KrMqa67ZQ96ItLt7u/view
