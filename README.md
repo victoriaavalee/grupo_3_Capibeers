@@ -50,7 +50,9 @@ Elegida por la información de ofrece a la hora de ver los detalles de un produc
 
 
 Elegida por la descripción de sus productos
- 
+
+## Tablero de trabajo
+* Trello: https://trello.com/b/TncnJ3PO/capibeers
 
 
  
