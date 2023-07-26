@@ -24,12 +24,22 @@ Se ofrecen bebidas de alta calidad donde se trabajó minuciosamente con el fin d
 *  Buenas , mi nombre es Maximiliano Leandro Antenor tengo 21 años estudio programación trabajo en atención al cliente y en mis tiempos libres juego al lol o veo animes.  
 
 ## Sitios de referencia
+
+* Cheverry: https://cheverry.com.ar
+Elegida por la estética y menú de opciones de gran interés que presenta
+
+* Beermarket: https://beermarket.com.ar/
+Su presentación de productos fue lo que nos atrajo de dicha pagína
+
+* Goose island: https://www.gooseisland.com/age-gate
+Elegida por la bella y atractiva estética que presenta
+
+* La Granja de Goose: https://www.lagranjadegoose.com/blog/
+Elegida por la información de ofrece a la hora de ver los detalles de un producto
+
+* Cerveza Salta: https://www.cervezasalta.com.ar/index.html
+Elegida por la descripción de sus productos
  
-https://cheverry.com.ar   // por su estética y menú de opciones.  
-https://beermarket.com.ar/  // por su presentación de productos.  
-https://www.gooseisland.com/age-gate //por su estética.  
-https://www.lagranjadegoose.com/blog/  //por su presentación de información sobre el producto.  
-https://www.cervezasalta.com.ar/index.html // por su la descripción de productos.  
 
 
  
