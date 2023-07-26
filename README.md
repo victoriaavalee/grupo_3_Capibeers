@@ -26,24 +26,19 @@ Se ofrecen bebidas de alta calidad donde se trabajó minuciosamente con el fin d
 ## Sitios de referencia
 
 * Cheverry: https://cheverry.com.ar
-
-   Elegida por la estética y menú de opciones de gran interés que presenta
+* Elegida por la estética y menú de opciones de gran interés que presenta
 
 * Beermarket: https://beermarket.com.ar/
-
-   Su presentación de productos fue lo que nos atrajo de dicha pagína
+* Su presentación de productos fue lo que nos atrajo de dicha pagína
 
 * Goose island: https://www.gooseisland.com/age-gate
-
-   Elegida por la bella y atractiva estética que presenta
+* Elegida por la bella y atractiva estética que presenta
 
 * La Granja de Goose: https://www.lagranjadegoose.com/blog/
-
-  Elegida por la información de ofrece a la hora de ver los detalles de un producto
+* Elegida por la información de ofrece a la hora de ver los detalles de un producto
 
 * Cerveza Salta: https://www.cervezasalta.com.ar/index.html
-
-   Elegida por la descripción de sus productos
+* Elegida por la descripción de sus productos
  
 
 
