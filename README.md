@@ -33,4 +33,3 @@ https://www.cervezasalta.com.ar/index.html // por su la descripción de producto
 
 
  
-https://drive.google.com/file/d/1bdYDt7i2xxs3J45KrMqa67ZQ96ItLt7u/view
