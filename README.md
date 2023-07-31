@@ -7,7 +7,7 @@ Somos Capibeers.
 
 ## Temática del sitio  
 El sitio web ofrece una gran variedad de cervezas de un exquisito sabor, digno de un público con paladar exigente.
-Se ofrecen bebidas de alta calidad donde se trabajó minuciosamente con el fin de poder llegar a una perfección con respecto a su ingredientes. Los articulos presentados son artesanales y distribuidos en distintos formatos como latas y botellas. También este sitio, trabaj en la comercialización de accesorios como vasos y botellones. Además presume de un pequeño apartado dedicado a la indumentaria donde se muestran artículos como remeras y gorras. 
+Se ofrecen bebidas de alta calidad donde se trabajó minuciosamente con el fin de poder llegar a una perfección con respecto a su ingredientes. Los articulos presentados son artesanales y distribuidos en distintos formatos como latas y botellas. También este sitio, trabaja en la comercialización de accesorios como vasos y botellones. Además presume de un pequeño apartado dedicado a la indumentaria donde se muestran artículos como remeras y gorras. 
 
 ## Público objetivo  
 Capibeers es un lugar destinado a jóvenes mayores de edad y adultos que aprecian la buena cerveza en un ambiente relajado.
