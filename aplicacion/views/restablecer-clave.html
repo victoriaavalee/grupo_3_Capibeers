@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capibeers - Acceder</title>
-    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     rel="stylesheet" />
+    <link rel="stylesheet" href="css/restablecer-clave.css">
+    <title>Capibeers - Restablecer Clave</title>  
 </head>
 <body>
     <header>
@@ -30,20 +30,14 @@
     </header>
 
     <main>
-        <div class="title">ACCEDER</div>
+        <div class="title">RESTABLECER CONTRASEÑA</div>
+        <div class="texto">Introduce tu nombre de usuario de Spotify o la dirección de correo que usaste en el registro. Te enviaremos un correo con tu nombre de usuario y un enlace para que puedas restablecer tu contraseña.</div>
+        <h5>Dirección de correo electrónico o nombre de usuario:</h5>
         <div>
-            <label form = "user"><i class="fa-solid fa-user"></i></label>
-            <input type="text"="user">
+            <label form = "correo"></label>
+            <input type="text"="correo">
         </div>
-        <div>
-            <label form = "clave"><i class="fa-solid fa-lock"></i></label>
-            <input type="password"="clave">
-        </div>
-        <p class="reco-olv">Recordar usuario y clave  <input id="electro" type="checkbox" name="recordar_user_clave"
-        value="electro" wfd="id9"></p>
-        <h5><a href="/restablecer-clave">¿Olvidaste tu contraseña?</a></h5>
-        <button>INGRESAR</button>
-        <h5><a href="/registro">¿No tienes una cuenta? ¡Unete a nosotros!</a></h5>
+        <button>ENVIAR</button>
     </main>
 
     <footer>
