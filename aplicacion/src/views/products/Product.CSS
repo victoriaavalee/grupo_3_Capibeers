@@ -1,1 +1,48 @@
 
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt{
+margin-left: 50px;
+}
+
+.imagen{
+    width: 350px;
+    height: 310px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cart {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.cart h2 {
+    margin-top: 0;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.cart-total {
+    text-align: right;
+    margin-top: 1rem;
+}
