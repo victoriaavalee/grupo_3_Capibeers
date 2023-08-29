@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capibeers - producto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-
+    <link rel="stylesheet" href="Product.css">
+    <link rel="stylesheet" type="text/css" href="Product.css">
 </head>
 <body>
 
@@ -37,15 +37,66 @@
 
     <div class="contenedor">
 
-    <img src="../public/img/carpinbeer.png" alt="FotoDeMuestra">
+        <div class="txt">
 
-    <h2>BelgianCarpincho</h2>
+        <h1>Belgian Carpincho</h1>
+        <p>2 Euros</p>
+        <p></p>
 
-    <h3>2€</h3>
+        <div class="cart">
+            <h2>Mi Carrito</h2> <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            <ul class="cart-items">
+                <li class="item">
+                    <span>Producto 1</span>
+                    <span>$20.00</span>
+                </li>
+                <li class="item">
+                    <span>Producto 2</span>
+                    <span>$15.00</span>
+                </li>
+            </ul>
+            <div class="cart-total">
+                Total: $35.00
+            </div>
+        </div>
+
+        <div id="counter">0</div>
+    <button id="incrementButton">Incrementar</button>
+    <button id="decrementButton">Decrementar</button>
+    
+    <script>
+        const counterElement = document.getElementById('counter');
+        const incrementButton = document.getElementById('incrementButton');
+        const decrementButton = document.getElementById('decrementButton');
+        
+        let count = 0;
+        
+        function updateCounter() {
+            counterElement.textContent = count;
+        }
+        
+        incrementButton.addEventListener('click', () => {
+            count++;
+            updateCounter();
+        });
+        
+        decrementButton.addEventListener('click', () => {
+            if (count > 0) {
+                count--;
+                updateCounter();
+            }
+        });
+        
+        updateCounter();
+    </script>
+
+        </div>
+
+    <img class="imagen" src="../public/img/carpinbeer.png" alt="FotoDeMuestra">
 
     </div>
 
-        
+    <h1>Productos relacionados</h1>
     
     
 
