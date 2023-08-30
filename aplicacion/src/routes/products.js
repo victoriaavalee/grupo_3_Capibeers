@@ -1,21 +1,14 @@
 const express = require ('express');
-let indexController = require ('../controllers');
-const listProductsController = require ('../controllers/products')
+const {listProductsController,buyProductController, detailProduct}= require('../controllers/products')
+//const listProductsController = require ('../controllers/products')
+//const buyProductController = require ('../controllers/products')
 
 const productsRouter = express.Router();
 
 productsRouter.get('/', listProductsController);
-productsRouter.get('/purchase', listProductsController);
-productsRouter.get('/edit', listProductsController);
-productsRouter.get('/create', listProductsController);
+productsRouter.get('/comprar', buyProductController);
+productsRouter.get('/:identificador', detailProduct);
+//productsRouter.get('/editar', listProductsController);
+//productsRouter.get('/crear', listProductsController);
 
 module.exports = productsRouter;
-
-
-/*
-router.get('/:idProducto', productosController.detalle);
-
-router.get('/:idProducto/comentarios/:idComentario?', productosController.detalleComentarios);
-
-
-*/

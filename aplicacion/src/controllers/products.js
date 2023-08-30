@@ -1,26 +1,22 @@
 const path = require('path');
 
-const productsController =  (req, res) => {
+const listProductsController =  (req, res) => {
     res.sendFile(path.resolve(__dirname, '../views/products.html'));
-}
+};
 
-module.exports = productsController;
+const buyProductController =  (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../views/comprar.html'));
+};
 
+const detailProduct =  (req, res) => {
+    const id = req.params.identificador;
+    if (id === "secreto"){ //http://localhost:8000/products/secreto
+        res.send(`<h1>me descubriste</h1>`); 
+    }else{
+        res.send(`<h1>Estas viendo el producto con id ${id}</h1>`);
+    }
+};
 
-
-/*si va
-let productosController ={
-    listado: function () {},
-    crear : function () {},
-    detalle : function (req,res){
-        res.send("Bienvenidos al detalle de producto" + req.params.idProducto)
-    },
-    detalleComentarios: function (req,res){
-        if (req.params.idComentario ==undefined){
-            res.send("Bienvenidos a los comentarios de producto" + req.params.idProducto);
-        } else {
-            res.send("Bienvenidos a los comentarios de producto" + req.params.idProducto + "y estas enfocado en el comentario" + req.params.idComentario);
-        }
-    },
-}
-*/
+module.exports = {listProductsController,buyProductController,detailProduct};
+//module.exports = listProductsController;
+//module.exports = buyProductController;
