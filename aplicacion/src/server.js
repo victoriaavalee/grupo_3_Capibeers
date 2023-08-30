@@ -1,13 +1,19 @@
 const express = require ('express');
+const router = require('./routes');
+const productsRouter = require('./routes/products');
+const homeRouter = require ('./routes/home');
 
 const app = express ();
 const PORT = 8000;
 
 app.use(express.static('public'));
 
-app.get('/', (req, res)=>{
-    res.sendFile(__dirname + '/views/home.html')
-});
+app.use ('/',router);
+
+app.use('/home',homeRouter);
+
+app.use ('/products',productsRouter);
+
 
 app.listen (PORT, () => {
     console.log (`[server] corriendo en el puerto: ${PORT}`);
@@ -18,7 +24,7 @@ app.listen (PORT, () => {
 let rutasProductos = require ('./routes/productos.js');
 let rutasMain = require ('./routes/home.js');
 
-app.use('/', rutasHome);
+
 app.use('/productos', rutasProductos);
 
 /*
@@ -49,7 +55,6 @@ app.get ('/carrito', (req, res)=>{//carrito
 });
 
 
-
 app.get ('/restablecer-clave', (req, res)=>{//indumentaria
     res.sendFile(path.join (__dirname, './views/restablecer-clave.html'))
 });
@@ -65,10 +70,5 @@ app.get ('/accesorios', (req, res)=>{//accesorios
 app.get ('/indumentaria', (req, res)=>{//indumentaria
     res.sendFile(path.join (__dirname, './views/indumentaria.html'))
 });
-
-//esto SI va
-
-
-
 */
 

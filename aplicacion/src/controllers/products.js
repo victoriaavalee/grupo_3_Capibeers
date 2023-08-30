@@ -1,12 +1,14 @@
-/*const controlador = {
-    index: (req, res)=>{
-        res.send('Index de productos');
-    },
-    show: hh,//mostrar detalle de producto,
-    create: //enviar datos para agregar un producto,
-};
-*/
+const path = require('path');
 
+const productsController =  (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../views/products.html'));
+}
+
+module.exports = productsController;
+
+
+
+/*si va
 let productosController ={
     listado: function () {},
     crear : function () {},
@@ -21,4 +23,4 @@ let productosController ={
         }
     },
 }
-module.exports = productosController;
+*/
