@@ -5,42 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capibeers - producto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/producto.css">
-    <link rel="stylesheet" type="text/css" href="/css/products.css">
+    <link rel="stylesheet" href="Product.css">
+    <link rel="stylesheet" type="text/css" href="Product.css">
+    <link href="https://db.onlinewebfonts.com/c/401b7744fffbc1cd21fc71a6c08182ee?family=Futura-Heavy" rel="stylesheet">
 </head>
+
 <body>
 
-    <div>
+    <header>
+        <div class="RedesSocialesInicio">
         <a href="https://www.instagram.com/capibeers"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://twitter.com/capibeers"><i class="fa-brands fa-x-twitter"></i></a>
         <a href="https://www.facebook.com/profile.php?id=100095248490157"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://open.spotify.com/user/31r6oywah4insuhfwfnr7junotua"><i class="fa-brands fa-spotify"></i></a>
 
-        <img src="../public/img/logo.png" style="width: 500px;" alt="">
+        <img src="../public/img/logo.png" height="200px" alt="">
 
         <input type="text"> 
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-
+        <button class="Buscador1"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
 
-    <header>
-        <nav>
-            <ul>
-                <a href="/sobreNosotros">SOBRE NOSOTROS</a>
-                <a href="/variedades">VARIEDADES</a>
-                <a href="/">INICIO</a>
-                <a href="/accesorios">ACCESORIOS</a>
-                <a href="/indumentaria">INDUMENTARIA</a>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <a href="/sobreNosotros">SOBRE NOSOTROS</a>
+            <a href="/variedades">VARIEDADES</a>
+            <a href="/">INICIO</a>
+            <a href="/accesorios">ACCESORIOS</a>
+            <a href="/indumentaria">INDUMENTARIA</a>
+        </ul>
+    </nav>
+
     </header>
+
+
+
 
     <div class="contenedor">
 
         <div class="txt">
 
         <h1>Belgian Carpincho</h1>
-        <p>2 Euros</p>
+        <p>2 € </p>
         <p></p>
 
         <div class="cart">
@@ -48,61 +53,79 @@
             <ul class="cart-items">
                 <li class="item">
                     <span>Producto 1</span>
-                    <span>$20.00</span>
+                    <span>$2.00</span>
                 </li>
                 <li class="item">
                     <span>Producto 2</span>
-                    <span>$15.00</span>
+                    <span>$2.00</span>
                 </li>
             </ul>
             <div class="cart-total">
-                Total: $35.00
+                Total: $4.00
             </div>
         </div>
 
         <div id="counter">0</div>
-    <button id="incrementButton">Incrementar</button>
-    <button id="decrementButton">Decrementar</button>
-    
-    <script>
-        const counterElement = document.getElementById('counter');
-        const incrementButton = document.getElementById('incrementButton');
-        const decrementButton = document.getElementById('decrementButton');
+        <button id="incrementButton">Incrementar</button>
+        <button id="decrementButton">Decrementar</button>
         
-        let count = 0;
-        
-        function updateCounter() {
-            counterElement.textContent = count;
-        }
-        
-        incrementButton.addEventListener('click', () => {
-            count++;
-            updateCounter();
-        });
-        
-        decrementButton.addEventListener('click', () => {
-            if (count > 0) {
-                count--;
-                updateCounter();
+        <script>
+            const counterElement = document.getElementById('counter');
+            const incrementButton = document.getElementById('incrementButton');
+            const decrementButton = document.getElementById('decrementButton');
+            
+            let count = 0;
+            
+            function updateCounter() {
+                counterElement.textContent = count;
             }
-        });
-        
-        updateCounter();
-    </script>
+            
+            incrementButton.addEventListener('click', () => {
+                count++;
+                updateCounter();
+            });
+            
+            decrementButton.addEventListener('click', () => {
+                if (count > 0) {
+                    count--;
+                    updateCounter();
+                }
+            });
+            
+            updateCounter();
+        </script>
 
+    
+            </div>
+
+            <div>
+                <button type="button" id="agregar-carrito">Agregar al carrito</button>
+    
+            </div>
+
+    <img class="imagen" src="../public/img/carpinbeer.png"alt="FotoDeMuestra">
+
+    </div>
+
+    <section class="productosrelacionados">
+        <h1>Productos Relacionados</h1>
+        <img src="../public/img/Cervezaa.png" height="250px" alt="FotoRelacionada1">
+    </section>
+
+    <footer>
+        <div class="footer-content">
+          <div class="left">Siguenos En Nuestras Redes Sociales!</div>
+          <div class="right">
+            <a href="https://www.instagram.com/capibeers"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/capibeers"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100095248490157"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://open.spotify.com/user/31r6oywah4insuhfwfnr7junotua"><i class="fa-brands fa-spotify"></i></a>
+
+
+
+          </div>
         </div>
-
-    <img class="imagen" src="../public/img/carpinbeer.png" alt="FotoDeMuestra">
-
-    </div>
-
-    <h1>Productos relacionados</h1>
-
-    <div>
-
-        <img src="../public/img/Cervezaa.png" style="width: 50px;" alt="Foto De Muestra">
-
-    </div>
+      </footer>
     
     
 
