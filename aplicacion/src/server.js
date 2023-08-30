@@ -2,7 +2,7 @@ const express = require ('express');
 const router = require('./routes');
 const productsRouter = require('./routes/products');
 const homeRouter = require ('./routes/home');
-//const loginRouter = require('./routes/login');
+const userRouter = require('./routes/user');
 
 const app = express ();
 const PORT = 8000;
@@ -14,8 +14,8 @@ app.use ('/',router);
 app.use('/home',homeRouter);
 
 app.use ('/products',productsRouter);
-//login va dentro de un USER
-//app.use ('/login', loginRouter)
+
+app.use('/user', userRouter)
 
 app.listen (PORT, () => {
     console.log (`[server] corriendo en el puerto: ${PORT}`);
