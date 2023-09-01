@@ -1,3 +1,32 @@
-body{
-    color:red;
+body {
+    margin-top: 20%;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    background: rgb(90, 46, 46);
+    background: linear-gradient(90deg, rgba(90, 46, 46, 1) 0%, rgba(223, 186, 105, 1) 50%, rgba(90, 46, 46, 1) 99%);
+}
+
+h1 {
+    color: #000000;
+    font-size: 4vw;
+}
+
+button {
+    font-size: 2vw;
+    padding: 10px 90px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+.Si {
+    background-color: #4caf50;
+    color: white;
+}
+
+.No {
+    background-color: #f44336;
+    color: white;
 }
