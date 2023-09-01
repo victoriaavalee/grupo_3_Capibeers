@@ -4,6 +4,10 @@ const listProductsController =  (req, res) => {
     res.render('./products/products');
 };
 
+const createProductController =  (req, res) => {
+    res.render('./products/create');
+};
+
 const buyProductController =  (req, res) => {
     res.render('./products/comprar');
 };
