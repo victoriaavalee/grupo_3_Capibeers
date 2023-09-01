@@ -25,6 +25,6 @@ const detailProduct =  (req, res) => { //PRUEBA DE ID PARA PRODUCTOS
     }
 };
 
-module.exports = {listProductsController,buyProductController,carritoProductController,detailProduct};
+module.exports = {listProductsController,buyProductController,carritoProductController,detailProduct,createProductController};
 //module.exports = listProductsController;
 //module.exports = buyProductController;
