@@ -7,7 +7,6 @@ userRouter.get('/', userController); //aqui iria el perfil de usuario
 userRouter.get('/login', loginController);
 userRouter.get('/registro', registroController);
 userRouter.get('/restablecerClave', restablecerClaveController);
-//userRouter.get('/perfil', listProductsController);
 
 
 module.exports = userRouter;

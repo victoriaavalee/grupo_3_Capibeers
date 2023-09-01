@@ -1,7 +1,8 @@
 const express = require ('express');
+//rutas
 const router = require('./routes');
-const productsRouter = require('./routes/products');
 const homeRouter = require ('./routes/home');
+const productsRouter = require('./routes/products');
 const userRouter = require('./routes/user');
 
 const app = express ();
@@ -9,6 +10,10 @@ const PORT = 8000;
 
 app.use(express.static('public'));
 
+app.set('view engine', 'ejs')
+app.set ('views', './src/views');
+
+//rutas 
 app.use ('/',router);
 
 app.use('/home',homeRouter);
@@ -17,20 +22,12 @@ app.use ('/products',productsRouter);
 
 app.use('/user', userRouter)
 
+
 app.listen (PORT, () => {
     console.log (`[server] corriendo en el puerto: ${PORT}`);
 });
 
-
-/*
-let rutasProductos = require ('./routes/productos.js');
-let rutasMain = require ('./routes/home.js');
-
-
-app.use('/productos', rutasProductos);
-
-/*
-//creo que todo esto se va :(
+/*Codigo pasado
 const path= require ('path');
 
 const publicFolderPath=path.resolve(__dirname, './public');
@@ -55,7 +52,6 @@ app.get ('/productos', (req, res)=>{
 app.get ('/carrito', (req, res)=>{//carrito
     res.sendFile(path.join (__dirname, './views/carrito.html'))
 });
-
 
 app.get ('/restablecer-clave', (req, res)=>{//indumentaria
     res.sendFile(path.join (__dirname, './views/restablecer-clave.html'))

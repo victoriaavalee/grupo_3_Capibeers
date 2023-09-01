@@ -1,20 +1,17 @@
-const path = require('path');
-
 const userController =  (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../views/user/user.html'));
+    res.render('./user/user');
 };
 
 const loginController =  (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../views/user/login.html'));
+    res.render('./user/login');
 };
 
 const registroController =  (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../views/user/registro.html'));
+    res.render('./user/registro');
 };
 
 const restablecerClaveController =  (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../views/user/restablecer-clave.html'));
+    res.render('./user/restablecer-clave');
 };
-
 
 module.exports = {userController,loginController,registroController,restablecerClaveController};

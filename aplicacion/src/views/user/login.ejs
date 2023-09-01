@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head')%>
+    <title>Capebeers - Login</title>
+</head>     
+<body>
+    <!HEADER/!>
+        <%- include('../partials/header')%>
+    <main>
+        <div class="title">ACCEDER</div>
+        <div>
+            <label form = "user"><i class="fa-solid fa-user"></i></label>
+            <input type="text"="user">
+        </div>
+        <div>
+                <label form = "clave"><i class="fa-solid fa-lock"></i></label>
+            <input type="password"="clave">
+        </div>
+        <p class="reco-olv">Recordar usuario y clave  <input id="electro" type="checkbox" name="recordar_user_clave"
+        value="electro" wfd="id9"></p>
+        <h5><a href="/user/restablecer-clave">¿Olvidaste tu contraseña?</a></h5>
+        <button>INGRESAR</button>
+        <h5><a href="/user/registro">¿No tienes una cuenta? ¡Unete a nosotros!</a></h5>
+    </main>
+    <!FOOTER/!>
+    <%- include('../partials/footer')%>
+</body>
+</html>
+
+
+

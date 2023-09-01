@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capibeers - producto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" type="text/css" href="/css/products.css">
+    <link href="https://db.onlinewebfonts.com/c/401b7744fffbc1cd21fc71a6c08182ee?family=Futura-Heavy" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="RedesSocialesInicio">
+        <a href="https://www.instagram.com/capibeers"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/capibeers"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100095248490157"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://open.spotify.com/user/31r6oywah4insuhfwfnr7junotua"><i class="fa-brands fa-spotify"></i></a>
+
+        <img src="/img/logo.png" height="200px" alt="">
+
+        <input type="text"> 
+        <button class="Buscador1"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+    <nav>
+        <ul>
+            <a href="/sobreNosotros">SOBRE NOSOTROS</a>
+            <a href="/variedades">VARIEDADES</a>
+            <a href="/">INICIO</a>
+            <a href="/accesorios">ACCESORIOS</a>
+            <a href="/indumentaria">INDUMENTARIA</a>
+        </ul>
+    </nav>
+
+    </header>
+
+
+
+
+    <div class="contenedor">
+
+        <div class="txt">
+
+        <h1>Belgian Carpincho</h1>
+        <p>2 € </p>
+        <p></p>
+
+        <div class="cart">
+            <h2>Mi Carrito</h2> <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            <ul class="cart-items">
+                <li class="item">
+                    <span>Producto 1</span>
+                    <span>$2.00</span>
+                </li>
+                <li class="item">
+                    <span>Producto 2</span>
+                    <span>$2.00</span>
+                </li>
+            </ul>
+            <div class="cart-total">
+                Total: $4.00
+            </div>
+        </div>
+
+        <div id="counter">0</div>
+        <button id="incrementButton">Incrementar</button>
+        <button id="decrementButton">Decrementar</button>
+        
+        <script>
+            const counterElement = document.getElementById('counter');
+            const incrementButton = document.getElementById('incrementButton');
+            const decrementButton = document.getElementById('decrementButton');
+            
+            let count = 0;
+            
+            function updateCounter() {
+                counterElement.textContent = count;
+            }
+            
+            incrementButton.addEventListener('click', () => {
+                count++;
+                updateCounter();
+            });
+            
+            decrementButton.addEventListener('click', () => {
+                if (count > 0) {
+                    count--;
+                    updateCounter();
+                }
+            });
+            
+            updateCounter();
+        </script>
+
+    
+            </div>
+
+            <div>
+                <button type="button" id="agregar-carrito">Agregar al carrito</button>
+    
+            </div>
+
+    <img class="imagen" src="/img/carpinbeer.png"alt="FotoDeMuestra">
+
+    </div>
+
+    <section class="productosrelacionados">
+        <h1>Productos Relacionados</h1>
+        <img src="/img/Cervezaa.png" height="250px" alt="FotoRelacionada1">
+    </section>
+
+    <footer>
+        <p >¡Seguinos en nuestras redes sociales!</p>
+        <article>
+            <a href="https://www.instagram.com/capibeers"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/capibeers"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100095248490157"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://open.spotify.com/user/31r6oywah4insuhfwfnr7junotua"><i class="fa-brands fa-spotify"></i></a>
+        </article>
+        <p>¿Necesitas atención personalizada? Contactanos por Gmail <i class="fa-solid fa-envelope"> </i></a>capibeers@gmail.com</p>      
+        <p id="copyright">©2023 Capibeers Cervezas</p>
+    </footer>
+    
+    
+
+</body>
+</html>

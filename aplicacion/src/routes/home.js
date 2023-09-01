@@ -1,9 +1,9 @@
 const express = require ('express');
-const startHomeController = require ('../controllers/home');
+const homeController = require ('../controllers/home');
 
 const homeRouter = express.Router();
 
-homeRouter.get('/', startHomeController);
+homeRouter.get('/', homeController);
 //nose si necesita todas estas vistas el home ._.
 //homeRouter.get('/vistaA', startHomeController);
 //homeRouter.get('/vistaB', startHomeController);
