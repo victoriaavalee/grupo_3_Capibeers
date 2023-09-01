@@ -337,26 +337,36 @@ main {text-align: center; font-size: 17px;}
 .title{
     font-size: 30px;
     font-weight: bold;
-    margin: 20px;
+    margin-bottom: 20px;
 }
+
 .texto{
     margin: 0 auto;
     width: 35%;
-    font-size: 17px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#ingresar{
+    font-size: 15px;
+    font-weight: bold;
 }
 
 button{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 15px;
     background-color:#DFBA69;
     color: #000;
     transition-property: background-color, color;
     transition-duration: 0.4s;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
-    margin-top: 15px;
 }
+
 button:hover{
-    background-color: #5a2e2e;
-    color:#FFFEDF;
+    background-color:#5A2E2E;
+    color:white;
 }
 /*****************************************************FOOTER*************************************/
 .footer{
