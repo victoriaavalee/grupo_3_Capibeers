@@ -1,4 +1,4 @@
-/****************************************************HEADER**********************************************/
+/******************************************HEADER************************************/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -198,7 +198,6 @@ justify-content: space-between;
 
 
 /*Contacto*/
-
 .Contacto:hover {
     background-color: #FFFEDF;
     padding: 24px 10px;
@@ -265,7 +264,6 @@ justify-content: space-between;
 .Ofertas{
     background: #DFBA69;
 }
-
 
 /*Indumentaria*/
 .Indumentaria:hover {
@@ -334,56 +332,33 @@ justify-content: space-between;
     background:  #DFBA69;
 }
 
-/**************************************************MAIN**************************************/
-
-
-#contenedor{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFFEDF;
+/**************************************MAIN**************************************************/
+main {text-align: center; font-size: 17px;}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
 }
-
-#txt{
-margin-left: 50px;
-}
-
-#cart {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin: 1rem;
-}
-
-#image{
-    width: 350px;
-    height: 310px;
-}
-.cart h2 {
-    margin-top: 0;
-}
-
-#cart-items {
-    list-style: none;
-    padding: 0;
-}
-
-#item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-}
-
-#cart-total {
-    text-align: right;
-    margin-top: 1rem;
-}
-
-#productosrelacionados{
-    width: 200px;
+.texto{
     margin: 0 auto;
+    width: 35%;
+    font-size: 17px;
 }
 
-/**************************************************FOOTER**************************************/
+button{
+    background-color:#DFBA69;
+    color: #000;
+    transition-property: background-color, color;
+    transition-duration: 0.4s;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+button:hover{
+    background-color: #5a2e2e;
+    color:#FFFEDF;
+}
+/*****************************************************FOOTER*************************************/
 .footer{
     background-color:#5A2E2E;
     padding: 80px 0;

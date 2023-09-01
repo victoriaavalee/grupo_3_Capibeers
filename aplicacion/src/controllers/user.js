@@ -1,3 +1,5 @@
+const path = require('path');
+
 const userController =  (req, res) => {
     res.render('./user/user');
 };
@@ -11,7 +13,7 @@ const registroController =  (req, res) => {
 };
 
 const restablecerClaveController =  (req, res) => {
-    res.render('./user/restablecer-clave');
+    res.render('./user/restablecerClave');
 };
 
 module.exports = {userController,loginController,registroController,restablecerClaveController};

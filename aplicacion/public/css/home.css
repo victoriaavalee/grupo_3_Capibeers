@@ -271,8 +271,6 @@ justify-content: space-between;
 
 
 /*Indumentaria*/
-
-
 .Indumentaria:hover {
   background-color:  #FFFEDF;
   padding: 24px 10px;
@@ -343,25 +341,29 @@ justify-content: space-between;
 }
 
 
+/*////////////////////////HASTA AQUI ES EL HEADER////////////////////////////////*/
+
+
+
 /*Cerveza mas vendida*/
 
 .Linea-baja{
   color: #000;
   height: 5px;
   width: 80%;
-background-color: #000;
-margin-left: auto;
-margin-right: auto;
+  background-color: #000;
+  margin-left: auto;
+  margin-right: auto;
 }
 .Linea-alta{
   color: #000;
   height: 5px;
   width: 80%;
-background-color: #000;
-margin-left: auto;
-margin-right: auto;
+  background-color: #000;
+  margin-left: auto;
+  margin-right: auto;
 }
-
+/*****************O ESTE ES EL BODYYY???****/
 .Cerveza-mas-vendida{
 text-align: center;
 margin-top: 80px;
@@ -462,7 +464,7 @@ margin-top: 80px;
   border: 3px solid black;
 }
 
-/*Carrusel de cervezas*/
+/***************************Carrusel de cervezas*****************************/
 
 .Nuestros-productos{
   text-align: center;
@@ -508,6 +510,7 @@ margin-top: 80px;
   max-width: 1200px;
   margin: 0 auto;
 }
+/*************************************FOOTER************************************/
 .footer{
   background-color:#5A2E2E;
   padding: 80px 0;
