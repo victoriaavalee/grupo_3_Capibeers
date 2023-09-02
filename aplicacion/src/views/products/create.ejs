@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <title>Creacion de productos</title>
+    <link rel="stylesheet" href="/css/create.css">
+</head>
+<body>
+    <!HEADER/!>
+        <%- include('../partials/header')%>
+    
+    <main>
+        <form action="/products" class="form">
+            <div class="img-product">
+                <label for="product">Product image</label>
+                <input type="file" name="new-product" id="product" required>
+            </div>
+            <div class="newProduct">
+                <!--name <label for="name-product">Nombre del producto:</label>-->
+                <input type="text" name="new-product" id="name-product" placeholder="Nombre del producto" required>
+                <!--<label for="price">Precio:</label>-->
+                <input type="text" name="new-product" id="price" placeholder="Precio" required>
+                <p><a href="#">Ver medios de pago</a></p>
+            </div>
+            <section class="info-container">
+                <div class="description">
+                    <label for="description">Descripción</label>
+                    <input type="text" name="new-product" id="description">
+                </div>
+                <p>Detalles</p>
+                <div class="details">
+                    <label for="brand">Marca</label>
+                    <input type="text" name="new-product" id="brand" placeholder="Ej. Heineken">
+                    <label for="container">Tipo de envase</label>
+                    <input type="text" name="new-product" id="container" placeholder="Ej. Lata">
+                    <label for="volume">Volumen de la unidad</label>
+                    <input type="text" name="new-product" id="volume" placeholder="Ej. 330 ml">
+            </div>
+            </section>
+            
+            <div>
+                <button type="reset">Borrar</button>
+                <button type="submit">Gurdar</button>
+            </div>
+        </form>
+    </main>
+
+    <!FOOTER/!>
+        <%- include('../partials/footer')%>
+</body>
+</html>
