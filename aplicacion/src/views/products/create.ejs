@@ -16,13 +16,14 @@
     <main>
         <form action="/products" class="form">
             <div class="img-product">
-                <label for="product">Product image</label>
+                <p>Imagen del producto</p>
+                <label for="product">Upload file</label>
                 <input type="file" name="new-product" id="product" required>
             </div>
             <div class="newProduct">
-                <!--name <label for="name-product">Nombre del producto:</label>-->
+                <label for="name-product">Nombre del producto:</label>
                 <input type="text" name="new-product" id="name-product" placeholder="Nombre del producto" required>
-                <!--<label for="price">Precio:</label>-->
+                <label for="price">Precio:</label>
                 <input type="text" name="new-product" id="price" placeholder="Precio" required>
                 <p><a href="#">Ver medios de pago</a></p>
             </div>
@@ -42,7 +43,7 @@
             </div>
             </section>
             
-            <div>
+            <div class="buttons">
                 <button type="reset">Borrar</button>
                 <button type="submit">Gurdar</button>
             </div>
