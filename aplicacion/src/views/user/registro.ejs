@@ -12,22 +12,42 @@
     <!HEADER/!>
         <%- include('../partials/header')%>
     <main>
-        <section class="formRegister">
+         <section class="formRegister">
             <h2>Unete a nosotros!</h2>
-            <input class="controls" type="email" name="email" id="email" placeholder="Email">
-            <input class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre">
-            <input class="controls" type="text" name="apellido" id="apellido" placeholder="Apellido">
-            <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-            <input class="controls" type="password" name="confirmar contraseña" id="confirmar contraseña" placeholder="Confirmar contraseña">
-            <p>¿Ya tienes una cuenta?<a class="login" href="/user/login">Iniciar sesión.</a></p>
-            <button id="button-continuar">
-                Continuar
-            </button>
-            <p class="separador">o</p>
-            <button class="Google">
-                <i class="fa-brands fa-google"></i>
-                Continuar con Google
-            </button>
+            <form action="/home">
+                <div class="controls">
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text" name="nombre" id="name" placeholder="Nombre" required>
+                    <input type="text" name="apellido" id="last-name" placeholder="Apellido" required>
+                    <input type="date" name="edad" id="age" max="2005-09-01">
+                </div>
+                <div class="user-profile">
+                    <p>Perfil de usuario:</p>
+                    <label for="buyer">Cliente</label>
+                    <input type="radio" id="buyer" name="profile" value="buyer">
+                    <label for="seller">Administrador</label>
+                    <input type="radio" id="seller" name="profile" value="seller">
+                </div>
+                <div class="img-user">
+                    <label for="img-profile">Foto de perfil</label>
+                    <input type="file" name="foto-usuario" id="img-profile">
+                </div>
+                <div class="controls">
+                    <input type="password" name="contraseña" id="password" placeholder="Contraseña" required>
+                    <input type="password" name="confContraseña" id="confirm-password" placeholder="Confirmar contraseña" required>
+                </div>
+                <p>¿Ya tienes una cuenta?<a class="login" href="/user/login">Iniciar sesión.</a></p>
+                <div class="buttons">
+                    <button type="submit">
+                        Continuar
+                    </button>
+                    <p class="separador">o</p>
+                    <button class="Google">
+                        <i class="fa-brands fa-google"></i>
+                        Continuar con Google
+                    </button>
+                </div>
+            </form>
         </section>
     </main>
     <!FOOTER/!>
