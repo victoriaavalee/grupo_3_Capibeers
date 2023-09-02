@@ -1,8 +1,37 @@
+.form{
+    width: 70%;
+    padding: 30px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.form p{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.newProduct a{
+    color: #434343;
+    font-size: 13px;
+    margin-left: 2px;
+}
+
+.newProduct a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.img-product{
+    flex: 1;
+}
+
 .img-product input{
     display: none;
 }
 
 .img-product label{
+    display: flex;
     height: 100px;
     width: 150px;
     border-radius: 6px;
@@ -13,4 +42,62 @@
 .img-product label:hover{
     color: #5a2e2e;
     border: 1px dashed #5a2e2e;
+}
+
+.newProduct{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#name-product{
+    width: 30%;
+}
+
+#price{
+    width: 20%;
+}
+
+.info-container label{
+    display: flex;
+    flex-direction: column;
+}
+
+/*input{
+    text-transform: uppercase;
+}*/
+
+/**************************************BOTONES*******************************************/
+.buttons{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.buttons button[type="submit"]{
+    width: 200px;
+    background-color: #e2b657;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    color: #333333;
+    font-size: 17px;
+}
+
+.buttons button[type="submit"]:hover{
+    background-color:  #f1cd7d;
+}
+
+.buttons button[type="reset"]{
+    width: 200px;
+    background-color: #5c2f2f;
+
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    color: #efefef;
+    font-size: 17px;
+}
+
+.buttons button[type="reset"]:hover{
+    background-color: #a05151;
 }
