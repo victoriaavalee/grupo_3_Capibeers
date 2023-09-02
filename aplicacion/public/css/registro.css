@@ -335,27 +335,27 @@ justify-content: space-between;
 }
 /**************************************************MAIN**************************************/
 
-.controls{
-    width: 90%;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.controls input{
+    width: 98%;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 5px;
     border: 1px solid #434343;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #434343;
 }
-
-
-
-.botones a{
-    padding: 5px;
-}
-
 
 .formRegister{
-
-    width: 400px;
+    width: 450px;
     padding: 30px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     color: #434343;
 }
 
@@ -364,13 +364,13 @@ justify-content: space-between;
     font-size: 38px;
 }
 
-#nombre{
-    width: 40%;
+#name{
+    width: 48%;
     
 }
 
-#apellido{
-    width: 40%;
+#last-name{
+    width: 48%;
     margin-inline: 5px;
 }
 
@@ -380,8 +380,10 @@ justify-content: space-between;
     color: #1f1f1f;
 }
 
-.formRegister a{
+.login{
     color: #434343;
+    font-size: 13px;
+    margin-left: 2px;
 }
 
 .login:hover{
@@ -389,13 +391,91 @@ justify-content: space-between;
     text-decoration: underline;
 }
 
-#button-continuar{
+.user-profile p{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.user-profile input{
+    display: none;
+}
+
+.user-profile label{
+    background-color: white;
+    width: 48%;
+    position: relative;
+    color: #753c3c;
+    font-size: 14px;
+    border: 2px solid #753c3c;
+    border-radius: 5px;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 5px;
+    margin-left: 100px;
+}
+
+.user-profile label:before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    border: 3px solid #753c3c;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-profile input:checked + label{
+    background-color: #753c3c;
+    color: white;
+}
+
+.user-profile input:checked + label:before{
+    height: 5px;
+    width: 5px;
+    border: 5px solid white;
+    background-color: #753c3c;
+}
+
+.img-user p{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.img-user input{
+    display: none;
+}
+
+.img-user label{
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    background-color: #753c3c;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    width: 48%;
+    margin-left: 100px;
+}
+
+.img-user label:hover{
+    background-color: #5A2E2E;
+}
+
+/******************************************BOTONES*****************************************************/
+
+.buttons{
     margin-top: 20px;
 }
 
 .formRegister button{
     width: 98%;
-    background-color: #f44336;
+    background-color: #753c3c;
     border: none;
     padding: 15px;
     border-radius: 8px;
@@ -404,7 +484,7 @@ justify-content: space-between;
 }
 
 .formRegister button:hover{
-    background-color:  #fd2e1f;
+    background-color:  #a05151;
 }
 
 .formRegister .separador{
@@ -415,13 +495,13 @@ justify-content: space-between;
 .formRegister .Google{
     margin-top: 10px;
     width: 98%;
-    background-color: #efefef;
+    background-color: #DFBA69;
     color: #434343;
     font-size: 17px;
 }
 
 .formRegister .Google:hover{
-    background-color: rgb(204, 204, 204);
+    background-color: #f1cf85;
 }
 
 /**************************************************FOOTER**************************************/
@@ -478,6 +558,10 @@ justify-content: space-between;
     height: 300px;
 }
 #copyright{
+    text-align: center;
+    margin-top: 100px;
+}
+
     text-align: center;
     margin-top: 100px;
 }
