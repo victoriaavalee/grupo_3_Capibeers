@@ -1,0 +1,16 @@
+.img-product input{
+    display: none;
+}
+
+.img-product label{
+    height: 100px;
+    width: 150px;
+    border-radius: 6px;
+    border: 1px dashed #999;
+    padding: 100px;
+}
+
+.img-product label:hover{
+    color: #5a2e2e;
+    border: 1px dashed #5a2e2e;
+}
