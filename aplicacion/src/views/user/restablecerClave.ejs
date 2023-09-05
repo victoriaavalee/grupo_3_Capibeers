@@ -12,22 +12,25 @@
     <!HEADER/!>
         <%- include('../partials/header')%>
     <main>
-        <div class="title">RESTABLECER CONTRASEÑA</div>
-        <div class="texto">Introduce tu nombre de usuario de Capibeers o la dirección de correo que usaste en el registro. Te enviaremos un correo con tu nombre de usuario y un código numérico para que puedas restablecer tu contraseña.</div>
-        <p id="ingresar">Dirección de correo electrónico o nombre de usuario:</p> 
-        <div>
-            <label form = "correo"></label>
-            <input type="text"="correo">
-        </div>
-        <button>ENVIAR</button>
-        <p id="ingresar">Ingrese código:</p>
-        <div> <label form="codigo"></label>
-            <input type="text"="codigo"></div>
-        <button>ENVIAR</button>
-        <p id="ingresar">Ingrese nueva contraseña:</p>
-        <div><label form = "nuevaclave"></label>
-            <input type="password"="nuevaclave"></div>
-        <button>CONFIRMAR</button>
+        <form action="/home" method="GET">
+            <h2 class="title">RESTABLECER CONTRASEÑA</h2>
+            <div class="texto">Introduce la dirección de correo electrónico que usaste en el registro. Te enviaremos un mail con un código numérico para que puedas restablecer tu contraseña.</div>
+            <p id="ingresar">Ingrese dirección de correo electrónico:</p> 
+            <div>
+                <label form = "correo"></label>
+                <input type="email"required >
+            </div>
+            <!--<button>ENVIAR</button>!-->
+            <p id="ingresar">Ingrese código:</p>
+            <div>
+                <label form="codigo"></label>
+                <input type="text" required></div>
+            <!--<button>ENVIAR</button>!-->
+            <p id="ingresar">Ingrese nueva contraseña:</p>
+            <div><label form = "nuevaClave"></label>
+                <input type="password" required></div>
+            <button  type="submit">CONFIRMAR</button>
+        </form>
     </main>
     <!FOOTER/!>
         <%- include('../partials/footer')%>

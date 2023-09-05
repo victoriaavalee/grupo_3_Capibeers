@@ -12,27 +12,29 @@
     <!HEADER/!>
         <%- include('../partials/header')%>
     <main>
-        <div class="title">ACCEDER</div>
-        <p id="text-user-password">Ingrese su nombre de usuario y su contraseña:</p>
-        <div id="div-user">
-            <label form = "user"><i class="fa-solid fa-user"></i></label>
-            <input type="text" id="log.user" placeholder="Usuario"
-                class="submit clickable">
-        </div>
-        <div id="div-password">
-            <label form = "clave"><i class="fa-solid fa-lock"></i></label>
-            <input type="password" id="log.password" placeholder="Contraseña">
-        </div>
-        <div id="remember-user-password">
-            <p>Recordar usuario y clave  <input id="electro" type="checkbox" name="remember-user-password"
-        value="electro" wfd="id9"></p>
-        </div>
-        <div>
-            <p><a id="forgot-password" href="/user/restablecerClave">¿Olvidaste tu contraseña?</a></p>
-        </div>
-        <div>
-            <button>INGRESAR</button>
-        </div>
+        <form action="/home" method="GET">
+            <h2 class="title">ACCEDER</h2>
+            <p id="text-user-password">Ingrese su correo electrónico y su contraseña:</p>
+            <div id="div-user">
+                <label form = "user"><i class="fa-solid fa-user"></i></label>
+                <input type="email" name="nameUsuario" id="log.user" placeholder="Correo"
+                    class="submit clickable" required>
+            </div>
+            <div id="div-password">
+                <label form = "clave"><i class="fa-solid fa-lock"></i></label>
+                <input type="password"  id="log.password" placeholder="Contraseña" required>
+            </div>
+            <div id="remember-user-password">
+                <p>Recordar usuario y clave  <input id="electro" type="checkbox" name="remember-user-password"
+            value="electro" wfd="id9"></p>
+            </div>
+            <div>
+                <p><a id="forgot-password" href="/user/restablecerClave">¿Olvidaste tu contraseña?</a></p>
+            </div>
+            <div>
+                <button type="submit"  >INGRESAR</button>
+            </div>
+        </form>
         <div>
             <p><a id="create-account" href="/user/registro">¿No tienes una cuenta? ¡Unete a nosotros!</a></p>
         </div>
