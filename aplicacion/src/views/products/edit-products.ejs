@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capibeers-Editar Producto</title>
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <!HEADER/!>
+    <%- include('../partials/header')%>
+    <h1>Editar Producto</h1>
+    <form>
+        <h2>Tipo del producto</h2><br>
+        <div class="tipo-producto-edit">
+            <label for="tipo-Podructo">Cerveza</label><br>
+            <input type="radio" id="tipo-Podructo1" name="tipo-Podructo" value="Opción B" required>
+            <label for="interes2">Accesorios</label><br>
+            <input type="radio" id="tipo-Podructo2" name="tipo-Podructo" value="Opción B" required>
+            <label for="interes3">Indumentaria</label><br>
+            <input type="radio" id="tipo-Podructo3" name="tipo-Podructo" value="Opción B" required>
+        </div><br><br>
+        <h2>Tipo de Envase</h2>
+        <div class="envase-edit">
+            <label for="tipo-Lata">Lata</label>
+            <input type="radio" id="tipo-Lata" name="tipo-Envase" value="Lata" required>
+            <label for="tipo-Botella">Botella</label>
+            <input type="radio" id="tipo-Botella" name="tipo-Envase" value="Botella" required>
+            <label for="tipo">Tipo:</label>
+        </div>
+        <select id="tipo" name="tipo" required>
+            <option value="Opción 1">...</option>
+            <option value="Opción 1">CLASICA</option>
+            <option value="Opción 2">STOUT</option>
+            <option value="Opción 3">BOCK</option>
+        </select><br><br>
+        <h2>Accesorios</h2><br>
+        <div class="accesorios-edit">
+            <label for="gorras">Gorras</label>
+            <input type="radio" id="gorras" name="tipo-Accesorio" value="Gorras" required>
+            <label for="bolsas">Bolsas</label>
+            <input type="radio" id="bolsas" name="tipo-Accesorio" value="Bolsas" required>
+            <label for="vasos">Vasos</label>
+            <input type="radio" id="vasos" name="tipo-Accesorio" value="Vasos" required>
+        </div><br><br>
+        <h2>Indumentaria</h2><br>
+        <div class="indumentaria-edit">
+            <label for="superior">Superior</label>
+            <input type="radio" id="superior" name="tipo-Indumentaria" value="Superior" required>      
+            <label for="inferior">Inferior</label>
+            <input type="radio" id="inferior" name="tipo-Indumentaria" value="Inferior" required>
+        </div><br><br>
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea><br>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" required><br>
+        <label for="foto">Agregar una foto:</label>
+        <input type="file" id="foto" name="foto" accept="image/*"><br><br>
+        <input type="submit" value="Guardar">
+        <input type="submit" value="Cancelar">
+    </form>
+<!FOOTER/!>
+    <%- include('../partials/footer')%>
+</body>
+</html>
