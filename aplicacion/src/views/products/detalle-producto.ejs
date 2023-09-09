@@ -14,11 +14,11 @@
     <main>
     <div id="contenedor">
         <div id="txt">
-            <h1><%=product.name %></h1>
-            <p>><%= "$" + product.price %></p>
+            <h1><%=products.name%></h1>
+            <p><%= "$" + products.price %></p>
             <div id="cart">
                 <h2>Descripción</h2> 
-                <p><%=product.description %></p>
+                <p><%= products.description %></p>
                 <div id="cart-total">
             </div>
         </div>
@@ -48,12 +48,12 @@
             <div>
                 <button type="button" id="agregar-carrito">Agregar al carrito</button>
             </div>
-        <img id="image" src="/img/<%=product.image %>"alt="FotoDeMuestra">
+        <img id="image" src="/img/<%=products.image %>"alt="FotoDeMuestra">
         </div>
-        <!--<form action="/products/delete/<%= products.id %>?_method=DELETE" method="post">
+        <form action="/products/delete/<%= products.id %>?_method=DELETE" method="post">
             <input type="submit" value="Eliminar">
         </form>
-        !>
+
         <!--Carrusel cervezas-->
         <h1 class="Nuestros-productos">NUESTROS PRODUCTOS</h1>
         <div class="Carrusel">
@@ -87,7 +87,7 @@
                 <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
                 <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
             </div>
-            <img id="image" src="/img/carpinbeer.png"alt="FotoDeMuestra">
+            <img id="image" src="/img/<%=products.image %>" alt="FotoDeMuestra">
         </div>
     </main>
     <!FOOTER/!>

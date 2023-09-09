@@ -12,8 +12,8 @@ const productsController = {
     //detalle de producto 
     detail: function (req, res){
         const detailId = +req.params.id;
-        let description = products.find(p => p.id === detailId);
-        res.render('./products/detalle-producto', {description});
+        let description = products.find(p => p.id === detailId);;
+        res.render('./products/detalle-producto', {products});
     },
 
     delete: function (req, res){
