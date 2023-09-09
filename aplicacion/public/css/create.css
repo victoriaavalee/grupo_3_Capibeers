@@ -73,7 +73,7 @@
     margin-bottom: 20px;
 }
 
-.buttons button[type="submit"]{
+.buttons input[type="submit"]{
     width: 200px;
     background-color: #e2b657;
     border: none;
@@ -83,7 +83,7 @@
     font-size: 17px;
 }
 
-.buttons button[type="submit"]:hover{
+.buttons input[type="submit"]:hover{
     background-color:  #f1cd7d;
 }
 

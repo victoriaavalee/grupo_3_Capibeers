@@ -60,6 +60,9 @@
                 <button type="button" id="agregar-carrito">Agregar al carrito</button>
             </div>
         <img id="image" src="/img/carpinbeer.png"alt="FotoDeMuestra">
+        <form action="/products/delete/<%= products.id %>?_method=DELETE" method="post">
+            <input type="submit" value="Eliminar">
+        </form>
         </div>
         <section id="productosrelacionados">
             <h1>Productos Relacionados</h1>

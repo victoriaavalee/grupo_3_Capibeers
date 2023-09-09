@@ -1,14 +1,27 @@
 const express = require ('express');
-const {listProductsController, detailProductController, createProductController,buyProductController,carritoProductController,}= require('../controllers/products')
-
+const productsController = require('../controllers/products')
 const productsRouter = express.Router();
 
-productsRouter.get('/', listProductsController); //lista de productos
-productsRouter.get('/producto', detailProductController);//producto individual
-productsRouter.get('/carrito', carritoProductController); //carrito
-productsRouter.get('/crear', createProductController); //crear 
-productsRouter.get('/comprar', buyProductController);//comprar
+//lista de productos
+productsRouter.get('/', productsController.list); 
 
+//detalle de producto
+productsRouter.get('/:id', productsController.detail);
+productsRouter.delete('/delete/:id', productsController.delete);
+
+//carrito
+productsRouter.get('/carrito', productsController.carrito); 
+
+//crear producto
+productsRouter.get('/crear', productsController.create); 
+productsRouter.post('/crear', productsController.postCreate); 
+
+//editar producto
+productsRouter.get('/editar/:id', productsController.edit);
+productsRouter.put('/editar', productsController.putEdit);
+
+//comprar
+//productsRouter.get('/comprar', productsController);
 
 //productsRouter.get('/:id', listProductsController);//producto individual
 /*ejemplo:

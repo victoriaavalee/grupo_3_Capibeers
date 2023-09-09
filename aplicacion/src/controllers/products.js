@@ -1,24 +1,52 @@
 const products = require ('../data/products.json');
 
-const listProductsController =  (req, res) => {
-    res.render('./products/products'); //listado de productos
-};
+const productsController = {
 
-const detailProductController =  (req, res) => {
-    res.render('./products/detalle-producto'); //producto individual
-};
+    //listado de productos
+    list: function (req, res){
+        res.render('./products/products');
+    },
 
-const carritoProductController =  (req, res) => {
-    res.render('./products/carrito');
-};
+    //detalle de producto 
+    detail: function (req, res){
+        const detailId = +req.params.id;
+        let description = products.find(p => p.id === detailId);
+        res.render('./products/detalle-producto', {description});
+    },
 
-const createProductController =  (req, res) => {
-    res.render('./products/create');
-};
+    delete: function (req, res){
+        const productId = +req.params.id;
+        let productDelete = products.find(p => p.id === productId);
+        res.redirect('/products/detail')
+    },
 
-const buyProductController =  (req, res) => {
-    res.render('./products/comprar');
-};
+    //carrito
+    carrito: function (req, res){
+        res.render('./products/carrito');
+    },
+
+    //crear producto
+    create: function (req, res){
+        res.render('./products/create');
+    },
+
+    postCreate: function (req, res){
+        const newProduct = req.body;
+
+        res.redirect('/');
+    },
+
+    //editar producto
+    edit: function (req, res){
+        const productId = +req.params.id;
+        let productEdit = products.find(p => p.id === productId);
+        res.render('./products/edit-products', {productEdit})
+    },
+
+    putEdit: function (req,res){
+        res.redirect('/products/')
+    }
+}
 
 
 
@@ -39,5 +67,5 @@ module.exports = controller;
 
 
 
-module.exports = {listProductsController,detailProductController,createProductController,buyProductController,carritoProductController};
+module.exports = productsController;
 

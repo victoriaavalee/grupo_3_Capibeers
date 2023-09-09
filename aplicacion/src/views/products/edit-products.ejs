@@ -13,7 +13,7 @@
     <!HEADER/!>
     <%- include('../partials/header')%>
     <h1>Editar Producto</h1>
-    <form>
+    <form action="/products/editar/<%= products.id %>?_method=PUT" method="post">
         <h2>Tipo del producto</h2><br>
         <div class="tipo-producto-edit">
             <label for="tipo-Podructo">Cerveza</label><br>
