@@ -382,7 +382,52 @@ margin-left: 50px;
     width: 200px;
     margin: 0 auto;
 }
+/***************************Carrusel de cervezas*****************************/
 
+.Nuestros-productos{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.Carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+.elementos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 0 auto;
+    margin: 0 50px;
+    background-color:#DFBA69;
+    width: 400px;
+    height: 500px;
+    border-radius: 40px;
+    border: 5px solid #000000;
+}
+
+.cerveza-carrusel{
+    width: 250px;
+    height: 300px;
+    align-self: center;
+    border-radius: 50%;
+    border:5px solid #000000;
+    margin-top: 20px;
+}
+.nombre-carrusel{
+    margin-top: 10px;
+}
+.Datos-cerveza{
+    background-color:#FFFEDF;
+    border-radius: 20px;
+    padding: 10px;
+    border: 3px solid #000;
+}
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 /**************************************************FOOTER**************************************/
 .footer{
     background-color:#5A2E2E;

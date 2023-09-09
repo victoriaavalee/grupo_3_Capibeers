@@ -1,9 +1,52 @@
 [
     {
         "id": 1,
-        "name":"Cerveza Clásica",
-        "price":2.600,
-        "image":"cerveza-basica.png",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    }
+        "email": "ana.abar@gmail.com",
+        "firstName": "Ana",
+        "lastName": "Abar",
+        "age": 21,
+        "category": "Cliente",
+        "image": "AnaAbar.jpg",
+        "password": "contraseña01"
+    },
+    {
+        "id": 2,
+        "email": "eduardo.espeche@gmail.com",
+        "firstName": "Eduardo",
+        "lastName": "Espeche",
+        "age": 25,
+        "category": "Cliente",
+        "image": "EduardoEspeche.jpg",
+        "password": "contraseña02"
+    },
+    {
+        "id": 3,
+        "email": "ivana.ibañez@example.com",
+        "firstName": "Ivana",
+        "lastName": "Ibañez",
+        "age": 30,
+        "category": "Cliente",
+        "image": "IvanaIbañez.jpg",
+        "password": "contraseña03"
+    },
+    {
+        "id": 4,
+        "email": "osvalado.oria@example.com",
+        "firstName": "Osvaldo",
+        "lastName": "Oria",
+        "age": 35,
+        "category": "Cliente",
+        "image": "OsvaldoOria.jpg",
+        "password": "contraseña04"
+    },
+    {
+        "id": 5,
+        "email": "ursula.urquía@example.com",
+        "firstName": "Ursula",
+        "lastName": "Urquía",
+        "age": 28,
+        "category": "Administrador",
+        "image": "UrsulaUrquía.jpg",
+        "password": "contraseña05"
+    } 
 ]

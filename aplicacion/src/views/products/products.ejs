@@ -9,13 +9,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-
-    <!HEADER/!>
+    <!--HEADER/!-->
         <%- include('../partials/header')%>
     <main>
         <h1 id="title">Conocé nuestros productos!</h1>
             <div class="articles">
-                <div id="article">
+                <% for( let i = 0; i< products.length; i++) { %>
+                    <%- include('./product-card',{product:products[i]})%>
+                <% } %>
+
+<!--               <div id="article">
                     <img height="350px" src="/img/cerveza-basica.png" alt="cerveza-clasica">
                     <div id="conteiner">
                         <p id="price">$2.600</p>
@@ -46,9 +49,9 @@
                         <p id="name">Cerveza Roja </p>
                         <p>Descripción corta del producto</p>
                     </div>
-                </artdivicle>
-            </div>
-    <!FOOTER/!>
+                </div>-->
+            </div> 
+    <!--FOOTER/!-->
     <%- include('../partials/footer')%>
 
 </body>

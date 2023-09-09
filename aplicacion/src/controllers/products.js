@@ -1,22 +1,26 @@
 const products = require ('../data/products.json');
+const fs = require('fs');
+const path = require('path');
 
-const listProductsController =  (req, res) => {
-    res.render('./products/products'); //listado de productos
+function listProductsController (req, res) {
+    res.render('./products/products', {
+        products,
+    }); 
 };
 
-const detailProductController =  (req, res) => {
+function detailProductController (req, res) {
     res.render('./products/detalle-producto'); //producto individual
 };
 
-const carritoProductController =  (req, res) => {
+function carritoProductController (req, res) {
     res.render('./products/carrito');
 };
 
-const createProductController =  (req, res) => {
+function createProductController (req, res) {
     res.render('./products/create');
 };
 
-const buyProductController =  (req, res) => {
+function buyProductController (req, res) {
     res.render('./products/comprar');
 };
 
@@ -34,7 +38,7 @@ const controller ={
         logica a implementar
     },
 }
-module.exports = controller;
+module.exports = controller;,
 */
 
 

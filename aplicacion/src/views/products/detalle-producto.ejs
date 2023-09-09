@@ -14,28 +14,17 @@
     <main>
     <div id="contenedor">
         <div id="txt">
-            <h1>Belgian Carpincho</h1>
-            <p>2 € </p>
+            <h1><%=product.name %></h1>
+            <p>><%= "$" + product.price %></p>
             <div id="cart">
-                <h2>Mi Carrito</h2> <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                <ul id="cart-items">
-                    <li id="item">
-                        <span>Producto 1</span>
-                        <span>$2.00</span>
-                    </li>
-                    <li id="item">
-                        <span>Producto 2</span>
-                        <span>$2.00</span>
-                    </li>
-                </ul>
+                <h2>Descripción</h2> 
+                <p><%=product.description %></p>
                 <div id="cart-total">
-                    Total: $4.00
             </div>
         </div>
-        <div id="counter">0</div>
-        <button id="incrementButton">Incrementar</button>
+        <div id="counter">0</div>        <button id="incrementButton">Incrementar</button>
         <button id="decrementButton">Decrementar</button>
-        <script>
+        <script id="incremdecrem">
             const counterElement = document.getElementById('counter');
             const incrementButton = document.getElementById('incrementButton');
             const decrementButton = document.getElementById('decrementButton');   
@@ -59,12 +48,49 @@
             <div>
                 <button type="button" id="agregar-carrito">Agregar al carrito</button>
             </div>
-        <img id="image" src="/img/carpinbeer.png"alt="FotoDeMuestra">
+        <img id="image" src="/img/<%=product.image %>"alt="FotoDeMuestra">
         </div>
-        <section id="productosrelacionados">
-            <h1>Productos Relacionados</h1>
-            <img src="/img/Cervezaa.png" height="250px" alt="FotoRelacionada1">
-        </section>
+        <!--Carrusel cervezas-->
+        <h1 class="Nuestros-productos">NUESTROS PRODUCTOS</h1>
+        <div class="Carrusel">
+
+            <div class="elementos">
+                <img src="/img/Cervezaa.png" alt="" class="cerveza-carrusel">
+
+                <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
+                <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
+            </div>
+            <div class="elementos">
+                <img src="/img/Cervezaa.png" alt="" class="cerveza-carrusel">
+
+                <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
+                <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
+            </div>
+            <div class="elementos">
+                <img src="/img/Cervezaa.png" alt="" class="cerveza-carrusel">
+
+                <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
+                <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
+            </div>
+            <div class="elementos">
+                <img src="/img/Cervezaa.png" alt="" class="cerveza-carrusel">
+
+                <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
+                <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
+            </div>
+            <div class="elementos">
+                <img src="/img/Cervezaa.png" alt="" class="cerveza-carrusel">
+
+                <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
+                <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
+            </div>
+            <div class="elementos">
+                <img src="/img/Cervezaa.png" alt="" class="cerveza-carrusel">
+
+                <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
+                <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
+            </div>
+        </div>
     </main>
     <!FOOTER/!>
         <%- include('../partials/footer')%>

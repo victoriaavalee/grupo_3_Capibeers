@@ -1,5 +1,5 @@
 const express = require ('express');
-const {listProductsController, detailProductController, createProductController,buyProductController,carritoProductController,}= require('../controllers/products')
+const {listProductsController, detailProductController,createProductController,buyProductController,carritoProductController,}= require('../controllers/products')
 
 const productsRouter = express.Router();
 
@@ -15,7 +15,7 @@ productsRouter.get('/comprar', buyProductController);//comprar
 productsRouter.get('/', ProductsController.mostrarTodos)
 productsRouter.get('/:id', ProductsController.mostrarPorId)
 productsRouter.get('/', ProductsController.createProduct)
-*/
+
 
 
 /*appe.get('/productos/id:Producto/comentraio/:idComentario?', function (req,res){
