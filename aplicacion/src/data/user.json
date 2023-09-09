@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "name":"Cerveza Clásica",
+        "price":2.600,
+        "image":"cerveza-basica.png",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+]
