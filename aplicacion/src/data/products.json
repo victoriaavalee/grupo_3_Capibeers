@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name":"Cerveza Clásica",
+        "price":2.600,
+        "image":"cerveza-basica.png",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": 2,
+        "name":"Cerveza Negra",
+        "price":1.750,
+        "image":"carpinbeer.png",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": 3,
+        "name":"Cerveza Rubia",
+        "price":2.6580,
+        "image":"cerveza-basica.png",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": 4,
+        "name":"Cerveza Roja",
+        "price":1.600,
+        "image":"carpinbeer.png",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+]

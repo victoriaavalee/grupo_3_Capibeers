@@ -1,5 +1,4 @@
-const path = require('path');
-
+const products = require ('../data/products.json');
 
 const listProductsController =  (req, res) => {
     res.render('./products/products'); //listado de productos
