@@ -1,7 +1,16 @@
 const path = require('path');
 
+
 const listProductsController =  (req, res) => {
-    res.render('./products/products');
+    res.render('./products/products'); //listado de productos
+};
+
+const detailProductController =  (req, res) => {
+    res.render('./products/detalle-producto'); //producto individual
+};
+
+const carritoProductController =  (req, res) => {
+    res.render('./products/carrito');
 };
 
 const createProductController =  (req, res) => {
@@ -12,19 +21,24 @@ const buyProductController =  (req, res) => {
     res.render('./products/comprar');
 };
 
-const carritoProductController =  (req, res) => {
-    res.render('./products/carrito');
-};
 
-const detailProduct =  (req, res) => { //PRUEBA DE ID PARA PRODUCTOS
-    const id = req.params.identificador;
-    if (id === "comentarios"){ //http://localhost:8000/products/comentarios
-        res.send(`<h1>Bienvenido a la secion de comentarios del producto </h1>`); 
-    }else{
-        res.send(`<h1>Estas viendo el producto con id ${id}</h1>`);
-    }
-};
 
-module.exports = {listProductsController,buyProductController,carritoProductController,detailProduct,createProductController};
-//module.exports = listProductsController;
-//module.exports = buyProductController;
+/*ejempplo
+const controller ={
+    mostrarTodos:(req,res)=>{
+        logica a implementar
+    },
+    mostrarPorId: (req,res)=>{
+        logica a implementar
+    },
+    createProduct:(req,res)=>{
+        logica a implementar
+    },
+}
+module.exports = controller;
+*/
+
+
+
+module.exports = {listProductsController,detailProductController,createProductController,buyProductController,carritoProductController};
+

@@ -337,6 +337,7 @@ main {text-align: center; font-size: 17px;}
 .title{
     font-weight: bold;
     margin-bottom: 20px;
+    color:#434343;
 }
 
 .texto{
@@ -344,6 +345,15 @@ main {text-align: center; font-size: 17px;}
     width: 35%;
     font-size: 15px;
     margin-bottom: 20px;
+}
+
+input{
+    width: 20%;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #434343;
+    color: #434343;
 }
 
 #ingresar{

@@ -339,7 +339,8 @@ main {
 }
 
 .title{
-    font-size: 30px;
+    color: #434343;
+    font-size: 38px;
     font-weight: bold;
     margin: 20px;
 }
@@ -353,7 +354,25 @@ main {
     margin: 15px;
 }
 
+#div-password input{
+    width: 20%;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #434343;
+    color: #434343;
+}
+#div-user input{
+    width: 20%;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #434343;
+    color: #434343;
+}
+
 #remember-user-password{
+    text-align: center;
     margin: 15px;
     font-size: 14px;
 }
@@ -443,26 +462,3 @@ button:hover{
     text-align: center;
     margin-top: 100px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

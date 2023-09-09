@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.get('/', indexController);
 router.get('/home', homeController);
-router.get('/products', listProductsController);
-router.get('/user', userController);
+router.get('/products', listProductsController);//listado de productos
+router.get('/user', userController); //perfil de usuario
 
 module.exports = router; 

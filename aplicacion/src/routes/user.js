@@ -6,7 +6,7 @@ const userRouter = express.Router();
 userRouter.get('/', userController); //aqui iria el perfil de usuario
 userRouter.get('/login', loginController);
 userRouter.get('/registro', registroController);
-userRouter.get('/restablecerClave', restablecerClaveController);
+userRouter.get('/restablecer-clave', restablecerClaveController);
 
 
 module.exports = userRouter;

@@ -13,7 +13,6 @@ body {
     line-height: 1.5;
 }
 
-
 a {
     color: #262626;
     text-decoration: none;
@@ -31,8 +30,7 @@ ul {
     padding-right: 50px;
 }
 
-/* Nav */
-
+  /* Nav */
 .main-nav {
     display: flex;
     height: 60px;
@@ -198,6 +196,7 @@ justify-content: space-between;
 }
 /*Diseño botones*/
 
+
 /*Contacto*/
 
 .Contacto:hover {
@@ -267,8 +266,8 @@ justify-content: space-between;
     background: #DFBA69;
 }
 
-/*Indumentaria*/
 
+/*Indumentaria*/
 .Indumentaria:hover {
     background-color:  #FFFEDF;
     padding: 24px 10px;
@@ -335,50 +334,57 @@ justify-content: space-between;
     background:  #DFBA69;
 }
 
-/************************************************MAIN*******************************/
+/**************************************************MAIN**************************************/
 
-#title{
-    color: #434343;
-    font-size: 38px;
-    font-weight: bold;
-    margin: 20px;
-    text-align: center;
+
+#contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFEDF;
 }
 
-#article{
-    text-align: center;
-    background-color: white;
-    padding: 30px;
-    width: 40%;
-    border-radius: 8px;
-    margin: auto;
-    background-color: #DFBA69;
-    box-shadow: 0px 0px 20px rgb(37, 37, 37);
-    cursor: pointer;
-}
-#article{
-    margin-top: 20px;
-    margin-bottom: 20px;
+#txt{
+margin-left: 50px;
 }
 
-#lata{
-    background-color: white;
+#cart {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem;
 }
 
-#name{
-    font-weight: bold;
-    font-size: 17px;
+#image{
+    width: 350px;
+    height: 310px;
+}
+.cart h2 {
+    margin-top: 0;
 }
 
-#price{
-    font-weight: bold;
-    color:rgb(28, 193, 28);
-    font-size: 18px;
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+#cart-total {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+#productosrelacionados{
+    width: 200px;
+    margin: 0 auto;
 }
 
 /**************************************************FOOTER**************************************/
 .footer{
-    margin-top: 20px;
     background-color:#5A2E2E;
     padding: 80px 0;
 }
