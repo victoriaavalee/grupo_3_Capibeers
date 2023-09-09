@@ -11,4 +11,4 @@ router.get('/home', homeController);
 router.get('/products', productsController.list);//listado de productos
 router.get('/user', userController); //perfil de usuario
 
-module.exports = router; 
+module.exports = router;

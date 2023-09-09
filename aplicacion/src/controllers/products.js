@@ -6,9 +6,7 @@ const productsController = {
 
     //listado de productos
     list: function (req, res){
-        res.render('./products/products',{
-            products
-        });
+        res.render('./products/products',{products});
     },
 
     //detalle de producto 
@@ -53,23 +51,4 @@ const productsController = {
 }
 
 
-
-/*ejempplo
-const controller ={
-    mostrarTodos:(req,res)=>{
-        logica a implementar
-    },
-    mostrarPorId: (req,res)=>{
-        logica a implementar
-    },
-    createProduct:(req,res)=>{
-        logica a implementar
-    },
-}
-module.exports = controller;,
-*/
-
-
-
 module.exports = productsController;
-
