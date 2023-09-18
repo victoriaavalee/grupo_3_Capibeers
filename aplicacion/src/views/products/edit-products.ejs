@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capibeers-Editar Producto</title>
-    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/edit-products.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
 </head>
@@ -13,7 +14,7 @@
     <!HEADER/!>
     <%- include('../partials/header')%>
     <h1>Editar Producto</h1>
-    <form action="/products/editar/<%= products.id %>?_method=PUT" method="post">
+    <form action="/products/editar/<%= productEdit.id %>?_method=PUT" method="post">
         <h2>Tipo del producto</h2><br>
         <div class="tipo-producto-edit">
             <label for="tipo-Podructo">Cerveza</label><br>
