@@ -10,24 +10,24 @@ const productsController = {
     },
 
     //detalle de producto 
-    detail: function (req, res){
+    /*detail: function (req, res){
         const detailId = +req.params.id;
-        let description = products.find(p => p.id === detailId);
-        res.render('./products/detalle-producto', {description});
+        let productDetail = products.find(p => p.id === detailId);
+        res.render('./products/detalle-producto', {productDetail})
     },
 
     delete: function (req, res){
         const productId = +req.params.id;
         let productDelete = products.find(p => p.id === productId);
         res.redirect('/products/detail')
-    },
+    },*/
 
     //carrito
     carrito: function (req, res){
         res.render('./products/carrito');
     },
 
-    //crear producto
+   //crear producto
     create: function (req, res){
         res.render('./products/create');
     },
@@ -35,7 +35,7 @@ const productsController = {
     postCreate: function (req, res){
         const newProduct = req.body;
 
-        res.redirect('/');
+        res.redirect('/products/');
     },
 
     //editar producto
@@ -46,6 +46,8 @@ const productsController = {
     },
 
     putEdit: function (req,res){
+        const productId = +req.params.id;
+        const edit = req.body;
         res.redirect('/products/')
     }
 }
