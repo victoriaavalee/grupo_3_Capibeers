@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    /*background-color: #005227;*/
+    /*background-color: Verde oscuro #005227; o verde olvida claro #94B742*/
     background-image: url('../img/prueba1.jpg'); /*hay 3 tipos de imagenes de prueba, falta elegir*/
     background-size: cover;
     backdrop-filter: blur(5px);
@@ -31,26 +31,29 @@ a{
 
 button {
     font-size: 30px;
-    padding: 10px 80px;
+    padding: 10px 20%;
     margin: 10px;
     border: none;
     border: 4px solid white;
-    box-shadow: 0px 0px 10px rgb(100, 100, 150);
+    box-shadow: 0px 0px 15px rgb(17, 17, 18);
 }
 
 button:hover{
     background-color:#9e6730;
-    transition-duration: 0.4s;
 }
 
 .Si {
     background-color: #cba349;
     font-size: 30px;
+    margin-top: 30px;
+    /*width: 35%;*/
 }
 
 .No {
     background-color: #cba349;
     font-size: 30px;
+    margin-right: 10px;
+    /*width: 35%;*/
 }
 
 #text-end{

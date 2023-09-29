@@ -1,41 +1,27 @@
 <header>
     <div class="container">
         <!-- Nav -->
-        <nav class="main-nav">
-            <ul class="main-menu">
-                <li><a class="redes" href="https://www.instagram.com/capibeers"><i
-                            class="fa-brands fa-instagram"></i></a></li>
-                <li><a class="redes" href="https://twitter.com/capibeers"><i class="fa-brands fa-x-twitter"></i></a>
-                </li>
-                <li> <a class="redes" href="https://www.facebook.com/profile.php?id=100095248490157"><i
-                            class="fa-brands fa-facebook"></i></a></li>
-                <li><a class="redes" href="https://open.spotify.com/user/31r6oywah4insuhfwfnr7junotua?si=cbc1014e57454f80"><i class="fa-brands fa-spotify"></i></a>
-                </li>
+        <nav class="main-nav"> 
+            <!--Redes sociales-->
+            <ul class="left-menu">
+                <li><a class="redes" href="https://www.instagram.com/capibeers"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a class="redes" href="https://twitter.com/capibeers"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a class="redes" href="https://www.facebook.com/profile.php?id=100095248490157"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a class="redes" href="https://open.spotify.com/user/31r6oywah4insuhfwfnr7junotua?si=cbc1014e57454f80"><i class="fa-brands fa-spotify"></i></a></li>
             </ul>
+            <!--Buscar, login, carrito-->
             <ul class="right-menu">
-                <li>
-                    <a href="#">
-                        <i class="fas fa-search"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="/user/login">
-                        <i class="fa-regular fa-circle-user"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="/products/carrito">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                </li>
+                <li><input type="text" placeholder="Buscar" class="search-bar"></li>
+                <li><a href="#"><i class="fas fa-search"></i></a></li>
+                <li><a href="/user/login"><i class="fa-regular fa-circle-user"></i></a></li>
+                <li><a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
     </div>
-    
-    <div class="logo">
-        <a href="/home"><img class="logo" src="/img/logo.png" alt=""></a>
+    <div >
+        <a class="logo" href="/home"><img class="logo" src="/img/logo.png" alt=""></a>
     </div>
-    <!--opciones -->
+    <!--opciones izquierda-->
     <div class="opciones">
         <div class="opciones-izquierda">
             <ul>
@@ -47,7 +33,7 @@
                         <li><a class="submenu3" href="#">HORARIOS</a></li>
                     </ul>
                 </li>
-                <li><a class="Productos" href="#">PRODUCTOS</a>
+                <li><a class="Productos" href="/products">PRODUCTOS</a>
                     <ul>
                         <li><a href="#">CERVEZAS EN LATAS</a>
                             <ul>
@@ -68,8 +54,8 @@
                 <li><a class="Ofertas" href="#">OFERTAS</a></li>
             </ul>
         </div>
+        <!--opciones derecha-->
         <div class="opciones-derecha">
-
             <ul>
                 <li><a class="Indumentaria" href="#">ACCESORIOS</a>
                     <ul>

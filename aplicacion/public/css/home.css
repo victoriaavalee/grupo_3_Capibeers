@@ -1,74 +1,87 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: #FFFEDF;
-    color: #000;
-    font-size: 15px;
-    line-height: 1.5;
-  }
-  
-  a {
-    color: #262626;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  .container {
-    max-width: 100;
-    padding: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
+/*General*/
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-  
-  /* Nav */
+
+body {
+  background: white;
+  font-size: 16px;
+}
+
+a {
+  color: #cba349;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Nav */
+.container {
+  position: fixed;
+  width: 100%;
+  background-color: #222;
+  height: 45px;
+}
+
 .main-nav {
-    display: flex;
-    height: 60px;
-    padding: 20px;
-    font-size: 16px;
+  display: flex;
 }
+
 .main-nav ul {
-    display: flex;
+  display: flex;
 }
+
 .main-nav ul li {
-    padding:10px;
+  display: flex;
+  margin-right: 15px;
 } 
-.main-nav ul li a:hover {
-    border-bottom: 2px solid #262626;
-} 
-.main-nav ul.main-menu {
-    flex: 1;
-    margin-left: 20px;
+
+.right-menu {
+  margin-right: 40px;
+  margin: 10px;
 }
-.logo{
-    height: 150px;
-    display: flex;
-    justify-content: center;
+
+.left-menu {
+  flex: 1;
+  margin: 10px;
+  margin-left: 40px;
+}
+
+.main-nav ul li a:hover {
+  border-bottom: 2px solid white;
+} 
+
+.search-bar{
+  border: 1;
+}
+
+/*Nav products*/
+.logo {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 18px;
 }
 
 /*opciones al lado del logo*/
 .opciones{
   display: flex;
-justify-content: space-between;
-  background:  #FFFEDF;
+  justify-content: space-between;
+  background: white;
 }
 
 /*opciones lado izquierdo*/
-
 .opciones-izquierda{
   margin-left: 350px;
 }
-.opciones-izquierda ul
-{
+
+.opciones-izquierda ul{
 	list-style:none;
 	position:relative;
 	float:left;
@@ -76,8 +89,7 @@ justify-content: space-between;
 	padding:0
 }
 
-.opciones-izquierda ul a
-{
+.opciones-izquierda ul a{
 	display:block;
 	color:#000000;
 	text-decoration:none;
@@ -87,8 +99,7 @@ justify-content: space-between;
 	padding:0 15px;
 }
 
-.opciones-izquierda ul li
-{
+.opciones-izquierda ul li{
 	position:relative;
 	float:left;
 	margin:0;
@@ -96,8 +107,7 @@ justify-content: space-between;
 }
 
 
-.opciones-izquierda ul ul
-{
+.opciones-izquierda ul ul{
   transition: 0.4s;
 	display:none;
 	position:absolute;
@@ -107,35 +117,32 @@ justify-content: space-between;
 	padding:0
 }
 
-.opciones-izquierda ul ul li
-{
+.opciones-izquierda ul ul li{
   float: none;
 	width:100px
 }
 
-.opciones-izquierda ul ul a
-{
+.opciones-izquierda ul ul a{
 	line-height:120%;
 	padding:10px 15px
 }
 
-.opciones-izquierda ul ul ul
-{
+.opciones-izquierda ul ul ul{
 	top:0;
 	left:100%
 }
 
-.opciones-izquierda ul li:hover > ul
-{
+.opciones-izquierda ul li:hover > ul{
 	display:block
 }
+
 /*Opciones lado Derecho*/
 
 .opciones-derecha{
   margin-right:300px;
 }
-.opciones-derecha ul
-{
+
+.opciones-derecha ul{
 	list-style:none;
 	position:relative;
 	float:left;
@@ -143,10 +150,9 @@ justify-content: space-between;
 	padding:0
 }
 
-.opciones-derecha ul a
-{
+.opciones-derecha ul a{
 	display:block;
-	color:#333;
+	color:black;
 	text-decoration:none;
 	font-weight:700;
 	font-size:12px;
@@ -154,15 +160,14 @@ justify-content: space-between;
 	padding:0 15px;
 }
 
-.opciones-derecha ul li
-{
+.opciones-derecha ul li{
 	position:relative;
 	float:left;
 	margin:0;
 	padding:0
 }
-.opciones-derecha ul ul
-{
+
+.opciones-derecha ul ul{
 	display:none;
 	position:absolute;
 	top:100%;
@@ -171,33 +176,25 @@ justify-content: space-between;
 	padding:0
 }
 
-.opciones-derecha ul ul li
-{
+.opciones-derecha ul ul li{
 	float:none;
 	width:100px
 }
 
-.opciones-derecha ul ul a
-{
+.opciones-derecha ul ul a{
 	line-height:120%;
 	padding:10px 15px
 }
 
-.opciones-derecha ul ul ul
-{
+.opciones-derecha ul ul ul{
 	top:0;
 	left:-100%
 }
 
-.opciones-derecha ul li:hover > ul
-{
+.opciones-derecha ul li:hover > ul{
 	display:block
 }
 /*Diseño botones*/
-
-
-
-
 
 
 
@@ -208,11 +205,11 @@ justify-content: space-between;
 }
 .Contacto {
   transition: 0.4s;
-  color: #000000;
+  color: black;
   text-decoration: none;
   padding: 0 10px;
   margin: 0 10px;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 .Contacto {
   margin-top: 40px;
@@ -236,7 +233,7 @@ justify-content: space-between;
   text-decoration: none;
   padding: 0 10px;
   margin: 0 10px;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 .Productos {
   margin-top: 20px;
@@ -259,7 +256,7 @@ justify-content: space-between;
   text-decoration: none;
   padding: 0 10px;
   margin: 0 10px;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 .Ofertas {
   padding: 24px;
@@ -281,7 +278,7 @@ justify-content: space-between;
   text-decoration: none;
   padding: 0 10px;
   margin: 0 10px;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 .Indumentaria {
   padding: 24px;
@@ -303,7 +300,7 @@ justify-content: space-between;
   text-decoration: none;
   padding: 0 10px;
   margin: 0 10px;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 .Accesorios {
   margin-top: 20px;
@@ -318,7 +315,6 @@ justify-content: space-between;
 
 /*Preguntas*/
 
-
 .Preguntas:hover {
   background-color: #FFFEDF;
   padding: 24px 10px;
@@ -329,7 +325,7 @@ justify-content: space-between;
   text-decoration: none;
   padding: 0 10px;
   margin: 0 10px;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 .Preguntas {
   margin-top: 40px;
@@ -347,14 +343,6 @@ justify-content: space-between;
 
 /*Cerveza mas vendida*/
 
-.Linea-baja{
-  color: #000;
-  height: 5px;
-  width: 80%;
-  background-color: #000;
-  margin-left: auto;
-  margin-right: auto;
-}
 .Linea-alta{
   color: #000;
   height: 5px;
@@ -365,8 +353,8 @@ justify-content: space-between;
 }
 /*****************O ESTE ES EL BODYYY???****/
 .Cerveza-mas-vendida{
-text-align: center;
-margin-top: 80px;
+  text-align: center;
+  margin-top: 80px;
 }
 .centrar-izquierda{
   margin-top: 111px;
@@ -375,8 +363,7 @@ margin-top: 80px;
   margin-top: 30px;
 }
 .Descripcion{
-  background-color:#FFFEDF;
-  color: #fff;
+  background-color:white;
   padding: 50px 20px;
 }
 .Descripcion .fila{
@@ -387,12 +374,7 @@ margin-top: 80px;
   width: 49%;
   padding: 0 20px;
 }
-.Descripcion .fila .izquierda{
-  border-right:  2px solid #000000;
-}
-.Descripcion .fila .derecha{
-  border-left: 2px solid #000000;
-}
+
 .Descripcion .fila .item{
   padding: 25px;
   margin-bottom: 150px;
@@ -464,6 +446,14 @@ margin-top: 80px;
   border: 3px solid black;
 }
 
+.Linea-baja{
+  color: #000;
+  height: 5px;
+  width: 80%;
+  background-color: #000;
+  margin-left: auto;
+  margin-right: auto;
+}
 /***************************Carrusel de cervezas*****************************/
 
 .Nuestros-productos{
@@ -512,8 +502,8 @@ margin-top: 80px;
 }
 /*************************************FOOTER************************************/
 .footer{
-  background-color:#5A2E2E;
-  padding: 80px 0;
+  background-color:#222;
+  padding: 20px;
 }
 .footer-row{
   display: flex;
@@ -521,11 +511,10 @@ margin-top: 80px;
 }
 .footerlink{
   width: 25%;
-  padding: 0 15px;
 }
 .footerlink h4 {
   font-size: 20px;
-  color: #ffffff;
+  color: #cba349;
   margin-bottom: 25px;
   font-weight: 500;
   border-bottom: 2px solid black;
@@ -548,22 +537,21 @@ margin-top: 80px;
   display: inline-block;
   min-height: 40px;
   width: 40px;
-  background-color: #2A2C31;
   margin: 0 10px 10px 0;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
   color: white;
-  transition: all .5s ease;
+  transition: all .2s ease;
 }
 .social-links a:hover{
-  background-color: #FFFEDF;
+  background-color: #cba349;
 }
 .mapa{
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 #copyright{
   text-align: center;
-  margin-top: 100px;
+  color:white;
 }
