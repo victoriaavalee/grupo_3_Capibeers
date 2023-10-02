@@ -200,7 +200,7 @@ ul {
 
 /*Contacto*/
 .Contacto:hover {
-  background-color: #FFFEDF;
+  background-color: #9e6730;
   padding: 24px 10px;
 }
 .Contacto {
@@ -224,7 +224,7 @@ ul {
 /*Producto*/
 
 .Productos:hover {
-  background-color: #FFFEDF;
+  background-color: #9e6730;
   padding: 24px 10px;
 }
 .Productos {
@@ -247,7 +247,7 @@ ul {
 /*Ofertas*/
 
 .Ofertas:hover {
-  background-color:#FFFEDF;
+  background-color:#9e6730;
   padding: 24px 10px;
 }
 .Ofertas {
@@ -269,7 +269,7 @@ ul {
 
 /*Indumentaria*/
 .Indumentaria:hover {
-  background-color:  #FFFEDF;
+  background-color:  #9e6730;
   padding: 24px 10px;
 }
 .Indumentaria {
@@ -291,7 +291,7 @@ ul {
 /*Accesorios*/
 
 .Accesorios:hover {
-  background-color: #FFFEDF;
+  background-color: #9e6730;
   padding: 24px 10px;
 }
 .Accesorios {
@@ -316,7 +316,7 @@ ul {
 /*Preguntas*/
 
 .Preguntas:hover {
-  background-color: #FFFEDF;
+  background-color: #9e6730;
   padding: 24px 10px;
 }
 .Preguntas {
@@ -357,7 +357,7 @@ ul {
   margin-top: 80px;
 }
 .centrar-izquierda{
-  margin-top: 111px;
+  margin-top: 180px;
 }
 .centrar-derecha{
   margin-top: 30px;
@@ -377,20 +377,20 @@ ul {
 
 .Descripcion .fila .item{
   padding: 25px;
-  margin-bottom: 150px;
-  background-color: #DFBA69;
+  margin-bottom: 200px;
+  background-color: #333;
   position: relative;
   margin-top: 10px;
-  border-radius: 60px;
+  border-radius: 3px;
 }
-.Descripcion .fila .item .nombre-cerveza{
+.Descripcion .fila .item .title-text{
   display: block;
   margin-bottom: 10px;
-  color: rgb(0, 0, 0);
+  color: #DFBA69;
 }
 .Descripcion .fila .item p{
   line-height: 24px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .Descripcion .fila .izq{
   border-right: 2px solid #000000;
@@ -438,14 +438,18 @@ ul {
   position: relative;
   bottom: 4px;
 }
-.foto-cerveza{
-  margin-left: 210px;
-  width: 200px;
-  height: 250px;
-  border-radius: 50%;
-  border: 3px solid black;
+.foto-banner{
+  /*margin-left: 10px;
+  height: 250px;*/
+  border-radius: 3px;
 }
 
+.foto-banner-left{
+  margin-left: 12%;
+}
+.foto-banner-rigth{
+margin-left: 30px;
+}
 .Linea-baja{
   color: #000;
   height: 5px;
@@ -453,12 +457,13 @@ ul {
   background-color: #000;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0px;
 }
-/***************************Carrusel de cervezas*****************************/
+/***************************Carrousel de cervezas*****************************/
 
 .Nuestros-productos{
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 .Carrusel{
   display: flex;
@@ -466,34 +471,35 @@ ul {
   overflow: scroll;
 }
 .elementos{
+  border-right: 2px solid white;
+  margin-right: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex: 1 0 auto;
-  margin: 0 50px;
-  background-color:#DFBA69;
+  margin: 0 45px;
+  margin-bottom: 20px;
+  background-color:#333;
   width: 400px;
   height: 500px;
-  border-radius: 40px;
-  border: 5px solid #000000;
-
+  border-radius: 3px;
 }
 .cerveza-carrusel{
   width: 250px;
   height: 300px;
   align-self: center;
-  border-radius: 50%;
-  border:5px solid #000000;
+  border:3px;
   margin-top: 20px;
 }
 .nombre-carrusel{
   margin-top: 10px;
+  color:#cba349;
 }
 .Datos-cerveza{
-  background-color:#FFFEDF;
-  border-radius: 20px;
+  background-color:#555;
   padding: 10px;
-  border: 3px solid #000;
+  margin-bottom: 10px;
+  color:white;
 }
 
 .contenedor{

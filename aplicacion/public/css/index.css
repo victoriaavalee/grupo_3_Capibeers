@@ -8,7 +8,7 @@ body {
     justify-content: center;
     height: 100vh;
     /*background-color: Verde oscuro #005227; o verde olvida claro #94B742*/
-    background-image: url('../img/prueba1.jpg'); /*hay 3 tipos de imagenes de prueba, falta elegir*/
+    background-image: url('../img/index-background.jpg');
     background-size: cover;
     backdrop-filter: blur(5px);
 }

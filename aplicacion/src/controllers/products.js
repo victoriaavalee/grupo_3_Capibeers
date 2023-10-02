@@ -10,7 +10,7 @@ const productsController = {
     },
 
     //detalle de producto 
-    /*detail: function (req, res){
+    detail: function (req, res){
         const detailId = +req.params.id;
         let productDetail = products.find(p => p.id === detailId);
         res.render('./products/detalle-producto', {productDetail})
@@ -20,7 +20,7 @@ const productsController = {
         const productId = +req.params.id;
         let productDelete = products.find(p => p.id === productId);
         res.redirect('/products/detail')
-    },*/
+    },
 
     //carrito
     carrito: function (req, res){
@@ -55,5 +55,3 @@ const productsController = {
 
 module.exports = productsController;
 
-
-module.exports = productsController;

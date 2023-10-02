@@ -2,8 +2,8 @@ const express = require ('express');
 //rutas
 const router = require('./routes');
 const homeRouter = require ('./routes/home');
-const productsRouter = require('./routes/products');
-const userRouter = require('./routes/user');
+//const productsRouter = require('./routes/products');
+//const userRouter = require('./routes/user');
 //const methodOverride = require('method-override')
 
 const app = express ();
@@ -24,9 +24,9 @@ app.use ('/',router);
 
 app.use('/home',homeRouter);
 
-app.use ('/products',productsRouter);
+//app.use ('/products',productsRouter);
 
-app.use('/user', userRouter)
+//app.use('/user', userRouter)
 
 app.listen (PORT, () => {
     console.log (`[server] corriendo en el puerto: ${PORT}`);
