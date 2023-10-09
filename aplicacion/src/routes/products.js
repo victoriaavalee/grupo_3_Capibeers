@@ -7,8 +7,8 @@ const productsRouter = express.Router();
 productsRouter.get('/', productsController.list); 
 
 //detalle de producto NO ANDAN
-/*productsRouter.get('/:id', productsController.detail);
-productsRouter.delete('/delete/:id', productsController.delete);*/
+productsRouter.get('/:id', productsController.detail);
+productsRouter.delete('/delete/:id', productsController.delete);
 
 //carrito SACAR
 productsRouter.get('/carrito', productsController.carrito); 

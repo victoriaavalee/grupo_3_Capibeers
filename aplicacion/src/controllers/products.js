@@ -27,7 +27,7 @@ const productsController = {
         res.render('./products/carrito');
     },
 
-   //crear producto
+    //crear producto
     create: function (req, res){
         res.render('./products/create');
     },
