@@ -1,10 +1,13 @@
-const indexController =  (req, res) => {
-    res.render('index'); //esto usar al archivo index.ejs
+const indexController = (req, res) =>{
+    res.render('index');
 };
 
-module.exports = indexController;
+module.exports = {
+    indexController,
+};
+
 /*
-const  controller ={
+function  controller ={
     index: (req,res) => {
         return res.render('index');
     },

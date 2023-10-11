@@ -1,30 +1,98 @@
 [
     {
         "id":1,
-        "name":"Cerveza Clásica",
+        "name":"Cerveza Botella Andes",
         "price":2600,
-        "image":"cerveza-basica.png",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "image":"botella-andes.jpg",
+        "fabricante": "Quilmes",
+        "ingredientes": "Uva, Agua, Malta de Cebada tostada, Lúpulo y levadura",
+        "origen": "Argentina",
+        "description":"Está hecha con naranjas de estación y quinotos que le dan el cítrico ideal, sumado a un toque de jengibre que la hace más frrrrresquita, ideal para dias de verano."
     },
     {
         "id":2,
-        "name":"Cerveza Negra",
+        "name":"Cerveza Botella Brahma",
         "price":1750,
-        "image":"carpinbeer.png",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "image":"botella-brahma.jpg",
+        "fabricante": "AmBev",
+        "ingredientes": "Agua, malta, maíz y lúpulo",
+        "origen": "Brasil",
+        "description":"Es una cerveza de tipo Pilsner y con sabor a Brasil. Es suave, refrescante y ligera."
     },
     {
         "id":3,
-        "name":"Cerveza Rubia",
+        "name":"Cerveza Botella Corona",
         "price":2658,
-        "image":"cerveza-basica.png",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "image":"botella-corona.jpg",
+        "fabricante": "Quilmes",
+        "ingredientes": "agua, malta de cebada, maíz, arroz y extracto de lúpulo.",
+        "origen": "Mexico",
+        "description":"Cerveza 100% mexicana con un sabor inconfundible y refrescante."
     },
     {
         "id":4,
-        "name":"Cerveza Roja",
+        "name":"Cerveza Botella Heineken",
         "price":1600,
-        "image":"carpinbeer.png",
+        "image":"botella-heineken.jpg",
+        "fabricante": "",
+        "ingredientes": "cebada, lúpulo y agua.",
+        "origen": "Paises Bajos",
+        "description":"Es una cerveza tipo Pilsen, que sigue los estándares de mas alta calidad, con ingredientes 100% naturales."
+    },
+    {
+        "id":5,
+        "name":"Cerveza Botella Imperial",
+        "price":1600,
+        "image":"botella-imperial.jpg",
+        "description":"Es una cerveza fabricada en Argentina con malta de calidad teniendo un sabor equilibrado y un brillante color dorado."
+    },
+    {
+        "id":6,
+        "name":"Cerveza Botella Quilmes",
+        "price":1600,
+        "image":"botella-quilmes.jpg",
+        "description":"Es una cerveza argentina de ingredientes argentinos. Es de sabor refrescante, con un sabor equilibrado entre aroma, suavidad y amargor."
+    },
+    {
+        "id":7,
+        "name":"Cerveza Lata Gauter",
+        "price":1600,
+        "image":"lata-gauter.jpg",
+        "description":"Es una cerveza elaborada con ingredientes naturales, es libre de gluten y apta para celiacos."
+    },
+    {
+        "id":8,
+        "name":"Cerveza Lata Heineken",
+        "price":1600,
+        "image":"lata-heineken.jpg",
+        "description":"Es una cerveza tipo Pilsen, que sigue los estándares de mas alta calidad, con ingredientes 100% naturales."
+    },
+    {
+        "id":9,
+        "name":"Cerveza Lata Patagonia",
+        "price":1600,
+        "image":"lata-patagonia.jpg",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id":10,
+        "name":"Cerveza Lata Salta Cultiva",
+        "price":1600,
+        "image":"lata-saltaCultiva.jpg",
+        "description":"Una cerveza de origen salteño que ofrece un nuevo sabor gracias al toque de los ingredientes propios de la región."
+    },
+    {
+        "id":11,
+        "name":"Cerveza Lata Salta Rubia",
+        "price":1600,
+        "image":"lata-saltaRubia.jpg",
+        "description":"Una cerveza de origen salteño que ofrece un nuevo sabor gracias al toque de los ingredientes propios de la región."
+    },
+    {
+        "id":12,
+        "name":"Cerveza Lata Stella Artois",
+        "price":1600,
+        "image":"lata-stellaArtois.jpg",
+        "description":"Con su maravilloso aroma floral, dulzor de malta bien equilibrado, amargor de lúpulo crujiente y un final suave y seco, Stella Artois es la cerveza perfecta para acompañar comida y amigos."
     }
 ]

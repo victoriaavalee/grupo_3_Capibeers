@@ -1,4 +1,4 @@
-/******************************************HEADER************************************/
+/****************************************************HEADER**********************************************/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -198,6 +198,7 @@ justify-content: space-between;
 
 
 /*Contacto*/
+
 .Contacto:hover {
     background-color: #FFFEDF;
     padding: 24px 10px;
@@ -265,6 +266,7 @@ justify-content: space-between;
     background: #DFBA69;
 }
 
+
 /*Indumentaria*/
 .Indumentaria:hover {
     background-color:  #FFFEDF;
@@ -331,53 +333,9 @@ justify-content: space-between;
 .Preguntas{
     background:  #DFBA69;
 }
+/**************************************************MAIN**************************************/
 
-/**************************************MAIN**************************************************/
-main {text-align: center; font-size: 17px;}
-.title{
-    font-weight: bold;
-    margin-bottom: 20px;
-    color:#434343;
-}
-
-.texto{
-    margin: 0 auto;
-    width: 35%;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-input{
-    width: 20%;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 5px;
-    border: 1px solid #434343;
-    color: #434343;
-}
-
-#ingresar{
-    font-size: 15px;
-    font-weight: bold;
-}
-
-button{
-    font-size: 15px;
-    font-weight: bold;
-    margin: 15px;
-    background-color:#DFBA69;
-    color: #000;
-    transition-property: background-color, color;
-    transition-duration: 0.4s;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-button:hover{
-    background-color:#5A2E2E;
-    color:white;
-}
-/*****************************************************FOOTER*************************************/
+/**************************************************FOOTER**************************************/
 .footer{
     background-color:#5A2E2E;
     padding: 80px 0;

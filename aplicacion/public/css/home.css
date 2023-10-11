@@ -1,4 +1,4 @@
-/*General*/
+/****************************************************HEADER**********************************************/
 *{
   margin:0;
   padding: 0;
@@ -23,7 +23,7 @@ ul {
 
 /* Nav */
 .container {
-  position: fixed;
+  /*position: fixed; Por el momento no*/
   width: 100%;
   background-color: #222;
   height: 45px;

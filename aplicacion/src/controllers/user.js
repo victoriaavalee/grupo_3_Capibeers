@@ -1,7 +1,8 @@
 const path = require('path');
+const fs = require('fs');
 
-const userController =  (req, res) => {
-    res.render('./user/user'); //no existe, llevaria a un area de perfil
+function userController (req, res) {
+    res.render('./user/user'); 
 };
 
 const registroController =  (req, res) => {

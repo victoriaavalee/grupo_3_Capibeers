@@ -1,215 +1,213 @@
 /****************************************************HEADER**********************************************/
-* {
-    box-sizing: border-box;
-    margin: 0;
+*{
+    margin:0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: #FFFEDF;
-    color: #000;
-    font-size: 15px;
-    line-height: 1.5;
+    background: white;
+    font-size: 16px;
 }
 
 a {
-    color: #262626;
+    color: #cba349;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 ul {
     list-style: none;
 }
 
+/* Nav */
 .container {
-    max-width: 100;
-    padding: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
+    /*position: fixed; Por el momento no*/
+    width: 100%;
+    background-color: #222;
+    height: 45px;
 }
 
-  /* Nav */
 .main-nav {
     display: flex;
-    height: 60px;
-    padding: 20px;
-    font-size: 16px;
 }
+
 .main-nav ul {
     display: flex;
 }
+
 .main-nav ul li {
-    padding:10px;
+    display: flex;
+    margin-right: 15px;
 } 
-.main-nav ul li a:hover {
-    border-bottom: 2px solid #262626;
-} 
-.main-nav ul.main-menu {
-    flex: 1;
-    margin-left: 20px;
+
+.right-menu {
+    margin-right: 40px;
+    margin: 10px;
 }
-.logo{
-    height: 150px;
+
+.left-menu {
+    flex: 1;
+    margin: 10px;
+    margin-left: 40px;
+}
+
+.main-nav ul li a:hover {
+    border-bottom: 2px solid white;
+} 
+
+.search-bar{
+    border: 1;
+}
+
+/*Nav products*/
+.logo {
+    height: 200px;
     display: flex;
     justify-content: center;
+    padding: 18px;
 }
 
 /*opciones al lado del logo*/
 .opciones{
     display: flex;
-justify-content: space-between;
-    background:  #FFFEDF;
+    justify-content: space-between;
+    background: white;
 }
 
 /*opciones lado izquierdo*/
-
 .opciones-izquierda{
     margin-left: 350px;
 }
-.opciones-izquierda ul
-{
-	list-style:none;
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0
+
+.opciones-izquierda ul{
+    list-style:none;
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
 }
 
-.opciones-izquierda ul a
-{
-	display:block;
-	color:#000000;
-	text-decoration:none;
-	font-weight:700;
-	font-size:12px;
-	line-height:32px;
-	padding:0 15px;
+.opciones-izquierda ul a{
+    display:block;
+    color:#000000;
+    text-decoration:none;
+    font-weight:700;
+    font-size:12px;
+    line-height:32px;
+    padding:0 15px;
 }
 
-.opciones-izquierda ul li
-{
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0
+.opciones-izquierda ul li{
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
 }
 
 
-.opciones-izquierda ul ul
-{
+.opciones-izquierda ul ul{
     transition: 0.4s;
-	display:none;
-	position:absolute;
-	top:100%;
-	left:0;
-	background:#FFFEDF;
-	padding:0
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#FFFEDF;
+    padding:0
 }
 
-.opciones-izquierda ul ul li
-{
+.opciones-izquierda ul ul li{
     float: none;
-	width:100px
+    width:100px
 }
 
-.opciones-izquierda ul ul a
-{
-	line-height:120%;
-	padding:10px 15px
+.opciones-izquierda ul ul a{
+    line-height:120%;
+    padding:10px 15px
 }
 
-.opciones-izquierda ul ul ul
-{
-	top:0;
-	left:100%
+.opciones-izquierda ul ul ul{
+    top:0;
+    left:100%
 }
 
-.opciones-izquierda ul li:hover > ul
-{
-	display:block
+.opciones-izquierda ul li:hover > ul{
+    display:block
 }
+
 /*Opciones lado Derecho*/
 
 .opciones-derecha{
     margin-right:300px;
 }
-.opciones-derecha ul
-{
-	list-style:none;
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0
+
+.opciones-derecha ul{
+    list-style:none;
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
 }
 
-.opciones-derecha ul a
-{
-	display:block;
-	color:#333;
-	text-decoration:none;
-	font-weight:700;
-	font-size:12px;
-	line-height:32px;
-	padding:0 15px;
+.opciones-derecha ul a{
+    display:block;
+    color:black;
+    text-decoration:none;
+    font-weight:700;
+    font-size:12px;
+    line-height:32px;
+    padding:0 15px;
 }
 
-.opciones-derecha ul li
-{
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0
-}
-.opciones-derecha ul ul
-{
-	display:none;
-	position:absolute;
-	top:100%;
-	left:0;
-	background:#FFFEDF;
-	padding:0
+.opciones-derecha ul li{
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
 }
 
-.opciones-derecha ul ul li
-{
-	float:none;
-	width:100px
+.opciones-derecha ul ul{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#FFFEDF;
+    padding:0
 }
 
-.opciones-derecha ul ul a
-{
-	line-height:120%;
-	padding:10px 15px
+.opciones-derecha ul ul li{
+    float:none;
+    width:100px
 }
 
-.opciones-derecha ul ul ul
-{
-	top:0;
-	left:-100%
+.opciones-derecha ul ul a{
+    line-height:120%;
+    padding:10px 15px
 }
 
-.opciones-derecha ul li:hover > ul
-{
-	display:block
+.opciones-derecha ul ul ul{
+    top:0;
+    left:-100%
+}
+
+.opciones-derecha ul li:hover > ul{
+    display:block
 }
 /*Diseño botones*/
 
-
 /*Contacto*/
-
 .Contacto:hover {
-    background-color: #FFFEDF;
+    background-color: #9e6730;
     padding: 24px 10px;
 }
 .Contacto {
     transition: 0.4s;
-    color: #000000;
+    color: black;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 .Contacto {
     margin-top: 40px;
@@ -224,7 +222,7 @@ justify-content: space-between;
 /*Producto*/
 
 .Productos:hover {
-    background-color: #FFFEDF;
+    background-color: #9e6730;
     padding: 24px 10px;
 }
 .Productos {
@@ -233,7 +231,7 @@ justify-content: space-between;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 .Productos {
     margin-top: 20px;
@@ -247,7 +245,7 @@ justify-content: space-between;
 /*Ofertas*/
 
 .Ofertas:hover {
-    background-color:#FFFEDF;
+    background-color:#9e6730;
     padding: 24px 10px;
 }
 .Ofertas {
@@ -256,7 +254,7 @@ justify-content: space-between;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 .Ofertas {
     padding: 24px;
@@ -269,7 +267,7 @@ justify-content: space-between;
 
 /*Indumentaria*/
 .Indumentaria:hover {
-    background-color:  #FFFEDF;
+    background-color:  #9e6730;
     padding: 24px 10px;
 }
 .Indumentaria {
@@ -278,7 +276,7 @@ justify-content: space-between;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 .Indumentaria {
     padding: 24px;
@@ -291,7 +289,7 @@ justify-content: space-between;
 /*Accesorios*/
 
 .Accesorios:hover {
-    background-color: #FFFEDF;
+    background-color: #9e6730;
     padding: 24px 10px;
 }
 .Accesorios {
@@ -300,23 +298,22 @@ justify-content: space-between;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 .Accesorios {
     margin-top: 20px;
     padding: 24px;
     text-align: center;
+
 }
 .Accesorios{
     background:  #DFBA69;
 }
 
-
 /*Preguntas*/
 
-
 .Preguntas:hover {
-    background-color: #FFFEDF;
+    background-color: #9e6730;
     padding: 24px 10px;
 }
 .Preguntas {
@@ -325,7 +322,7 @@ justify-content: space-between;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 .Preguntas {
     margin-top: 40px;
@@ -335,11 +332,275 @@ justify-content: space-between;
 .Preguntas{
     background:  #DFBA69;
 }
-/**************************************************MAIN**************************************/
-/**************************************************FOOTER**************************************/
+
+
+/*////////////////////////HASTA AQUI ES EL HEADER////////////////////////////////*/
+
+/*******************************************MAIN LOGIN****************************/
+main {
+    text-align: center;
+    font-size: 17px;
+}
+
+.title{
+    color: #434343;
+    font-size: 38px;
+    font-weight: bold;
+    margin: 20px;    
+}
+
+#text-user-password{
+    margin:15px;
+    font-size: 15px;
+}
+
+#div-user{
+    margin: 15px;
+}
+
+#div-password input{
+    width: 20%;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #434343;
+    color: #434343;
+}
+#div-user input{
+    width: 20%;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #434343;
+    color: #434343;
+}
+
+#remember-user-password{
+    text-align: center;
+    margin: 15px;
+    font-size: 14px;
+}
+
+#forgot-password{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#create-account{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 15px;
+    background-color:#DFBA69;
+    color: #000;
+    transition-property: background-color, color;
+    transition-duration: 0.4s;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color:#9e6730;
+    color:white;
+}
+
+/****************************MAIN RESTABLECER CLAVE******************************/
+
+
+.texto{
+    margin: 0 auto;
+    width: 35%;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+form div input{
+    width: 20%;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #434343;
+    color: #434343;
+}
+
+#ingresar{
+    font-size: 15px;
+    font-weight: bold;
+}
+/*********************************MAIN REGISTRO ******************************************/
+
+
+.controls input{
+    width: 98%;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #434343;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #434343;
+}
+
+.formRegister{
+    width: 450px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    color: #434343;
+}
+
+.formRegister h2{
+    text-align: center;
+    font-size: 38px;
+}
+
+#name{
+    width: 48%;
+    
+}
+
+#last-name{
+    width: 48%;
+    margin-inline: 5px;
+}
+
+.formRegister p{
+    height: 20px;
+    font-size: 14px;
+    color: #1f1f1f;
+}
+
+.login{
+    color: #434343;
+    font-size: 13px;
+    margin-left: 2px;
+}
+
+.login:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.user-profile p{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.user-profile input{
+    display: none;
+}
+
+.user-profile label{
+    background-color: white;
+    width: 48%;
+    position: relative;
+    color: #753c3c;
+    font-size: 14px;
+    border: 2px solid #753c3c;
+    border-radius: 5px;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 5px;
+    margin-left: 100px;
+}
+
+.user-profile label:before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    border: 3px solid #753c3c;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-profile input:checked + label{
+    background-color: #753c3c;
+    color: white;
+}
+
+.user-profile input:checked + label:before{
+    height: 5px;
+    width: 5px;
+    border: 5px solid white;
+    background-color: #753c3c;
+}
+
+.img-user p{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.img-user input{
+    display: none;
+}
+
+.img-user label{
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    background-color: #753c3c;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    width: 48%;
+    /*margin-left: 100px;*/
+}
+
+.img-user label:hover{
+    background-color: #5A2E2E;
+}
+
+/*********BOTONES*************/
+
+.buttons{
+    margin-top: 20px;
+}
+
+.formRegister button{
+    width: 98%;
+    background-color: #753c3c;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    color: #efefef;
+    font-size: 17px;
+}
+
+.formRegister button:hover{
+    background-color:  #a05151;
+}
+
+.formRegister .separador{
+    text-align: center;
+    font-size: 17px;
+}
+
+.formRegister .Google{
+    margin-top: 10px;
+    width: 98%;
+    background-color: #DFBA69;
+    color: #434343;
+    font-size: 17px;
+}
+
+.formRegister .Google:hover{
+    background-color: #f1cf85;
+}
+
+/*************************************FOOTER************************************/
 .footer{
-    background-color:#5A2E2E;
-    padding: 80px 0;
+    background-color:#222;
+    padding: 20px;
 }
 .footer-row{
     display: flex;
@@ -347,11 +608,10 @@ justify-content: space-between;
 }
 .footerlink{
     width: 25%;
-    padding: 0 15px;
 }
 .footerlink h4 {
     font-size: 20px;
-    color: #ffffff;
+    color: #cba349;
     margin-bottom: 25px;
     font-weight: 500;
     border-bottom: 2px solid black;
@@ -374,22 +634,25 @@ justify-content: space-between;
     display: inline-block;
     min-height: 40px;
     width: 40px;
-    background-color: #2A2C31;
     margin: 0 10px 10px 0;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
     color: white;
-    transition: all .5s ease;
+    transition: all .2s ease;
 }
 .social-links a:hover{
-    background-color: #FFFEDF;
+    background-color: #cba349;
 }
 .mapa{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 #copyright{
     text-align: center;
-    margin-top: 100px;
+    color:white;
 }
+
+
+
+
