@@ -34,7 +34,7 @@
         "name":"Cerveza Botella Heineken",
         "price":1600,
         "image":"botella-heineken.jpg",
-        "fabricante": "",
+        "fabricante": "Palermo",
         "ingredientes": "cebada, lúpulo y agua.",
         "origen": "Paises Bajos",
         "description":"Es una cerveza tipo Pilsen, que sigue los estándares de mas alta calidad, con ingredientes 100% naturales."
@@ -44,6 +44,9 @@
         "name":"Cerveza Botella Imperial",
         "price":1600,
         "image":"botella-imperial.jpg",
+        "fabricante": "CCU",
+        "ingredientes": "cebada, lúpulo y agua.",
+        "origen": "Tegucigalpa",
         "description":"Es una cerveza fabricada en Argentina con malta de calidad teniendo un sabor equilibrado y un brillante color dorado."
     },
     {
@@ -51,6 +54,9 @@
         "name":"Cerveza Botella Quilmes",
         "price":1600,
         "image":"botella-quilmes.jpg",
+        "fabricante": "CCU",
+        "ingredientes": "cebada, lúpulo y agua.",
+        "origen": "Tegucigalpa",
         "description":"Es una cerveza argentina de ingredientes argentinos. Es de sabor refrescante, con un sabor equilibrado entre aroma, suavidad y amargor."
     },
     {

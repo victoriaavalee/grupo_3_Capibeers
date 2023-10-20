@@ -1,12 +1,12 @@
 const express = require ('express');
-const {userController, loginController, registroController,restablecerClaveController}= require('../controllers/user')
-
+const userController = require('../controllers/user')
 const userRouter = express.Router();
 
-userRouter.get('/', userController); //aqui iria el perfil de usuario
-userRouter.get('/login', loginController);
-userRouter.get('/registro', registroController);
-userRouter.get('/restablecer-clave', restablecerClaveController);
+
+userRouter.get('/', userController.user); //aqui iria el perfil de usuario
+userRouter.get('/login', userController.login);
+userRouter.get('/registro', userController.register);
+userRouter.get('/restablecer-clave', userController.password);
 
 
 module.exports = userRouter;

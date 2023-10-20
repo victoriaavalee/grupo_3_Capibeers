@@ -15,6 +15,12 @@ const productsController = {
         let productDetail = products.find(p => p.id === detailId);
         res.render('./products/detalle-producto', {productDetail})
     },
+    //detail: function (req, res) {
+        //const idBuscar = parseInt(req.params.id);
+        //let productDetail = products.find(b => b.id == idBuscar);
+        //renderizado de la página:
+        //res.render('./products/detalle-producto', {products, productDetail})
+    //},
 
     delete: function (req, res){
         const productId = +req.params.id;

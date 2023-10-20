@@ -1,20 +1,22 @@
+const user = require ('../data/user.json');
 const path = require('path');
 const fs = require('fs');
 
-function userController (req, res) {
-    res.render('./user/user'); 
-};
+const userController = {
 
-const registroController =  (req, res) => {
-    res.render('./user/registro');
-};    
+    //listado de usuarios
+    user: function (req, res){
+        res.render('./user/user');
+    },
+    register: function (req, res){
+        res.render('./user/registro');
+    },
+    login: function (req, res){
+        res.render('./user/login');
+    },    
+    password: function (req, res){
+        res.render('./user/restablecer-clave');
+    },
+}
 
-const loginController =  (req, res) => {
-    res.render('./user/login');
-};
-
-const restablecerClaveController =  (req, res) => {
-    res.render('./user/restablecer-clave');
-};
-
-module.exports = {userController,registroController,loginController,restablecerClaveController};
+module.exports = userController;
