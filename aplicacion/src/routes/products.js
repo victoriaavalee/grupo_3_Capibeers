@@ -8,24 +8,28 @@ productsRouter.get('/', productsController.list);
 
 
 //detalle de producto NO ANDAN
+
 //OPCION DE VIDEO
 //Detalle de producto
-productsRouter.get('/:idProducto', function (req,res){
-    res.send('elegiste el producto ' + req.params.idProducto)
-});
+//productsRouter.get('/:idProducto', function (req,res){
+//    res.send('elegiste el producto ' + req.params.idProducto)
+//});
 //Detalle de comentario en un producto y comentario especifico
-productsRouter.get('/:idProducto/comentarios/:idComentario?', function (req,res){
-    if (req.params.idComentario == undefined){
-        res.send('Bienvenidos a los comentarios del producto '+ req.params.idProducto )
-    }else{
-        res.send('Bienvenidos a los comentarios del producto '+ req.params.idProducto + ' y esta enfocado en el comentario ' + req.params.idComentario)
-    }
-});
+//productsRouter.get('/:idProducto/comentarios/:idComentario?', function (req,res){
+//    if (req.params.idComentario == undefined){
+//        res.send('Bienvenidos a los comentarios del producto '+ req.params.idProducto )
+//    }else{
+//        res.send('Bienvenidos a los comentarios del producto '+ req.params.idProducto + ' y esta enfocado en el comentario ' + req.params.idComentario)
+//    }
+//});
 
 
 
 //OPCION PAO
-//productsRouter.get('/:id', productsController.detail);
+productsRouter.get('/:id', productsController.detail);
+//productsRouter.get('/:id', (req,res){
+    //res.send (productsController.detail)
+//});
 productsRouter.delete('/delete/:id', productsController.delete);
 
 

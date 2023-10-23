@@ -13,6 +13,7 @@
         <%- include('../partials/header')%>
     <main>
         <h1 id="title">Conocé nuestros productos!</h1>
+        <h1 ><%=products.name%></h1>
             <div class="articles">
                 <% for( let i = 0; i< products.length; i++) { %>
                     <%- include('./product-card',{product:products[i]})%>

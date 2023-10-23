@@ -334,7 +334,7 @@ ul {
 }
 
 /************************************************MAIN*******************************/
-
+/********************************Listado de Productos*******************************/
 #title{
     color: #434343;
     font-size: 38px;
@@ -372,6 +372,99 @@ ul {
     font-weight: bold;
     color:rgb(28, 193, 28);
     font-size: 18px;
+}
+/***************************Poducto detalle *****************************/
+#contenedores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#txt{
+    margin-left: 50px;
+}
+
+#cart {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#image{
+    width: 350px;
+    height: 310px;
+}
+.cart h2 {
+    margin-top: 0;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+#cart-total {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+#productosrelacionados{
+    width: 200px;
+    margin: 0 auto;
+}
+/***************************Carrousel de cervezas*****************************/
+
+.Nuestros-productos{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.Carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+.elementos{
+    border-right: 2px solid white;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 0 auto;
+    margin: 0 45px;
+    margin-bottom: 20px;
+    background-color:#333;
+    width: 400px;
+    height: 500px;
+    border-radius: 3px;
+}
+.cerveza-carrusel{
+    width: 250px;
+    height: 300px;
+    align-self: center;
+    border:3px;
+    margin-top: 20px;
+}
+.nombre-carrusel{
+    margin-top: 10px;
+    color:#cba349;
+}
+.Datos-cerveza{
+    background-color:#555;
+    padding: 10px;
+    margin-bottom: 10px;
+    color:white;
+}
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /*************************************FOOTER************************************/

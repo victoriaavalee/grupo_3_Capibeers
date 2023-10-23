@@ -1,4 +1,4 @@
-const homeController = (req, res)=>{
+const homeController = (req, res) => {
     res.render('home');
 };
 
