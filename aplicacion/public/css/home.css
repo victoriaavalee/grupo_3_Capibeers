@@ -7,7 +7,8 @@
 }
 
 body {
-  background: white;
+  background: #ebebeb;;
+  ;
   font-size: 16px;
 }
 
@@ -73,7 +74,8 @@ ul {
 .opciones{
   display: flex;
   justify-content: space-between;
-  background: white;
+  background:  #ebebeb;;
+  ;
 }
 
 /*opciones lado izquierdo*/
@@ -351,7 +353,7 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
-/*****************O ESTE ES EL BODYYY???****/
+/*************************HOME*********************/
 .Cerveza-mas-vendida{
   text-align: center;
   margin-top: 80px;
@@ -363,12 +365,15 @@ ul {
   margin-top: 30px;
 }
 .Descripcion{
-  background-color:white;
+  background-color: #ebebeb;
+  ;
   padding: 50px 20px;
 }
 .Descripcion .fila{
   display: flex;
   justify-content: space-between;
+  background: #ebebeb;
+
 }
 .Descripcion .fila .col{
   width: 49%;
@@ -463,43 +468,36 @@ margin-left: 30px;
 
 .Nuestros-productos{
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
-.Carrusel{
+.carrusel{
+  background-color: #ebebeb;
   display: flex;
-  flex-wrap: nowrap;
-  overflow: scroll;
+  overflow-x: scroll;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
 }
-.elementos{
-  border-right: 2px solid white;
-  margin-right: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex: 1 0 auto;
-  margin: 0 45px;
-  margin-bottom: 20px;
-  background-color:#333;
-  width: 400px;
-  height: 500px;
-  border-radius: 3px;
+.item-carrusel{
+  margin: 10px;
+  background-color: white;
 }
-.cerveza-carrusel{
-  width: 250px;
-  height: 300px;
-  align-self: center;
-  border:3px;
-  margin-top: 20px;
+.img-carrusel{ 
+  max-width: 200px;
+  max-height: 100%;
+  background-color: white;
 }
-.nombre-carrusel{
-  margin-top: 10px;
+.price-carrusel{
   color:#cba349;
+  font-weight: bold;
+  background-color: white
 }
-.Datos-cerveza{
-  background-color:#555;
-  padding: 10px;
-  margin-bottom: 10px;
-  color:white;
+.data-cerveza{
+  background-color: white;
+}
+.name-carrusel{
+  background-color: white;
 }
 
 .contenedor{

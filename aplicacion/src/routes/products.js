@@ -7,9 +7,6 @@ const uploadFile = require('../middleware/productsMulter');
 productsRouter.get('/', productsController.list); 
 
 
-//detalle de producto NO ANDAN
-
-//OPCION DE VIDEO
 //Detalle de producto
 //productsRouter.get('/:idProducto', function (req,res){
 //    res.send('elegiste el producto ' + req.params.idProducto)
@@ -24,13 +21,11 @@ productsRouter.get('/', productsController.list);
 //});
 
 
-
+//Detalle de producto
 //OPCION PAO
-productsRouter.get('/:id', productsController.detail);
-//productsRouter.get('/:id', (req,res){
-    //res.send (productsController.detail)
-//});
-productsRouter.delete('/delete/:id', productsController.delete);
+//productsRouter.get('/:id', productsController.detail);
+
+//productsRouter.delete('/delete/:id', productsController.delete);
 
 
 //carrito SACAR
@@ -46,7 +41,4 @@ productsRouter.post('/crear',uploadFile.single("img"), productsController.postCr
 productsRouter.get('/editar/:id', productsController.edit);
 productsRouter.put('/editar',uploadFile.single("img"), productsController.putEdit);
 
-
-//comprar
-//productsRouter.get('/comprar', productsController);
 module.exports = productsRouter;

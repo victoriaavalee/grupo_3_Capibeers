@@ -7,7 +7,7 @@
 }
 
 body {
-    background: white;
+    background: #ebebeb;
     font-size: 16px;
 }
 
@@ -73,7 +73,7 @@ ul {
 .opciones{
     display: flex;
     justify-content: space-between;
-    background: white;
+    background: #ebebeb;
 }
 
 /*opciones lado izquierdo*/

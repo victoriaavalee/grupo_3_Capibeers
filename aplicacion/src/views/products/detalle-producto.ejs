@@ -23,9 +23,12 @@
                     <p><%=productDetail.description%></p>
                 </div>
             </div>
+            <img id="image" src="/img/<%=productDetail.image %>" alt="FotoDeMuestra">
             <div id="counter">0</div>
-            <button id="incrementButton">Incrementar</button>
-            <button id="decrementButton">Decrementar</button>
+            <div id="buttons-incremdecrem">
+                <button id="incrementButton">Incrementar</button>
+                <button id="decrementButton">Decrementar</button>
+            </div>
         </div>
         <script id="incremdecrem">
             const counterElement = document.getElementById('counter');
@@ -51,7 +54,7 @@
             <div>
                 <button type="button" id="agregar-carrito">Agregar al carrito</button>
             </div>
-            <img src="/img/<%=productDetail.image %>"alt="FotoDeMuestra">
+
 
             <form action="/products/delete/<%=productDetail.id %>?_method=DELETE" method="post">
                 <input type="submit" value="Eliminar">
@@ -90,7 +93,6 @@
                     <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
                     <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
                 </div>
-                <img id="image" src="/img/<%=productDetail.image %>" alt="FotoDeMuestra">
         </div>
     </main>
     <!--FOOTER/-->
