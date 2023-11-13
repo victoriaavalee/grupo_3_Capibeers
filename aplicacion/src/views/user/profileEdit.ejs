@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capibeers - Edición de perfil</title>
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Header/-->
+        <%- include('../partials/header')%>
+    <main>
+        <h2 class="title">EDITAR PERFIL</h2>
+        <form method="POST" action="/user/edit?_method=PUT">
+            <div class="controls">
+                <input type="text" name="nombre" value="<%=userToEdit.name %>" id="name" placeholder="Nombre" required>
+            </div>
+            <div class="buttons">
+                <button type="submit" value="Registrar">
+                    Continuar
+                </button>
+            </div>
+        </form>
+    </main>
+    <!--FOOTER/-->
+        <%- include('../partials/footer')%>
+</body>
+</html>

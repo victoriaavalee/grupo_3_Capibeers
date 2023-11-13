@@ -2,7 +2,7 @@
     {
         "id": 1,
         "email": "ana.abar@gmail.com",
-        "firstName": "Ana",
+        "name": "Ana",
         "lastName": "Abar",
         "age": 21,
         "category": "Cliente",
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "email": "eduardo.espeche@gmail.com",
-        "firstName": "Eduardo",
+        "name": "Eduardo",
         "lastName": "Espeche",
         "age": 25,
         "category": "Cliente",
@@ -22,7 +22,7 @@
     {
         "id": 3,
         "email": "ivana.ibañez@example.com",
-        "firstName": "Ivana",
+        "name": "Ivana",
         "lastName": "Ibañez",
         "age": 30,
         "category": "Cliente",
@@ -32,7 +32,7 @@
     {
         "id": 4,
         "email": "osvalado.oria@example.com",
-        "firstName": "Osvaldo",
+        "name": "Osvaldo",
         "lastName": "Oria",
         "age": 35,
         "category": "Cliente",
@@ -42,7 +42,7 @@
     {
         "id": 5,
         "email": "ursula.urquía@example.com",
-        "firstName": "Ursula",
+        "name": "Ursula",
         "lastName": "Urquía",
         "age": 28,
         "category": "Administrador",

@@ -14,7 +14,7 @@
     <main>
         <section class="formRegister">
             <h2>Unete a nosotros!</h2>
-            <form action="/home">
+            <form method="POST" action="/user/register">
                 <div class="controls">
                     <input type="email" name="email" id="email" placeholder="Email" required>
                     <input type="text" name="nombre" id="name" placeholder="Nombre" required>
@@ -39,7 +39,7 @@
                 </div>
                 <p>¿Ya tienes una cuenta?<a class="login" href="/user/login">Iniciar sesión.</a></p>
                 <div class="buttons">
-                    <button type="submit">
+                    <button type="submit" value="Registrar">
                         Continuar
                     </button>
                     <p class="separador">o</p>
