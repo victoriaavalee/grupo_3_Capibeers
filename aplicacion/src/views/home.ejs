@@ -64,12 +64,6 @@
                                     un equipo de profesionales que forman esta familia, dedicados 
                                     a entregar la mejor cerveza, hecha con orgullo y pasión para vos ❤️</p>
                             </div>
-                            <!--<div class="item der">
-                                <img src="/img/Cervezaa.png" class="foto-cerveza">
-                                <div class="conectord">
-                                    <div class="circulod"></div>
-                                </div>
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -80,54 +74,9 @@
         ESTO TIENE QUE SER INTERACTIVO Y LLEVAR A LA VISTA DE PRODUCTO SEGUN EL DI DEL PRODUCT :(-->
         <h2 class="Nuestros-productos">Basado en tu última visita</h2>
         <div class="carrusel">
-            <div class="item-carrusel">
-                <img src="/img/Cervezaa.png" alt="" class="img-carrusel">
-                <p class="name-carrusel">NOMBRE DE LA CERVEZA</p>
-                <p class="price-carrusel" >$X</p>
-                <p class="data-carrusel">LLega mañana</p>
-            </div>
-            <div class="item-carrusel">
-                <img src="/img/Cervezaa.png" alt="" class="img-carrusel">
-                <p class="name-carrusel">NOMBRE DE LA CERVEZA</p>
-                <p class="price-carrusel" >$X</p>
-                <p class="data-carrusel">LLega mañana</p>
-            </div>
-            <div class="item-carrusel">
-                <img src="/img/Cervezaa.png" alt="" class="img-carrusel">
-                <p class="name-carrusel">NOMBRE DE LA CERVEZA</p>
-                <p class="price-carrusel" >$X</p>
-                <p class="data-carrusel">LLega mañana</p>
-            </div>
-            <div class="item-carrusel">
-                <img src="/img/Cervezaa.png" alt="" class="img-carrusel">
-                <p class="name-carrusel">NOMBRE DE LA CERVEZA</p>
-                <p class="price-carrusel" >$X</p>
-                <p class="data-carrusel">LLega mañana</p>
-            </div>
-            <div class="item-carrusel">
-                <img src="/img/Cervezaa.png" alt="" class="img-carrusel">
-                <p class="name-carrusel">NOMBRE DE LA CERVEZA</p>
-                <p class="price-carrusel" >$X</p>
-                <p class="data-carrusel">LLega mañana</p>
-            </div>
-            <div class="item-carrusel">
-                <img src="/img/Cervezaa.png" alt="" class="img-carrusel">
-                <p class="name-carrusel">NOMBRE DE LA CERVEZA</p>
-                <p class="price-carrusel" >$X</p>
-                <p class="data-carrusel">LLega mañana</p>
-            </div>
-            <div class="item-carrusel">
-                <img src="/img/Cervezaa.png" alt="" class="img-carrusel">
-                <p class="name-carrusel">NOMBRE DE LA CERVEZA</p>
-                <p class="price-carrusel" >$X</p>
-                <p class="data-carrusel">LLega mañana</p>
-            </div>
-            <div class="item-carrusel">
-                <img src="/img/Cervezaa.png" alt="" class="img-carrusel">
-                <p class="name-carrusel">NOMBRE DE LA CERVEZA</p>
-                <p class="price-carrusel" >$X</p>
-                <p class="data-carrusel">LLega mañana</p>
-            </div>
+            <% for( let i = 0; i< productsList.length; i++) { %>
+                <%- include('./products/product-carrusel',{product:productsList[i]})%>
+            <% } %>
         </div>
     </main>
     <!--FOOTER/-->

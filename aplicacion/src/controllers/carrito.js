@@ -9,7 +9,7 @@ if(document.readyState == 'loading'){
 
 function ready(){
     
-   
+
     let botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
     for(let i=0;i<botonesEliminarItem.length; i++){
         let button = botonesEliminarItem[i];
@@ -23,14 +23,14 @@ function ready(){
         button.addEventListener('click',sumarCantidad);
     }
 
-   
+
     let botonesRestarCantidad = document.getElementsByClassName('restar-cantidad');
     for(let i=0;i<botonesRestarCantidad.length; i++){
         let button = botonesRestarCantidad[i];
         button.addEventListener('click',restarCantidad);
     }
 
-   
+
     let botonesAgregarAlCarrito = document.getElementsByClassName('boton-item');
     for(let i=0; i<botonesAgregarAlCarrito.length;i++){
         let button = botonesAgregarAlCarrito[i];
@@ -43,7 +43,7 @@ function ready(){
 
 function pagarClicked(){
     alert("Gracias por la compra");
-   
+
     let carritoItems = document.getElementsByClassName('carrito-items')[0];
     while (carritoItems.hasChildNodes()){
         carritoItems.removeChild(carritoItems.firstChild)
