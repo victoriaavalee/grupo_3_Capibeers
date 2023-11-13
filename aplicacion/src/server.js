@@ -27,6 +27,11 @@ app.use ('/home',homeRouter);
 app.use ('/products',productsRouter);
 app.use ('/user', userRouter)
 
+//Error 404
+app.use((req, res, next) => {
+    res.status(404).render("not-found")
+});
+
 //Puerto
 app.listen (PORT, () => {
     console.log (`[server] corriendo en el puerto: ${PORT}`);

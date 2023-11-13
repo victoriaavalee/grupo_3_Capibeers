@@ -7,8 +7,7 @@
 }
 
 body {
-  background: #ebebeb;;
-  ;
+  background: #ebebeb;
   font-size: 16px;
 }
 
@@ -503,6 +502,30 @@ margin-left: 30px;
 .contenedor{
   max-width: 1200px;
   margin: 0 auto;
+}
+/*********************************page not-found************************************/
+.error{
+  text-align: center;
+  margin: 20px;
+}
+.text-error{
+  margin: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+.text-error-links{
+  margin-left: 30%;
+  font-size: 18px;
+  margin-bottom: 15px;
+  list-style: circle;
+}
+.error-links-conteiner li{
+  margin: 18px;
+}
+.error-links{
+  color: black;
+  margin-left: 30%;
+  font-size: 18px;
 }
 /*************************************FOOTER************************************/
 .footer{

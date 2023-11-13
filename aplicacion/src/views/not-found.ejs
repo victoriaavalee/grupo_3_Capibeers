@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capibeers - Not found</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Fuente de letra-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" /> <!--Iconos-->
+</head>
+<body>
+    <!--HEADER-->
+    <%- include('./partials/header')%> 
+    <main>
+        <h2 class="error">¡Error 404!</h2>
+        <p class="text-error">La pagina que intenta solicitar no se encuentra en el servidor </p>
+        <p class="text-error-links">Puedes probar con los siguientes links:</p>
+        <ul class="error-links-conteiner">
+            <li><a href="/home" class="error-links"> > Home</a></li>
+            <li><a href="/products" class="error-links"> > Productos</a></li>
+            <li><a href="/user/login" class="error-links"> > Perfil de usuario</a></li>
+        </ul>
+
+    </main>
+    <!--FOOTER/-->
+    <%- include('./partials/footer')%>
+</body>
+</html>
