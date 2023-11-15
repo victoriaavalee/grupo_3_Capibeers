@@ -1,76 +1,199 @@
-.form{
-    width: 70%;
-    padding: 30px;
-    margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+main {
+    font-family: 'Poppins', sans-serif;
+    padding: 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
-.form p{
+form {
     font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.newProduct a{
     color: #434343;
-    font-size: 13px;
-    margin-left: 2px;
+    border-radius: 10px;
+    width: 500px;
+    height: 1250px;
+    padding: 8px;
+
 }
 
-.newProduct a:hover{
-    color: black;
-    text-decoration: underline;
+h2 {
+    text-align: center;
+    font-size: 35px;
+    color: #434343;
+    margin-bottom: 5px;
+}  
+
+h3 {
+    text-align: center;
+    font-size: 25px;
+    color: #434343;
 }
+
+/*************** IMAGEN ***************/
 
 .img-product{
-    flex: 1;
+    padding: 15px;
+    margin-left: 90px;
 }
 
-.img-product input{
+.img-product input {
     display: none;
 }
 
-.img-product label{
+.img-product label {
+    border-radius: 4px;
+    color: white;
+    height: 60px;
+    width: 250px;
+    background-color: #5c2f2f;
+    font-size: 12px;
     display: flex;
-    height: 100px;
-    width: 150px;
-    border-radius: 6px;
-    border: 1px dashed #999;
-    padding: 100px;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 20px;
 }
 
 .img-product label:hover{
-    color: #5a2e2e;
-    border: 1px dashed #5a2e2e;
+    background-color: #a05151;
 }
 
-.newProduct{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+/*****************************************/
+
+.form input[type="text"]{
+    width: 98%;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #434343;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #434343;
 }
 
-#name-product{
-    width: 30%;
+.description input{
+    height: 120px;
 }
 
-#price{
+/************************** INPUT ****************************/
+
+.radio-group{
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-left: 160px;
+}
+
+.radio{
+    font-size: 18px;
+    font-weight: 100;
+    text-transform: capitalize;
+    display: inline-block;
+    vertical-align: middle;
+    color: #434343;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.radio + .radio{
+    margin-left: 20px;
+}
+
+.radio input[type="radio"]{
+    display: none;
+}
+
+.radio span{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 3px solid #5c2f2f;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+.radio span::after{
+    content: "";
+    height: 7px;
+    width: 7px;
+    background-color: #5c2f2f;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: 300ms ease-in-out 0s;
+}
+
+.radio input[type="radio"]:checked ~ span::after{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*.form_input{
+    display: grid;
+    margin-inline: 5px;
+}
+
+.form_input input{
+    display: none;
+}
+
+.form_input label{
+    background-color: white;
     width: 20%;
-}
-
-.info-container label{
+    position: relative;
+    color: #753c3c;
+    font-size: 14px;
+    border: 2px solid #753c3c;
+    border-radius: 5px;
+    padding: 5px 20px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin: 5px;
+    margin-left: 100px;
 }
 
-/*input{
-    text-transform: uppercase;
+.form_input label:before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    border: 3px solid #753c3c;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.form_input input:checked + label{
+    background-color: #753c3c;
+    color: white;
+}
+
+.form_input input:checked + label:before{
+    height: 5px;
+    width: 5px;
+    border: 5px solid white;
+    background-color: #753c3c;
 }*/
 
 /**************************************BOTONES*******************************************/
 .buttons{
     margin-top: 15px;
     margin-bottom: 20px;
+}
+
+.buttons button[type="reset"]{
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.buttons input[type="submit"]{
+    margin-left: 20px;
 }
 
 .buttons input[type="submit"]{

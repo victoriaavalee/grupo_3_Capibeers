@@ -34,11 +34,11 @@ productsRouter.get('/carrito', productsController.carrito);
 
 //crear producto NO ANDAN
 productsRouter.get('/crear', productsController.create); 
-productsRouter.post('/crear',uploadFile.single("img"), productsController.postCreate); 
+//productsRouter.post('/crear',uploadFile.single("img"), productsController.postCreate); 
 
 
 //editar producto NO ANDA
 productsRouter.get('/editar/:id', productsController.edit);
-productsRouter.put('/editar',uploadFile.single("img"), productsController.putEdit);
+//productsRouter.put('/editar',uploadFile.single("img"), productsController.putEdit);
 
 module.exports = productsRouter;

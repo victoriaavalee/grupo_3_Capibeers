@@ -15,11 +15,11 @@ const productsController = {
 //        let productDetail = products.find(p => p.id === detailId);
 //        res.render('./products/detalle-producto', {productDetail,products})
 //    },
-    detail: function (req, res) {
+    /*detail: function (req, res) {
         const idBuscar = parseInt(req.params.id);
         let productDetail = products.find(b => b.id === idBuscar);
         res.render('./products/detalle-producto', {products, productDetail})
-    },
+    },*/
 
     delete: function (req, res){
         const productId = +req.params.id;
@@ -37,11 +37,11 @@ const productsController = {
         res.render('./products/create');
     },
 
-    postCreate: function (req, res){
+    /*postCreate: function (req, res){
         const newProduct = req.body;
 
         res.redirect('/products/');
-    },
+    },*/
 
     //editar producto
     edit: function (req, res){
