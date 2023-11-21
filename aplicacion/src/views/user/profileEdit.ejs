@@ -12,10 +12,15 @@
     <!--Header/-->
         <%- include('../partials/header')%>
     <main>
-        <h2 class="title">EDITAR PERFIL</h2>
+        <h2 class="title">EDITAR PERFIL</h2>  <!--Editar un perfil in-->
+        <!--<div>
+            <p><%=usersList.email %></p>
+            <p><%=usersList.name +" "+ usersList.lastName  %></p>
+            <p><%=usersList.category %></p>
+        </div>-->
         <form method="POST" action="/user/edit?_method=PUT">
             <div class="controls">
-                <input type="text" name="nombre" value="<%=userToEdit.name %>" id="name" placeholder="Nombre" required>
+                <input type="text" name="nombre" value="<%=usersList.email %>" id="name" placeholder="Nombre" required>
             </div>
             <div class="buttons">
                 <button type="submit" value="Registrar">

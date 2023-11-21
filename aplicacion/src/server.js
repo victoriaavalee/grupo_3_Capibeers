@@ -36,3 +36,21 @@ app.use((req, res, next) => {
 app.listen (PORT, () => {
     console.log (`[server] corriendo en el puerto: ${PORT}`);
 });
+
+/*FALTA IMLPEMENTAR
+const session = require('express-session')
+const userMiddleware = require('./middleware/userMiddleware')
+const cookies = require('cookie-parser');
+const cookieMiddleware = require('./middleware/cookieMiddleware')
+
+app.use(session({
+    secret: "Shh",
+    resave: false,
+    saveUninitialized: false,
+}))
+app.use(cookies());
+app.use(cookieMiddleware);
+
+//middleware global 
+app.use(userMiddleware.logged)
+*/
