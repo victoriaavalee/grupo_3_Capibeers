@@ -5,9 +5,11 @@ const fs = require('fs');
 //const { json } = require('express');
 
 //Controladores
-const userController = {
+const userController = {  //REVEEER segun el email en la url que permita ver una vista de perfil con los items
     profile: function (req, res){
-        res.render('./user/profile');
+        const archivoUsuario = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
+        usuarios = JSON.parse(archivoUsuario);
+        res.render('./user/profile', {'usersList':usuarios});
     },
     login: function (req, res){
         res.render('./user/login');
@@ -26,7 +28,7 @@ const userController = {
             password: req.body.contraseña,
             confPassword: req.body.confContraseña
         }
-        //Guardar info de usuario en un json
+        //guardar info de usuario en un json
         const archivoUsuario = fs.readFileSync ('./src/data/users.json', {encoding: 'utf-8'});
         let usuarios;
         if(archivoUsuario == ""){
@@ -46,7 +48,6 @@ const userController = {
         const archivoUsuario = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
         usuarios = JSON.parse(archivoUsuario);
         res.render('./user/userList', {'usersList':usuarios});
-
     },
     edit: function (req, res){
         const archivoUsuario = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
@@ -56,11 +57,11 @@ const userController = {
     search: function(req,res){
         const loQueSeBusca = req.query.search;
         const archivoJSON = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
-        const users = JSON.parse(archivoJSON);
+        const usuarios = JSON.parse(archivoJSON);
         const userResults = [];
-        for(let i = 0; i<users.length; i++){
-            if (users[i].name.includes(loQueSeBusca)){
-                usersResults.push(users[i]);
+        for(let i = 0; i<usuarios.length; i++){
+            if (usuarios[i].email.includes(loQueSeBusca)){
+                usersResults.push(usuarios[i]);
             }
         }
         res.render('userResults', {usersResults: userResults})

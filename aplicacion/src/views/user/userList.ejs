@@ -18,6 +18,8 @@
             <% for (let i = 0; i < usersList.length; i++) { %>
             <li>
                 <a href="/user/edit/<%= usersList[i].email %>"><%=usersList[i].email%></a>
+                <a href="/src/views/home.ejs"><img src="/img/users/<%= usersList[i].image || 'placeholder.jpg' %>"></img></a>
+                <p><%=usersList[i].image%></p>
                 <p><%=usersList[i].name +" "+ usersList[i].lastName  %></p>
                 <p><%=usersList[i].category %></p>
                 <form method="POST" action="/user/delete/<%=usersList[i].id %>?_method=DELETE">
