@@ -1,23 +1,21 @@
 const path = require('path');
 const fs = require('fs');
-
-//const usersListJSON = require ('./src/data/users.json');
-//const { json } = require('express');
+const usersJSON = require ('../data/users.json');
 
 //Controladores
-const userController = {  //REVEEER segun el email en la url que permita ver una vista de perfil con los items
+const userController = {  
     profile: function (req, res){
-        const archivoUsuario = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
-        usuarios = JSON.parse(archivoUsuario);
-        res.render('./user/profile', {'usersList':usuarios});
-    },
+        const userId = +req.params.id;
+        const user = usersJSON.find((u)=>u.id === userId); 
+        res.render ('./user/profile',{'user' : user,});
+    }, 
     login: function (req, res){
         res.render('./user/login');
     },
-    register: function (req, res){  //es como un create
+    register: function (req, res){
         res.render('./user/register');
     },
-    registerPost: function (req, res) {  //es como un create x2
+    registerPost: function (req, res) {
         const usuario = {
             email: req.body.email,
             name: req.body.nombre,
@@ -29,12 +27,12 @@ const userController = {  //REVEEER segun el email en la url que permita ver una
             confPassword: req.body.confContraseña
         }
         //guardar info de usuario en un json
-        const archivoUsuario = fs.readFileSync ('./src/data/users.json', {encoding: 'utf-8'});
+        const archivoUsuarios = fs.readFileSync ('./src/data/users.json', {encoding: 'utf-8'});
         let usuarios;
-        if(archivoUsuario == ""){
+        if(archivoUsuarios == ""){
             usuarios = [];
         }else{
-            usuarios = JSON.parse(archivoUsuario);
+            usuarios = JSON.parse(archivoUsuarios);
         }
         usuarios.push(usuario);
         usuariosJSON = JSON.stringify(usuarios);
@@ -50,11 +48,11 @@ const userController = {  //REVEEER segun el email en la url que permita ver una
         res.render('./user/userList', {'usersList':usuarios});
     },
     edit: function (req, res){
-        const archivoUsuario = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
-        usuarios = JSON.parse(archivoUsuario);
-        res.render('./user/profileEdit', {'usersList':usuarios});
-    },
-    search: function(req,res){
+        const userId = +req.params.id;
+        const user = usersJSON.find((u)=>u.id === userId); 
+        res.render('./user/profileEdit', {'user':user});
+    }, 
+    search: function(req,res){ //REVEER
         const loQueSeBusca = req.query.search;
         const archivoJSON = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
         const usuarios = JSON.parse(archivoJSON);
