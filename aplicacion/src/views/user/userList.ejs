@@ -17,15 +17,12 @@
         <ul>
             <% for (let i = 0; i < usersList.length; i++) { %>
             <li>
-                <form method="POST" action="/user/delete/<%=usersList[i].email %>?_method=DELETE"></form>
-                    <img src="/img/users/<%= usersList[i].image || 'placeholder.jpg' %>"></img></a>
-                    <p><%=usersList[i].email%></p>
-                    <p><%=usersList[i].image%></p>
-                    <p><%=usersList[i].name +" "+ usersList[i].lastName  %></p>
-                    <p><%=usersList[i].category %></p>
-                    <button type="submit">Eliminar</button>
-                    <button type="submit">Editar</button>
-                </form>
+                <img src="/img/users/<%= usersList[i].image || 'placeholder.jpg' %>"></img></a>
+                <p><%=usersList[i].email%></p>
+                <p><%=usersList[i].image%></p>
+                <p><%=usersList[i].name +" "+ usersList[i].lastName  %></p>
+                <p><%=usersList[i].category %></p>
+                <button type="submit">Ver perfil</button>
             </li>
             <% } %> 
         </ul>

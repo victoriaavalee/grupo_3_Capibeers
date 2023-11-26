@@ -17,25 +17,25 @@
             <form method="POST" action="/user/register" enctype="multipart/form-data">
                 <div class="controls">
                     <input type="email" name="email" id="email" placeholder="Email" required>
-                    <input type="text" name="nombre" id="name" placeholder="Nombre" required>
-                    <input type="text" name="apellido" id="last-name" placeholder="Apellido" required>
-                    <input type="date" name="edad" id="age" max="2005-09-01">
+                    <input type="text" name="name" id="name" placeholder="Nombre" required>
+                    <input type="text" name="lastName" id="last-name" placeholder="Apellido" required>
+                    <input type="date" name="birthdate" id="age" max="2005-09-01">
                 </div>
                 <div class="user-profile">
                     <p>Perfil de usuario:</p>
-                    <input type="radio" id="buyer" name="profile" value="buyer">
+                    <input type="radio" id="buyer" name="category" value="Comprador">
                     <label for="buyer">Cliente</label>
-                    <input type="radio" id="seller" name="profile" value="seller">
+                    <input type="radio" id="seller" name="category" value="Administrador">
                     <label for="seller">Administrador</label>
                 </div>
                 <div class="img-user">
                     <p>Foto de perfil:</p>
                     <label for="img-profile"><i class="fa-solid fa-upload"></i>Upload file</label>
-                    <input type="file" name="foto-usuario" id="img-profile">
+                    <input type="file" name="image" id="img-profile">
                 </div>
                 <div class="controls">
-                    <input type="password" name="contraseña" id="password" placeholder="Contraseña" required>
-                    <input type="password" name="confContraseña" id="confirm-password" placeholder="Confirmar contraseña" required>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                    <input type="password" name="confPassword" id="confirm-password" placeholder="Confirmar contraseña" required>
                 </div>
                 <p>¿Ya tienes una cuenta?<a class="login" href="/user/login">Iniciar sesión.</a></p>
                 <div class="buttons">
