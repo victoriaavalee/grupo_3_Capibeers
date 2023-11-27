@@ -25,9 +25,22 @@ const userController = {
         res.render('./user/register');
     },
     registerPost: function (req, res) {
-        const usuario = req.body;
-        usuario.id = new Date().getTime(); //pone un id diferente a cada user ingresado
         const archivoUsuarios = fs.readFileSync ('./src/data/users.json', {encoding: 'utf-8'});
+        const newId = archivoUsuarios[(archivoUsuarios.length - 1)].id + 1;
+        let file = req.file;
+        const usuario = {
+            email: req.body.email,
+            name: req.body.name,
+            lastName: req.body.lastName,
+            birthdate:req.body.birthdate,
+            category: req.body.category,
+            password: req.body.password,
+            confPassword: req.body.confPassword,
+            image:`img-${file.filename}`
+        }
+        //const usuario = req.body;
+        usuario.id = new Date().getTime(); //pone un id diferente a cada user ingresado
+
         let usuarios;
         if(archivoUsuarios == ""){
             usuarios = [];
@@ -35,7 +48,7 @@ const userController = {
             usuarios = JSON.parse(archivoUsuarios);
         }
         usuarios.push(usuario);
-        usuariosJSON = JSON.stringify(usuarios);
+        usuariosJSON = JSON.stringify(usuarios, null, 2);
         fs.writeFileSync('./src/data/users.json', usuariosJSON);
         /*const test = req.body; Testea si la info llega a consola y viaja bien
         console.log(test);*/

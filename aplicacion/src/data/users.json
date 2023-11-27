@@ -1,1 +1,101 @@
-[{"id":2,"email":"eduardo-espeche@gmail.com","name":"Eduardo","lastName":"Espeche","birthdate":"2005-08-25","category":"buyer","image":"","password":"contraseña02","confPassword":"contraseña02"},{"id":3,"email":"ivana-ibañez@example.com","name":"Ivana","lastName":"Ibañez","birthdate":"2005-08-25","category":"buyer","image":"","password":"contraseña03","confPassword":"contraseña03"},{"id":4,"email":"osvalado-oria@example.com","name":"Osvalado","lastName":"Oria","birthdate":"2005-08-31","category":"seller","image":"","password":"contraseña04","confPassword":"contraseña04"},{"id":5,"email":"ursula.urquía@example.com","name":"ursula","lastName":"urquía","birthdate":"2005-03-17","category":"buyer","image":"","password":"contraseña05","confPassword":"contraseña05"},{"id":6,"email":"vicky@digitalhouse.com","name":"victoria","lastName":"valencia","birthdate":"2004-12-13","category":"seller","image":"user6.jpg","password":"asdf","confPassword":"asdf"}]
+[
+  {
+    "id": 2,
+    "email": "eduardo-espeche@gmail.com",
+    "name": "Eduardo",
+    "lastName": "Espeche",
+    "birthdate": "2005-08-25",
+    "category": "buyer",
+    "image": "",
+    "password": "contraseña02",
+    "confPassword": "contraseña02"
+  },
+  {
+    "id": 3,
+    "email": "ivana-ibañez@example.com",
+    "name": "Ivana",
+    "lastName": "Ibañez",
+    "birthdate": "2005-08-25",
+    "category": "buyer",
+    "image": "",
+    "password": "contraseña03",
+    "confPassword": "contraseña03"
+  },
+  {
+    "id": 4,
+    "email": "osvalado-oria@example.com",
+    "name": "Osvalado",
+    "lastName": "Oria",
+    "birthdate": "2005-08-31",
+    "category": "seller",
+    "image": "",
+    "password": "contraseña04",
+    "confPassword": "contraseña04"
+  },
+  {
+    "id": 5,
+    "email": "ursula.urquía@example.com",
+    "name": "ursula",
+    "lastName": "urquía",
+    "birthdate": "2005-03-17",
+    "category": "buyer",
+    "image": "",
+    "password": "contraseña05",
+    "confPassword": "contraseña05"
+  },
+  {
+    "id": 6,
+    "email": "vicky@digitalhouse.com",
+    "name": "victoria",
+    "lastName": "valencia",
+    "birthdate": "2004-12-13",
+    "category": "seller",
+    "image": "user6.jpg",
+    "password": "asdf",
+    "confPassword": "asdf"
+  },
+  {
+    "email": "sdfgaperrogatoro@gmail.com",
+    "name": "sapo",
+    "lastName": "sapoo",
+    "birthdate": "2005-01-18",
+    "category": "Comprador",
+    "password": "sdfg",
+    "confPassword": "sdfg",
+    "image": "img/1701053372515-img.jpg",
+    "id": 1701053372556
+  },
+  {
+    "email": "pinguino@gmail.com",
+    "name": "pin",
+    "lastName": "guino",
+    "birthdate": "2005-01-18",
+    "category": "Administrador",
+    "password": "hhh",
+    "confPassword": "hhh",
+    "image": "img1701053624684-img.jpg",
+    "id": 1701053624712
+  },
+  {
+    "email": "kuromi@gmail.com",
+    "name": "kkkk",
+    "lastName": "rrrrr",
+    "birthdate": "2004-10-20",
+    "category": "Administrador",
+    "password": "asdf",
+    "confPassword": "asdf",
+    "image": "img-1701053690577.jpg",
+    "id": 1701053690591
+  },
+  {
+    "email": "nosei@gmail.com",
+    "name": "kkkk",
+    "lastName": "rrrrr",
+    "birthdate": "2004-10-28",
+    "category": "Comprador",
+    "password": "sdf",
+    "confPassword": "sdf",
+    "image": "img-1701053783189.jpg",
+    "id": 1701053783221
+  }
+]

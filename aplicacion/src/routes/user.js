@@ -1,14 +1,18 @@
 const express = require ('express');
 const userController = require('../controllers/user')
 const userRouter = express.Router();
-const uploadFile = require('../middleware/usersMulter');
+const upload = require('../middleware/usersMulter');
 
 //Rutas
 userRouter.get('/profile/:id', userController.profile);
 userRouter.post('/profile/:id', userController.profileDelete);
 userRouter.get('/login', userController.login); //falta que envie info a algun lugar y la valide
 userRouter.get('/register', userController.register);
-userRouter.post('/register', uploadFile.single("profilePhoto"), userController.registerPost); //falta revisar multer
+
+
+userRouter.post('/register', upload.single("image"), userController.registerPost);
+
+
 userRouter.get('/restorePassword', userController.restorePassword);
 userRouter.get('/list', userController.list);
 userRouter.get('/search', userController.search); //Actualizacion: falta
