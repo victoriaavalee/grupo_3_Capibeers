@@ -1,101 +1,57 @@
 [
   {
+    "id": 1,
+    "email": "ejemplo1@gmail.com",
+    "name": "ejemplo",
+    "lastName": "uno",
+    "birthdate": "2000-01-01",
+    "category": "Comprador",
+    "password": "uno",
+    "confPassword": "uno",
+    "image": "1701318417089-image.jpg"
+  },
+  {
     "id": 2,
-    "email": "eduardo-espeche@gmail.com",
-    "name": "Eduardo",
-    "lastName": "Espeche",
-    "birthdate": "2005-08-25",
-    "category": "buyer",
-    "image": "",
-    "password": "contraseña02",
-    "confPassword": "contraseña02"
+    "email": "ejemplo2@gmail.com",
+    "name": "ejemplo",
+    "lastName": "dos",
+    "birthdate": "2000-02-02",
+    "category": "Comprador",
+    "password": "dos",
+    "confPassword": "dos",
+    "image": "1701318456703-image.jpg"
   },
   {
     "id": 3,
-    "email": "ivana-ibañez@example.com",
-    "name": "Ivana",
-    "lastName": "Ibañez",
-    "birthdate": "2005-08-25",
-    "category": "buyer",
-    "image": "",
-    "password": "contraseña03",
-    "confPassword": "contraseña03"
+    "email": "ejemplo3@gmail.com",
+    "name": "ejemplo",
+    "lastName": "tres",
+    "birthdate": "2000-03-03",
+    "category": "Comprador",
+    "password": "tres",
+    "confPassword": "tres",
+    "image": "1701318581396-image.jpg"
   },
   {
     "id": 4,
-    "email": "osvalado-oria@example.com",
-    "name": "Osvalado",
-    "lastName": "Oria",
-    "birthdate": "2005-08-31",
-    "category": "seller",
-    "image": "",
-    "password": "contraseña04",
-    "confPassword": "contraseña04"
+    "email": "ejemplo4@gmail.com",
+    "name": "ejemplo",
+    "lastName": "tres",
+    "birthdate": "2000-04-04",
+    "category": "Comprador",
+    "password": "cuatro",
+    "confPassword": "cuatro",
+    "image": "1701318672429-image.jpg"
   },
   {
     "id": 5,
-    "email": "ursula.urquía@example.com",
-    "name": "ursula",
-    "lastName": "urquía",
-    "birthdate": "2005-03-17",
-    "category": "buyer",
-    "image": "",
-    "password": "contraseña05",
-    "confPassword": "contraseña05"
-  },
-  {
-    "id": 6,
-    "email": "vicky@digitalhouse.com",
-    "name": "victoria",
-    "lastName": "valencia",
+    "email": "victoriaa@gmail.com",
+    "name": "vick",
+    "lastName": "vale",
     "birthdate": "2004-12-13",
-    "category": "seller",
-    "image": "user6.jpg",
-    "password": "asdf",
-    "confPassword": "asdf"
-  },
-  {
-    "email": "sdfgaperrogatoro@gmail.com",
-    "name": "sapo",
-    "lastName": "sapoo",
-    "birthdate": "2005-01-18",
-    "category": "Comprador",
-    "password": "sdfg",
-    "confPassword": "sdfg",
-    "image": "img/1701053372515-img.jpg",
-    "id": 1701053372556
-  },
-  {
-    "email": "pinguino@gmail.com",
-    "name": "pin",
-    "lastName": "guino",
-    "birthdate": "2005-01-18",
     "category": "Administrador",
-    "password": "hhh",
-    "confPassword": "hhh",
-    "image": "img1701053624684-img.jpg",
-    "id": 1701053624712
-  },
-  {
-    "email": "kuromi@gmail.com",
-    "name": "kkkk",
-    "lastName": "rrrrr",
-    "birthdate": "2004-10-20",
-    "category": "Administrador",
-    "password": "asdf",
-    "confPassword": "asdf",
-    "image": "img-1701053690577.jpg",
-    "id": 1701053690591
-  },
-  {
-    "email": "nosei@gmail.com",
-    "name": "kkkk",
-    "lastName": "rrrrr",
-    "birthdate": "2004-10-28",
-    "category": "Comprador",
-    "password": "sdf",
-    "confPassword": "sdf",
-    "image": "img-1701053783189.jpg",
-    "id": 1701053783221
+    "password": "vicky",
+    "confPassword": "vicky",
+    "image": "1701318710328-image.jpg"
   }
 ]

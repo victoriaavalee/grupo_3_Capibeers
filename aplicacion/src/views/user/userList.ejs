@@ -17,11 +17,16 @@
         <ul>
             <% for (let i = 0; i < usersList.length; i++) { %>
             <li>
-                <img src="/img/users/<%= usersList[i].newId|| 'placeholder.jpg' %>"></img></a>
+                <img src="/img/users/<%= usersList[i].image||'placeholder.jpg' %>"></img></a>
                 <p><%=usersList[i].email%></p>
                 <p><%=usersList[i].name +" "+ usersList[i].lastName  %></p>
+                <p><%=usersList[i].image%></p>
                 <p><%=usersList[i].category %></p>
-                <button type="submit">Ver perfil</button>
+                <form method="GET" action="/user/profile/<%=usersList[i].id%>">
+                    <button type="submit">
+                        Ver perfil
+                    </button>
+                </form>
             </li>
             <% } %> 
         </ul>
