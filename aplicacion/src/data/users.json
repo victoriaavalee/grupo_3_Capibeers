@@ -1,28 +1,27 @@
 [
   {
-    "id": 1,
+    "id": 3,
     "email": "ejemplo1@gmail.com",
     "name": "ejemplo",
-    "lastName": "uno",
-    "birthdate": "2000-01-01",
-    "category": "Comprador",
-    "password": "uno",
-    "confPassword": "uno",
-    "image": "1701318417089-image.jpg"
+    "lastName": "tres",
+    "birthdate": "2000-01-03",
+    "password": "tres",
+    "confPassword": "tres",
+    "image": "1701494175911-image.jpg"
   },
   {
-    "id": 2,
-    "email": "ejemplo2@gmail.com",
+    "id": 4,
+    "email": "ejemplo$@gmail.com",
     "name": "ejemplo",
-    "lastName": "dos",
-    "birthdate": "2000-02-02",
+    "lastName": "cuatro",
+    "birthdate": "2000-04-04",
     "category": "Comprador",
-    "password": "dos",
-    "confPassword": "dos",
-    "image": "1701318456703-image.jpg"
+    "password": "cuatro",
+    "confPassword": "cuatro",
+    "image": "1701494187697-image.jpg"
   },
   {
-    "id": 3,
+    "id": 5,
     "email": "ejemplo3@gmail.com",
     "name": "ejemplo",
     "lastName": "tres",
@@ -30,28 +29,6 @@
     "category": "Comprador",
     "password": "tres",
     "confPassword": "tres",
-    "image": "1701318581396-image.jpg"
-  },
-  {
-    "id": 4,
-    "email": "ejemplo4@gmail.com",
-    "name": "ejemplo",
-    "lastName": "tres",
-    "birthdate": "2000-04-04",
-    "category": "Comprador",
-    "password": "cuatro",
-    "confPassword": "cuatro",
-    "image": "1701318672429-image.jpg"
-  },
-  {
-    "id": 5,
-    "email": "victoriaa@gmail.com",
-    "name": "vick",
-    "lastName": "vale",
-    "birthdate": "2004-12-13",
-    "category": "Administrador",
-    "password": "vicky",
-    "confPassword": "vicky",
-    "image": "1701318710328-image.jpg"
+    "image": "1701494089145-image.jpg"
   }
 ]

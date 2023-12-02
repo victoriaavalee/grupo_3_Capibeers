@@ -13,14 +13,13 @@
     <%- include('../partials/header')%>
     <main>
         <h2 class="title">LISTADO DE USUARIOS</h2>
-        <input type="text" name="nombre" value="<%=usersList.email %>" id="name" placeholder="Buscar por email" required>
+        <input type="text" name="search" value="<%=usersList.email %>" id="name" placeholder="Buscar por email" required>
         <ul>
             <% for (let i = 0; i < usersList.length; i++) { %>
             <li>
                 <img src="/img/users/<%= usersList[i].image||'placeholder.jpg' %>"></img></a>
                 <p><%=usersList[i].email%></p>
                 <p><%=usersList[i].name +" "+ usersList[i].lastName  %></p>
-                <p><%=usersList[i].image%></p>
                 <p><%=usersList[i].category %></p>
                 <form method="GET" action="/user/profile/<%=usersList[i].id%>">
                     <button type="submit">

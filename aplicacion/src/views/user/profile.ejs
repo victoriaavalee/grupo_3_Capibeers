@@ -20,8 +20,12 @@
                 <p>Apellido: <%=user.lastName%></p>
                 <p>Fecha de nacimiento: <%=user.birthdate%></p>
                 <p>Categoría: <%=user.category %></p>
-                <button type="submit">Cambiar contraseña</button>
-                <form method="GET" action="/user/edit/<%=user.id%>" >
+                <form method="GET" action="/user/restorePassword" >
+                    <button type="submit">
+                        Cambiar contraseña
+                    </button>
+                </form>
+                <form method="PUT" action="/user/edit/<%=user.id%>" >
                     <button type="submit">
                         Editar
                     </button>

@@ -46,7 +46,7 @@ const userController = {
         usersJSON.push(usuario);
         fs.writeFileSync(
             path.join(__dirname, "../data/users.json"),
-            JSON.stringify(usersJSON, null, 2),
+            JSON.stringify(usersJSON, null, 3),
             {
                 encoding: 'utf-8',
             }
@@ -97,7 +97,28 @@ const userController = {
         const user = usersJSON.find((u)=>u.id === userId); 
         res.render('./user/profileEdit', {'user':user});
     },
-    search: function(req,res){ //REVEER
+    editPut: function (req, res){
+        const id = req.params.id;
+        let file = req.file;
+        const {email, name, lastName} = req.body;
+        usersJSON.forEach((userEdit) =>{
+                if (userEdit.id == id){
+                    userEdit.email = email;
+                    userEdit.name = name;
+                    userEdit.lastName = lastName;
+                    userEdit.image = `${file.filename}`
+                };
+        });;
+        fs.writeFileSync(
+            path.join(__dirname, "../data/users.json"),
+            JSON.stringify(usersJSON, null, 2),
+            {
+                encoding: 'utf-8',
+            }
+        );
+        res.render('./user/userList',  {'usersList':usersJSON});
+    },
+    search: function (req,res){ //REVISAR   
         const loQueSeBusca = req.query.search;
         const archivoJSON = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
         const usuarios = JSON.parse(archivoJSON);
@@ -110,6 +131,4 @@ const userController = {
         res.render('userResults', {usersResults: userResults})
     },
 }
-
-
 module.exports = userController;
