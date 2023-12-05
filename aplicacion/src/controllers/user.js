@@ -1,7 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 const usersJSON = require ('../data/users.json');
-const { log } = require('console'); //solo para verificar que la info llegue
+const { log } = require('console'); //para verificacion de envio de información
+const {validationResult} = require('express-validator');
 
 //Controladores
 const userController = {  
@@ -30,28 +31,37 @@ const userController = {
         res.render('./user/register');
     },
     registerPost: function (req, res) {
-        const newId = usersJSON[(usersJSON.length - 1 )].id + 1;
-        let file = req.file;
-        let usuario = {
-            id: newId,
-            email: req.body.email,
-            name: req.body.name,
-            lastName: req.body.lastName,
-            birthdate:req.body.birthdate,
-            category: req.body.category,
-            password: req.body.password,
-            confPassword: req.body.confPassword,
-            image:`${file.filename}`,
-        }
-        usersJSON.push(usuario);
-        fs.writeFileSync(
-            path.join(__dirname, "../data/users.json"),
-            JSON.stringify(usersJSON, null, 3),
-            {
-                encoding: 'utf-8',
+        let errors = validationResult(req);
+        if (errors.isEmpty()){
+            const newId = usersJSON[(usersJSON.length - 1 )].id + 1;
+            let file = req.file;
+            let usuario = {
+                id: newId,
+                email: req.body.email,
+                name: req.body.name,
+                lastName: req.body.lastName,
+                birthdate:req.body.birthdate,
+                category: req.body.category,
+                password: req.body.password,
+                confPassword: req.body.confPassword,
+                image:`${file.filename}`,
             }
-        );
-        res.redirect('/user/list')
+            usersJSON.push(usuario);
+            fs.writeFileSync(
+                path.join(__dirname, "../data/users.json"),
+                JSON.stringify(usersJSON, null, 3),
+                {
+                    encoding: 'utf-8',
+                }
+            );
+            res.redirect('/user/list')
+        }else{
+            res.render('./user/register', {
+                errors: errors.array(),
+                old: req.body,
+            });
+        }
+        
         //res.redirect('/user/list');
         //VERSION ORIGINAL + CLASE
         /*
