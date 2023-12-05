@@ -1,1 +1,57 @@
-[{"id":1,"email":"ejemplo1@gmail.com","name":"ejemplo","lastName":"tres","birthdate":"2000-01-03","password":"tres","confPassword":"tres","image":"1701494175911-image.jpg"}]
+[
+   {
+      "id": 1,
+      "email": "ejemplo1@gmail.com",
+      "name": "ejemploN",
+      "lastName": "ejemploA",
+      "birthdate": "2000-01-01",
+      "category": "Comprador",
+      "password": "ejemplo!",
+      "confPassword": "ejemplo1",
+      "image": "1701745681578-image.jpg"
+   },
+   {
+      "id": 2,
+      "email": "ejemplo2@gmail.com",
+      "name": "ejemploN",
+      "lastName": "ejemploA",
+      "birthdate": "2000-02-02",
+      "category": "Comprador",
+      "password": "ejemplo",
+      "confPassword": "ejemplo",
+      "image": "1701745796146-image.jpg"
+   },
+   {
+      "id": 3,
+      "email": "ejemplo3@gmail.com",
+      "name": "ejemploN",
+      "lastName": "ejemploA",
+      "birthdate": "2000-02-02",
+      "category": "Comprador",
+      "password": "ejemplo3",
+      "confPassword": "ejemplo3",
+      "image": "1701745830689-image.jpg"
+   },
+   {
+      "id": 4,
+      "email": "ejemplo4@gmail.com",
+      "name": "ejemploN",
+      "lastName": "ejemploA",
+      "birthdate": "2000-02-02",
+      "category": "Comprador",
+      "password": "ejemplo",
+      "confPassword": "ejemplo",
+      "image": "1701748003928-image.jpg"
+   },
+   {
+      "id": 5,
+      "email": "ejemplo5@gmail.com",
+      "name": "vickkk",
+      "lastName": "ejemploA",
+      "birthdate": "2004-12-13",
+      "category": "Administrador",
+      "password": "ejemplo",
+      "confPassword": "ejemplo",
+      "image": "1701748080187-image.jpg"
+   }
+]
