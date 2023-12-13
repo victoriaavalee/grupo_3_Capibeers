@@ -50,25 +50,25 @@
 
 **RETROSPECTIVA SPRINT 5**  
   
-*Comenzar a hacer:* 
-*Revisar los códigos para estar al tanto de los cambios de los compañeros.
-*Realizar commits donde funcione el código, o advertir sobre este.
+*Comenzar a hacer:*
+* Revisar los códigos para estar al tanto de los cambios de los compañeros.
+* Realizar commits donde funcione el código, o advertir sobre este.
 
 *Hacer mas:*
-*Comunicarnos sobre los cambios y avances o problemas en el proyecto.
-*Especificar lo realizado en los commits.
+* Comunicarnos sobre los cambios y avances o problemas en el proyecto.
+* Especificar lo realizado en los commits.
 
 *Continuar haciendo:*
-*Mantener una buena relación de comunicación entre compañeros. 
-*Mantener la asistencia en las reuniones
+* Mantener una buena relación de comunicación entre compañeros. 
+* Mantener la asistencia en las reuniones
 
 *Hacer menos:*
-*Ingresar tarde a las reuniones. 
-*No estar al día con las clases. 
-*Dejar de asistir tarde a clases.
+* Ingresar tarde a las reuniones. 
+* No estar al día con las clases. 
+* Dejar de asistir tarde a clases.
 
 *Dejar de hacer:* 
-*Ignorar o no responder los mensajes.
-*No presentar su parte del trabajo ni avisar al grupo sobre esto. 
-*Asistir a las reuniones y no realizar ninguna clase de aporte 
-*Incumplir con la presentación y los tiempos acordados.
+* Ignorar o no responder los mensajes.
+* No presentar su parte del trabajo ni avisar al grupo sobre esto. 
+* Asistir a las reuniones y no realizar ninguna clase de aporte 
+* Incumplir con la presentación y los tiempos acordados.
