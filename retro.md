@@ -86,3 +86,23 @@
 * No presentar su parte del trabajo ni avisar al grupo sobre esto. 
 * Asistir a las reuniones y no realizar ninguna clase de aporte.
 * Incumplir con la presentación y los tiempos acordados.
+#
+**RETROSPECTIVA SPRINT 6**  
+  
+*Comenzar a hacer:*
+* Avisar cuando se suba una actualización en el proyecto.
+* Subir actualizaciones donde el código funcione.
+
+*Hacer más:*
+* Comunicarnos.
+
+*Continuar haciendo:*
+* Mantener la asistencia en las reuniones.
+
+*Hacer menos:*
+* No estar al día con las clases. 
+
+*Dejar de hacer:* 
+* Ignorar o no responder los mensajes.
+* No presentar su parte del trabajo en la fecha planteada.
+* Cambiar o eliminar código que corresponda a otro compañero.
