@@ -48,7 +48,8 @@
 * No realizar ninguna clase de aporte
 * Incumplir con la presentación y los tiempos acordados.
 
-**RETROSPECTIVA SPRINT 4**
+**RETROSPECTIVA SPRINT 5**  
+  
 *Comenzar a hacer:* 
 *Revisar los códigos para estar al tanto de los cambios de los compañeros.
 *Realizar commits donde funcione el código, o advertir sobre este.
