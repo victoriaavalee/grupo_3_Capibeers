@@ -1,5 +1,6 @@
 const express = require ('express');
 const router = require('./routes');
+
 const homeRouter = require ('./routes/home');
 const productsRouter = require('./routes/products');
 const userRouter = require('./routes/user');
@@ -18,8 +19,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Método override
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
+
+//Morgan
+const morgan = require('morgan');
+app.use(morgan('dev'));
 
 //Rutas 
 app.use ('/',router);
@@ -39,7 +44,6 @@ app.listen (PORT, () => {
 
 /*FALTA IMLPEMENTAR
 const session = require('express-session')
-const userMiddleware = require('./middleware/userMiddleware')
 const cookies = require('cookie-parser');
 const cookieMiddleware = require('./middleware/cookieMiddleware')
 

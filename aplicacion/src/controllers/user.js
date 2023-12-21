@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const usersJSON = require ('../data/users.json');
-const { log } = require('console'); //para verificacion de envio de información
+const { log } = require('console');
 const {validationResult} = require('express-validator');
 
 //Controladores
@@ -31,8 +31,8 @@ const userController = {
         res.render('./user/register');
     },
     registerPost: function (req, res) {
-        let errors = validationResult(req);
-        if (errors.isEmpty()){
+        let resultValidation = validationResult(req);
+        if (resultValidation.errors.length == 0 ) {
             const newId = usersJSON[(usersJSON.length - 1 )].id + 1;
             let file = req.file;
             let usuario = {
@@ -54,10 +54,10 @@ const userController = {
                     encoding: 'utf-8',
                 }
             );
-            res.redirect('/user/list')
+            res.redirect('/user/list');
         }else{
-            res.render('./user/register', {
-                errors: errors.array(),
+            return res.render('./user/register', {
+                errors: resultValidation.mapped(),
                 old: req.body,
             });
         }
