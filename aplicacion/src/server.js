@@ -1,5 +1,7 @@
 const express = require ('express');
 const router = require('./routes');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 
 const homeRouter = require ('./routes/home');
 const productsRouter = require('./routes/products');
@@ -26,6 +28,25 @@ app.use(methodOverride('_method'));
 const morgan = require('morgan');
 app.use(morgan('dev'));
 
+//Express-session
+app.use(session({
+    secret: "topSecret",
+    resave: false,
+    saveUninitialized: false,
+}));
+
+//Middlewares
+const keepUserLogger = require('./middleware/keepUserLogger');
+const isUserLogged = require('./middleware/isUserLogged');
+
+//Cookie Parser
+app.use(cookieParser());
+app.use(keepUserLogger);
+
+//
+app.use(keepUserLogger);
+app.use(isUserLogged);
+
 //Rutas 
 app.use ('/',router);
 app.use ('/home',homeRouter);
@@ -41,20 +62,3 @@ app.use((req, res, next) => {
 app.listen (PORT, () => {
     console.log (`[server] corriendo en el puerto: ${PORT}`);
 });
-
-/*FALTA IMLPEMENTAR
-const session = require('express-session')
-const cookies = require('cookie-parser');
-const cookieMiddleware = require('./middleware/cookieMiddleware')
-
-app.use(session({
-    secret: "Shh",
-    resave: false,
-    saveUninitialized: false,
-}))
-app.use(cookies());
-app.use(cookieMiddleware);
-
-//middleware global 
-app.use(userMiddleware.logged)
-*/

@@ -1,8 +1,9 @@
 const path = require('path');
 const fs = require('fs');
 const usersJSON = require ('../data/users.json');
-const { log } = require('console');
 const {validationResult} = require('express-validator');
+const {getUserByEmail} = require('../data/users');
+const bcrypt = require('bcryptjs');
 
 //Controladores
 const userController = {  
@@ -25,7 +26,33 @@ const userController = {
          para actualizar la variable (let). No olvidar cambiar el usersTmp del JSON.stringify */
     },
     login: function (req, res){
-        res.render('./user/login');
+        if (req.session.isUserLogger){
+            return res.redirect('/products');
+        }
+        return res.render('./user/login');
+    },
+    loginPost: function (req, res){
+        const loginData = req.body;
+        const keepUserLogger = loginData.keepUserLogger === 'true';
+        const user = getUserByEmail(loginData.email);
+        const isPasswordCorrect = bcrypt.compareSync (loginData.password, user.password);
+
+        if (isPasswordCorrect){
+            req.session.isUserLogger = true;
+            req.session.emailUser = loginData.email;
+        }
+
+        if(keepUserLogger){
+            res.cookie('userEmail', user.email)
+        }
+
+        res.redirect('/products');
+    },
+    logoutPost: function(req, res){
+        req.session.destroy();
+        res.clearCokie('userEmail');
+
+        res.redirect('/home');
     },
     register: function (req, res){
         res.render('./user/register');
@@ -61,7 +88,6 @@ const userController = {
                 old: req.body,
             });
         }
-        
         //res.redirect('/user/list');
         //VERSION ORIGINAL + CLASE
         /*
@@ -139,6 +165,7 @@ const userController = {
             }
         }
         res.render('userResults', {usersResults: userResults})
-    },
-}
+    }
+};
+
 module.exports = userController;
