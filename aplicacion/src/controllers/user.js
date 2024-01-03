@@ -1,43 +1,164 @@
 const path = require('path');
 const fs = require('fs');
+const usersJSON = require ('../data/users.json');
+const {validationResult} = require('express-validator');
+const bcryptjs = require('bcryptjs');
+//const {getUserByEmail} = require('../data/users');
 
-//const usersListJSON = require ('./src/data/users.json');
-//const { json } = require('express');
 
 //Controladores
-const userController = {
+const userController = {  
     profile: function (req, res){
-        res.render('./user/profile');
+        const userId = +req.params.id;
+        const user = usersJSON.find((u)=>u.id === userId); 
+        res.render ('./user/profile',{'user' : user,});
+    },
+    profileDelete: function (req, res){
+        const userId = +req.params.id;
+        const imageDelete = usersJSON.find((u)=>u.id ==userId);
+        const imageD = path.join (__dirname, '../../public/img/users/' + imageDelete.image);
+        if(fs.existsSync(imageD)){
+            fs.unlinkSync(imageD)
+        };
+        const usersTmp = usersJSON.filter((u)=>u.id !== userId);
+        fs.writeFileSync('./src/data/users.json', JSON.stringify(usersTmp));
+        res.redirect('/user/list');
+        /*En mi caso funciona bien, si no, se pone el usersJSON con let y se reemplaza el usersTmp por usersJSON
+        para actualizar la variable (let). No olvidar cambiar el usersTmp del JSON.stringify */
     },
     login: function (req, res){
-        res.render('./user/login');
+        if (req.session.isUserLogger){
+            return res.redirect('/products');
+        }
+        return res.render('./user/login');
     },
-    register: function (req, res){  //es como un create
+    loginPost: function (req, res){
+        let resultValidation = validationResult(req);
+        if (resultValidation.isEmpty()) {
+            const usersJson = fs.readFileSync ('./src/data/users.json', {encoding: 'utf-8'});
+            let users;
+            if(usersJson == ""){
+                users = [];
+            }else{
+                users = JSON.parse(usersJson);
+            }
+            let userToLogin;
+            for(let i = 0; i < users.length; i++){
+                if(users[i].email == req.body.email){
+                    if(bcryptjs.compareSync(req.body.password, users[i].password)){
+                        userToLogin = users[i];
+                        break;
+                    }
+                }
+            }
+            if(userToLogin == undefined){
+                return res.render('./user/login', {
+                    resultValidation:{
+                        password:{
+                            msg: 'Credenciales invalidas'
+                        }
+                    }
+                });
+            }
+            req.session.userLogger = userToLogin;
+            
+            if (req.body.keepUserLogger != undefined){
+                res.cookie('keepUser', userToLogin.email, {maxAge:60000})
+            }
+            res.redirect('/products');
+        }else{
+            return res.render('./user/login', {
+                errors: resultValidation.mapped(),
+                old: req.body,
+            });
+        }
+            //hasta aqui va bien, aunque no sirve al loguarese, recibe info
+        /*
+        //VERSION CLASE
+        const loginData = req.body;
+        const keepUserLogger = loginData.keepUserLogger === 'true';
+        const user = getUserByEmail(loginData.email);
+        const isPasswordCorrect = bcryptjs.compareSync (loginData.password, user.password);
+        if (isPasswordCorrect){
+            req.session.isUserLogger = true;
+            req.session.emailUser = loginData.email;
+        }
+        if(keepUserLogger){
+            res.cookie('userEmail', user.email)
+        }
+        */
+        //res.redirect('/products');
+    },
+    logoutPost: function(req, res){
+        req.session.destroy();
+        res.clearCokie('userEmail');
+        return res.redirect('/home');
+    },
+    register: function (req, res){
         res.render('./user/register');
     },
-    registerPost: function (req, res) {  //es como un create x2
-        const usuario = {
-            email: req.body.email,
-            name: req.body.nombre,
-            lastName: req.body.apellido,
-            birthdate:req.body.edad,
-            category: req.body.profile,
-            image:req.body.fotoUsuario,
-            password: req.body.contraseña,
-            confPassword: req.body.confContraseña
+    registerPost: function (req, res) {
+        let resultValidation = validationResult(req);
+        if (resultValidation.errors.length == 0 ) {
+            const newId = usersJSON[(usersJSON.length - 1 )].id + 1;
+            let file = req.file;
+            let usuario = {
+                id: newId,
+                email: req.body.email,
+                name: req.body.name,
+                lastName: req.body.lastName,
+                birthdate:req.body.birthdate,
+                category: req.body.category,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                confPassword: req.body.confPassword,
+                image:`${file.filename}`,
+            }
+            usersJSON.push(usuario);
+            fs.writeFileSync(
+                path.join(__dirname, "../data/users.json"),
+                JSON.stringify(usersJSON, null, 3),
+                {
+                    encoding: 'utf-8',
+                }
+            );
+            res.redirect('/user/list');
+        }else{
+            return res.render('./user/register', {
+                errors: resultValidation.mapped(),
+                old: req.body,
+            });
         }
-        //Guardar info de usuario en un json
-        const archivoUsuario = fs.readFileSync ('./src/data/users.json', {encoding: 'utf-8'});
+        //res.redirect('/user/list');
+        //VERSION ORIGINAL + CLASE
+        /*
+        const archivoUsuarios = fs.readFileSync ('./src/data/users.json', {encoding: 'utf-8'});
+        let newId = usersJSON[(usersJSON.length - 1 )].id + 1; 
+        let file = req.file;
+        let usuario = {
+            id: newId,
+            email: req.body.email,
+            name: req.body.name,
+            lastName: req.body.lastName,
+            birthdate:req.body.birthdate,
+            category: req.body.category,
+            password: req.body.password,
+            confPassword: req.body.confPassword,
+            image:`img/${file.filename}`
+        }
+        //const usuario = req.body;
+        //usuario.id = new Date().getTime(); //pone un id diferente a cada user ingresado
         let usuarios;
-        if(archivoUsuario == ""){
+        if(archivoUsuarios == ""){
             usuarios = [];
         }else{
-            usuarios = JSON.parse(archivoUsuario);
+            usuarios = JSON.parse(archivoUsuarios);
         }
         usuarios.push(usuario);
-        usuariosJSON = JSON.stringify(usuarios);
+        usuariosJSON = JSON.stringify(usuarios, null, 2);
         fs.writeFileSync('./src/data/users.json', usuariosJSON);
-        res.redirect('/user/list');
+        res.redirect('/user/userList');
+        res.render('./user/register');
+        */
     },
     restorePassword: function (req, res){
         res.render('./user/restorePassword');
@@ -46,26 +167,45 @@ const userController = {
         const archivoUsuario = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
         usuarios = JSON.parse(archivoUsuario);
         res.render('./user/userList', {'usersList':usuarios});
-
     },
     edit: function (req, res){
-        const archivoUsuario = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
-        usuarios = JSON.parse(archivoUsuario);
-        res.render('./user/profileEdit', {'usersList':usuarios});
+        const userId = +req.params.id;
+        const user = usersJSON.find((u)=>u.id === userId); 
+        res.render('./user/profileEdit', {'user':user});
     },
-    search: function(req,res){
+    editPut: function (req, res){
+        const id = req.params.id;
+        let file = req.file;
+        const {email, name, lastName} = req.body;
+        usersJSON.forEach((userEdit) =>{
+                if (userEdit.id == id){
+                    userEdit.email = email;
+                    userEdit.name = name;
+                    userEdit.lastName = lastName;
+                    userEdit.image = `${file.filename}`
+                };
+        });;
+        fs.writeFileSync(
+            path.join(__dirname, "../data/users.json"),
+            JSON.stringify(usersJSON, null, 2),
+            {
+                encoding: 'utf-8',
+            }
+        );
+        res.render('./user/userList',  {'usersList':usersJSON});
+    },
+    search: function (req,res){ //REVISAR   
         const loQueSeBusca = req.query.search;
         const archivoJSON = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
-        const users = JSON.parse(archivoJSON);
+        const usuarios = JSON.parse(archivoJSON);
         const userResults = [];
-        for(let i = 0; i<users.length; i++){
-            if (users[i].name.includes(loQueSeBusca)){
-                usersResults.push(users[i]);
+        for(let i = 0; i<usuarios.length; i++){
+            if (usuarios[i].email.includes(loQueSeBusca)){
+                usersResults.push(usuarios[i]);
             }
         }
         res.render('userResults', {usersResults: userResults})
-    },
-}
-
+    }
+};
 
 module.exports = userController;

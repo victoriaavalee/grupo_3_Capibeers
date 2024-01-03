@@ -6,6 +6,7 @@
     <title>Capibeers -  Listado de usuarios</title>
     <link rel="stylesheet" href="/css/user.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="shortcut icon" href="/img/banners/favicon2.png"> <!--Icono favicon-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -13,16 +14,18 @@
     <%- include('../partials/header')%>
     <main>
         <h2 class="title">LISTADO DE USUARIOS</h2>
-        <input type="text" name="nombre" value="<%=usersList.email %>" id="name" placeholder="Buscar por email" required>
-        <ul style="text-align: left; margin-left: 50px; margin-bottom: 20px;">
+        <input type="text" name="search" value="<%=usersList.email %>" id="name" placeholder="Buscar por email" required>
+        <ul>
             <% for (let i = 0; i < usersList.length; i++) { %>
             <li>
-                <a href="/user/edit/<%= usersList[i].email %>"><%=usersList[i].email%></a>
+                <img src="/img/users/<%= usersList[i].image||'placeholder.jpg' %>"></img></a>
+                <p><%=usersList[i].email%></p>
                 <p><%=usersList[i].name +" "+ usersList[i].lastName  %></p>
                 <p><%=usersList[i].category %></p>
-                <form method="POST" action="/user/delete/<%=usersList[i].id %>?_method=DELETE">
-                    <button type="submit">Eliminar</button>
-                    <button type="submit">Editar</button>
+                <form method="GET" action="/user/profile/<%=usersList[i].id%>">
+                    <button type="submit">
+                        Ver perfil
+                    </button>
                 </form>
             </li>
             <% } %> 

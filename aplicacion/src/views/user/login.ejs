@@ -6,31 +6,42 @@
     <title>Capibeers - Login</title>
     <link rel="stylesheet" href="/css/user.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="shortcut icon" href="/img/banners/favicon2.png"> <!--Icono favicon-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
 </head>     
 <body>
     <!HEADER/!>
         <%- include('../partials/header')%>
     <main>
-        <form action="/home" method="GET">
+        <form  method="POST" action="/user/login" >
             <h2 class="title">ACCEDER</h2>
             <p id="text-user-password">Ingrese su correo electrónico y su contraseña:</p>
             <div id="div-user">
-                <label form = "user"><i class="fa-solid fa-user"></i></label>
-                <input type="email" name="nameUsuario" id="log.user" placeholder="Correo"
-                    class="submit clickable" required >
+                <!--<label form = "user"><i class="fa-solid fa-user"></i></label>-->
+                <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null %>" required>
+                <div>
+                    <% if (locals.errors && errors.email) { %>
+                        <%=  errors.email.msg %>
+                    <% } %>
+                </div>
             </div>
             <div id="div-password">
-                <label form = "clave"><i class="fa-solid fa-lock"></i></label>
-                <input type="password"  id="log.password" placeholder="Contraseña" required>
+                <!--<label form = "clave"><i class="fa-solid fa-lock"></i></label>-->
+                <input type="password" name="password" id="password" placeholder="Contraseña" value="<%= locals.old && old.password ? old.password : null %>" required>
+                <div>
+                    <% if (locals.errors && errors.password) { %>
+                        <%=  errors.password.msg %>
+                    <% } %>
+                </div>
             </div>
             <div id="remember-user-password">
-                <p>Recordar usuario y clave  <input id="electro" type="checkbox" name="remember-user-password"
-            value="electro" wfd="id9"></p>
+                <label for="keepUserLogger">Mantener la sesion iniciada</label>
+                <input id="electro" type="checkbox" value="true" name="keepUserLogger" ></p>
             </div>
-
             <div>
-                <button type="submit">INGRESAR</button>
+                <button type="submit" value="Login">
+                    INGRESAR
+                </button>
             </div>
         </form>
         <div>

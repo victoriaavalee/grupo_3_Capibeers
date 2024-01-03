@@ -1,6 +1,6 @@
 const express = require ('express');
-const productsRouter = express.Router();
 const productsController = require('../controllers/products');
+const productsRouter = express.Router();
 const uploadFile = require('../middleware/productsMulter');
 
 // Listado de productos

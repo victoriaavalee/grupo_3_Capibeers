@@ -6,28 +6,28 @@
     <title>Capibeers - Edición de perfil</title>
     <link rel="stylesheet" href="/css/user.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="shortcut icon" href="/img/banners/favicon2.png"> <!--Icono favicon-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-    <!--Header/-->
+    <!--HEADER-->
         <%- include('../partials/header')%>
     <main>
-        <h2 class="title">EDITAR PERFIL</h2>  <!--Editar un perfil in-->
-        <!--<div>
-            <p><%=usersList.email %></p>
-            <p><%=usersList.name +" "+ usersList.lastName  %></p>
-            <p><%=usersList.category %></p>
-        </div>-->
-        <form method="POST" action="/user/edit?_method=PUT">
-            <div class="controls">
-                <input type="text" name="nombre" value="<%=usersList.email %>" id="name" placeholder="Nombre" required>
-            </div>
-            <div class="buttons">
-                <button type="submit" value="Registrar">
-                    Continuar
-                </button>
-            </div>
-        </form>
+        <h2 class="title">EDITAR PERFIL</h2>
+        <div>
+            <form action="/user/edit/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <label>Foto de perfil</label>
+                <input type="file" name="image" id="img-profile">
+                <label>Correo</label>
+                <input type="email" name="email" id="email" placeholder="Email" value="<%=user.email%>">
+                <label>Nombre</label>
+                <input type="text" name="name" id="name" placeholder="Nombre" value="<%=user.name%>">
+                <label>Apellido</label>
+                <input type="text" name="lastName" id="last-name" placeholder="Apellido" value="<%=user.lastName%>">
+                <button type="submit">Guardar cambios</button>
+            </form>
+            <a href="/home"><button>Volver</button></a>
+        </div>
     </main>
     <!--FOOTER/-->
         <%- include('../partials/footer')%>

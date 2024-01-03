@@ -1,5 +1,8 @@
 const express = require ('express');
 const router = require('./routes');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+
 const homeRouter = require ('./routes/home');
 const productsRouter = require('./routes/products');
 const userRouter = require('./routes/user');
@@ -14,12 +17,35 @@ app.set('view engine', 'ejs');
 app.set ('views', './src/views');
 
 //Capturar información
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Método override
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
+
+//Morgan
+const morgan = require('morgan');
+app.use(morgan('dev'));
+
+//Express-session
+app.use(session({
+    secret: "topSecret",
+    resave: false,
+    saveUninitialized: false,
+}));
+
+//Cookie Parser
+app.use(cookieParser());
+
+//Middlewares
+const keepUserLogger = require('./middleware/keepUserLogger'); //se fija si el user esta logueado
+const isUserLogged = require('./middleware/isUserLogged'); //este se usa para los iconos de entrada y slaida de user 
+const keepUserCookie =  require('./middleware/keepUserCookie'); //cookie q reuerda user
+app.use(keepUserLogger);
+app.use(isUserLogged);
+app.use(keepUserCookie);
+
 
 //Rutas 
 app.use ('/',router);
@@ -36,21 +62,3 @@ app.use((req, res, next) => {
 app.listen (PORT, () => {
     console.log (`[server] corriendo en el puerto: ${PORT}`);
 });
-
-/*FALTA IMLPEMENTAR
-const session = require('express-session')
-const userMiddleware = require('./middleware/userMiddleware')
-const cookies = require('cookie-parser');
-const cookieMiddleware = require('./middleware/cookieMiddleware')
-
-app.use(session({
-    secret: "Shh",
-    resave: false,
-    saveUninitialized: false,
-}))
-app.use(cookies());
-app.use(cookieMiddleware);
-
-//middleware global 
-app.use(userMiddleware.logged)
-*/

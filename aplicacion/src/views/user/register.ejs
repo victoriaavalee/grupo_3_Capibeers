@@ -6,52 +6,84 @@
     <title>Capibeers - Registro</title>
     <link rel="stylesheet" href="/css/user.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="shortcut icon" href="/img/banners/favicon2.png"> <!--Icono favicon-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <!HEADER/!>
         <%- include('../partials/header')%>
-    <main>
-        <section class="formRegister">
-            <h2>Unete a nosotros!</h2>
-            <form method="POST" action="/user/register">
-                <div class="controls">
-                    <input type="email" name="email" id="email" placeholder="Email" required>
-                    <input type="text" name="nombre" id="name" placeholder="Nombre" required>
-                    <input type="text" name="apellido" id="last-name" placeholder="Apellido" required>
-                    <input type="date" name="edad" id="age" max="2005-09-01">
-                </div>
-                <div class="user-profile">
-                    <p>Perfil de usuario:</p>
-                    <input type="radio" id="buyer" name="profile" value="buyer">
-                    <label for="buyer">Cliente</label>
-                    <input type="radio" id="seller" name="profile" value="seller">
-                    <label for="seller">Administrador</label>
-                </div>
-                <div class="img-user">
-                    <p>Foto de perfil:</p>
-                    <label for="img-profile"><i class="fa-solid fa-upload"></i>Upload file</label>
-                    <input type="file" name="foto-usuario" id="img-profile">
-                </div>
-                <div class="controls">
-                    <input type="password" name="contraseña" id="password" placeholder="Contraseña" required>
-                    <input type="password" name="confContraseña" id="confirm-password" placeholder="Confirmar contraseña" required>
-                </div>
-                <p>¿Ya tienes una cuenta?<a class="login" href="/user/login">Iniciar sesión.</a></p>
-                <div class="buttons">
-                    <button type="submit" value="Registrar">
-                        Continuar
-                    </button>
-                    <p class="separador">o</p>
-                    <button class="Google">
-                        <i class="fa-brands fa-google"></i>
-                        Continuar con Google
-                    </button>
-                </div>
-            </form>
-        </section>
-    </main>
-    <!FOOTER/!>
-        <%- include('../partials/footer')%>
-</body>
-</html>
+        <main>
+            <section class="formRegister">
+                <h2>Unete a nosotros!</h2>
+                <form method="POST" action="/user/register" enctype="multipart/form-data">
+                    <div class="controls">
+                        <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null %>" required>
+                        <div>
+                            <% if (locals.errors && errors.email) { %>
+                                <%=  errors.email.msg %>
+                            <% } %>
+                        </div>
+                        <input type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : null %>" required>
+                        <div>
+                            <% if (locals.errors && errors.name) { %>
+                                <%=  errors.name.msg %>
+                            <% } %>
+                        </div>
+                        <input type="text" name="lastName" id="last-name" placeholder="Apellido" value="<%= locals.old && old.lastName ? old.lastName : null %>" required>
+                        <div>
+                            <% if (locals.errors && errors.lastName) { %>
+                                <%=  errors.lastName.msg %>
+                            <% } %>
+                        </div>
+                        <input type="date" name="birthdate" id="age" max="2005-09-01" value="<%= locals.old && old.birthdate ? old.birthdate : null %>" required>
+                        <div>
+                            <% if (locals.errors && errors.birthdate) { %>
+                                <%=  errors.birthdate.msg %>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="user-profile">
+                        <!--No estria funcionando, ej para style select class31-->
+                        <p>Perfil de usuario:</p>
+                        <input type="radio" id="buyer" name="category" value="Comprador"  <%= locals.old && old.category === 'Comprador' ? 'selected' : ''; %>>
+                        <label for="buyer">Cliente</label>
+                        <input type="radio" id="seller" name="category" value="Administrador"  <%= locals.old && old.category === 'Administrador' ? 'selected' : ''; %>>
+                        <label for="seller">Administrador</label>
+                    </div>
+                    <div class="img-user">
+                        <p>Foto de perfil:</p>
+                        <label for="img-profile"><i class="fa-solid fa-upload"></i>Upload file</label>
+                        <input type="file" name="image" id="img-profile" accept=".png,.jpg">
+                        <div>
+                            <% if (locals.errors && errors.image) { %>
+                                <%=  errors.image.msg %>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <input type="password" name="password" id="password" placeholder="Contraseña" value="<%= locals.old && old.password ? old.password : null %>" required>
+                        <div>
+                            <% if (locals.errors && errors.password) { %>
+                                <%=  errors.password.msg %>
+                            <% } %>
+                        </div>
+                        <input type="password" name="confPassword" id="confirm-password" placeholder="Confirmar contraseña" value="<%= locals.old && old.confPassword ? old.confPassword : null %>" required>
+                        <div>
+                            <% if (locals.errors && errors.confPassword) { %>
+                                <%=  errors.confPassword.msg %>
+                            <% } %>
+                        </div>
+                    </div>
+                    <p>¿Ya tienes una cuenta?<a class="login" href="/user/login">Iniciar sesión.</a></p>
+                    <div class="buttons">
+                        <button type="submit" value="Registrar">
+                            Continuar
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <!FOOTER/!>
+            <%- include('../partials/footer')%>
+    </body>
+    </html>

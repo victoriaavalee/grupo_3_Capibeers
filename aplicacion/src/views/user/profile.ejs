@@ -6,14 +6,38 @@
     <title>Capibeers - Perfil de usuario</title>
     <link rel="stylesheet" href="/css/user.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="shortcut icon" href="/img/banners/favicon2.png"> <!--Icono favicon-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <!HEADER/!>
         <%- include('../partials/header')%>
-    <main>
-        <p>ESTO ES PERFIL DE USUARIO, CODIGO EN PROCESO</p>
-    </main>
+        <main>
+            <h2 class="title">PERFIL DE USUARIO</h2>  <!--Editar un perfil segun CORREO FALTA -->
+            <div>
+                <img src="/img/users/<%= user.image || 'placeholder.jpg' %>"></img>
+                <p><%=user.email%></p>
+                <p>Nombre: <%=user.name%></p>
+                <p>Apellido: <%=user.lastName%></p>
+                <p>Fecha de nacimiento: <%=user.birthdate%></p>
+                <p>Categoría: <%=user.category %></p>
+                <form method="GET" action="/user/restorePassword" >
+                    <button type="submit">
+                        Cambiar contraseña
+                    </button>
+                </form>
+                <form method="PUT" action="/user/edit/<%=user.id%>" >
+                    <button type="submit">
+                        Editar
+                    </button>
+                </form>
+                <form method="POST" action="/user/profile/<%=user.id%>" >
+                    <button type="submit">
+                        Eliminar
+                    </button>
+                </form>
+            </div>
+        </main>
     <!FOOTER/!>
         <%- include('../partials/footer')%>
 </body>
