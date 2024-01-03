@@ -1,18 +1,18 @@
 # CAPIBEERS - DIGITAL HOUSE  
+¡Bienvenido a nuestra plataforma de venta al por mayor de cervezas! Somos tu destino número uno para encontrar una amplia variedad de cervezas de distintas marcas para satisfacer todos los gustos y necesidades de tu negocio.  
+¿Qué nos distingue? Nuestra dedicación a la excelencia en cada paso del proceso. Trabajamos directamente con productores y distribuidores confiables para asegurarnos de que cada lote de cerveza que llegue a tus manos sea de la más alta calidad. Además, nuestra plataforma intuitiva facilita el proceso de compra, permitiéndote navegar, seleccionar y realizar pedidos con total comodidad y confianza.  
+Únete a nuestra comunidad de clientes satisfechos que confían en nosotros para abastecer sus negocios con las mejores cervezas del mercado. ¡Descubre la experiencia única de trabajar con nosotros y lleva la diversidad y calidad a tu establecimiento!
 
-Te damos la bienvenida, somos un sitio innovador en el arte de la bebida.  
-Somos quienes cautivan el corazón y el paladar de jóvenes, y adultos.  
-Somos una promesa de un día ideal y refrescante.  
-Somos Capibeers.
 
 ## Temática del sitio  
-El sitio web ofrece una gran variedad de cervezas de un exquisito sabor, digno de un público con paladar exigente.
-Se ofrecen bebidas de alta calidad donde se trabajó minuciosamente con el fin de poder llegar a una perfección con respecto a su ingredientes. Los articulos presentados son artesanales y distribuidos en distintos formatos como latas y botellas. También este sitio, trabaja en la comercialización de accesorios como vasos y botellones. Además presume de un pequeño apartado dedicado a la indumentaria donde se muestran artículos como remeras y gorras. 
+En nuestra página, te sumergirás en un catálogo diverso y emocionante que abarca desde las clásicas cervezas artesanales hasta las reconocidas marcas internacionales. Ofrecemos una selección cuidadosamente curada que garantiza calidad, frescura y una gama de sabores que deleitarán a tus clientes.  
+Los articulos presentados se los encuentra en formatos como latas y botellas según su marca.  
 
 ## Público objetivo  
-Capibeers es un lugar destinado a jóvenes mayores de edad y adultos que aprecian la buena cerveza en un ambiente relajado.
-En Capibeers nos enorgullecemos de ofrecer una amplia selección de cervezas para todos los gustos y preferencias, desde cervezas tradicionales y clásicas hasta las ultimas tendencias e innovaciones en este mundo de la bebida. 
+Ya seas un bar, restaurante, tienda especializada o cualquier otro negocio relacionado con la venta de cervezas, estamos aquí para satisfacer tus necesidades. Nuestro compromiso es ser tu socio confiable en el mundo de las cervezas al por mayor, ofreciéndote no solo productos excepcionales, sino también un servicio excepcional.  
 
+
+ 
 ## Integrantes  
 * Hola. Soy  Victoria Valencia, tengo 18 años y soy estudiante de programación en la Facultad de Ingenieria, en mis tiempos libres me gusta escuchar música.
 
