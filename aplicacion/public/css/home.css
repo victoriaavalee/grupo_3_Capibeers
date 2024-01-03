@@ -89,151 +89,7 @@ ul {
   margin-top: 20px;
 }
 
-
-/*Contacto*/
-.Contacto:hover {
-  background-color: #9e6730;
-  padding: 24px 10px;
-}
-.Contacto {
-  transition: 0.4s;
-  color: black;
-  text-decoration: none;
-  padding: 0 10px;
-  margin: 0 10px;
-  border-radius: 3px;
-}
-.Contacto {
-  margin-top: 40px;
-  padding: 24px;
-  text-align: center;
-
-}
-.Contacto{
-  background: #DFBA69
-}
-
-/*Producto*/
-
-.Productos:hover {
-  background-color: #9e6730;
-  padding: 24px 10px;
-}
-.Productos {
-  transition: 0.4s;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0 10px;
-  margin: 0 10px;
-  border-radius: 3px;
-}
-.Productos {
-  margin-top: 20px;
-  padding: 24px;
-  text-align: center;
-}
-.Productos{
-  background:  #DFBA69;
-}
-
-/*Ofertas*/
-
-.Ofertas:hover {
-  background-color:#9e6730;
-  padding: 24px 10px;
-}
-.Ofertas {
-  transition: 0.4s;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0 10px;
-  margin: 0 10px;
-  border-radius: 3px;
-}
-.Ofertas {
-  padding: 24px;
-  text-align: center;
-}
-.Ofertas{
-  background: #DFBA69;
-}
-
-
-/*Indumentaria*/
-.Indumentaria:hover {
-  background-color:  #9e6730;
-  padding: 24px 10px;
-}
-.Indumentaria {
-  transition: 0.4s;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0 10px;
-  margin: 0 10px;
-  border-radius: 3px;
-}
-.Indumentaria {
-  padding: 24px;
-  text-align: center;
-}
-.Indumentaria{
-  background:  #DFBA69;
-}
-
-/*Accesorios*/
-
-.Accesorios:hover {
-  background-color: #9e6730;
-  padding: 24px 10px;
-}
-.Accesorios {
-  transition: 0.4s;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0 10px;
-  margin: 0 10px;
-  border-radius: 3px;
-}
-.Accesorios {
-  margin-top: 20px;
-  padding: 24px;
-  text-align: center;
-
-}
-.Accesorios{
-  background:  #DFBA69;
-}
-
-
-/*Preguntas*/
-
-.Preguntas:hover {
-  background-color: #9e6730;
-  padding: 24px 10px;
-}
-.Preguntas {
-  transition: 0.4s;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0 10px;
-  margin: 0 10px;
-  border-radius: 3px;
-}
-.Preguntas {
-  margin-top: 40px;
-  padding: 24px;
-  text-align: center;
-}
-.Preguntas{
-  background:  #DFBA69;
-}
-
-
-/*////////////////////////HASTA AQUI ES EL HEADER////////////////////////////////*/
-
-
-
-/*Cerveza mas vendida*/
+/****************************************************BODY**********************************************/
 
 .Linea-alta{
   color: #000;
@@ -243,7 +99,8 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
-/*************************HOME*********************/
+
+/****************************HOME*************************/
 .Cerveza-mas-vendida{
   text-align: center;
   margin-top: 80px;
@@ -354,6 +211,7 @@ margin-left: 30px;
   margin-right: auto;
   margin-top: 0px;
 }
+
 /***************************Carrousel de cervezas*****************************/
 
 .Nuestros-productos{
@@ -417,17 +275,19 @@ margin-left: 30px;
   margin-left: 30%;
   font-size: 18px;
 }
-/*************************************FOOTER************************************/
+
+/*************************************************FOOTER**********************************************/
+
 .footer{
   background-color:#222;
   padding: 20px;
 }
 .footer-row{
   display: flex;
-  flex-wrap: wrap;
+
 }
 .footerlink{
-  width: 25%;
+  width: 80%;
 }
 .footerlink h4 {
   font-size: 20px;
@@ -439,7 +299,7 @@ margin-left: 30px;
   display: inline-block;
 }
 .footerlink ul li a{
-  font-size: 18px;
+  font-size: 15px;
   text-decoration: none;
   color: rgb(255, 255, 255); 
   display: block;
@@ -451,22 +311,38 @@ margin-left: 30px;
   padding-left: 6px;
 }
 .social-links a{
+  font-size: 15px;
   display: inline-block;
   min-height: 40px;
-  width: 40px;
+  width: 150px;
   margin: 0 10px 10px 0;
   text-align: center;
   line-height: 40px;
-  border-radius: 50%;
+  border-radius: 10px;
   color: white;
   transition: all .2s ease;
 }
 .social-links a:hover{
   background-color: #cba349;
 }
+.contac-links a{
+  font-size: 15px;
+  display: inline-block;
+  min-height: 40px;
+  width: 250px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+  color: white;
+  transition: all .2s ease;
+}
+.contac-links a:hover{
+  background-color: #cba349;
+}
 .mapa{
   width: 250px;
-  height: 250px;
+  height: 220px;
 }
 #copyright{
   text-align: center;

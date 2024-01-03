@@ -11,24 +11,17 @@ body {
     font-size: 16px;
 }
 
-.iconsSup {
+a {
     color: #cba349;
     text-decoration: none;
     font-size: 22px;
-}
-
-.iconsSupButton{
-    background-color: #333;
-    color:#cba349;
-    font-size: 22px;
-    line-height: 0;
 }
 
 ul {
     list-style: none;
 }
 
-  /* Nav */
+/* Nav */
 .container {
     /*position: fixed; Por el momento no*/
     width: 100%;
@@ -68,26 +61,140 @@ ul {
     border: 1;
 }
 
-.buttonHeaderProducts{
-    background-color: #cba349;
-    color: white;
-    display: inline-block;
-    text-align: center;
-    width: 80%;
-    left: 50%;
-    padding: 10px;
-    text-decoration: none;
-    transform: translate(13%);
-    border-radius: 5px;
-    font-weight: bold;
-}
-
+/*Nav products*/
 .logo {
     height: 200px;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-} 
+    padding: 18px;
+}
+
+/*opciones al lado del logo*/
+.opciones{
+    display: flex;
+    justify-content: space-between;
+    background: #ebebeb;
+}
+
+/*opciones lado izquierdo*/
+.opciones-izquierda{
+    margin-left: 350px;
+}
+
+.opciones-izquierda ul{
+    list-style:none;
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
+}
+
+.opciones-izquierda ul a{
+    display:block;
+    color:#000000;
+    text-decoration:none;
+    font-weight:700;
+    font-size:12px;
+    line-height:32px;
+    padding:0 15px;
+}
+
+.opciones-izquierda ul li{
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
+}
+
+
+.opciones-izquierda ul ul{
+    transition: 0.4s;
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#FFFEDF;
+    padding:0
+}
+
+.opciones-izquierda ul ul li{
+    float: none;
+    width:100px
+}
+
+.opciones-izquierda ul ul a{
+    line-height:120%;
+    padding:10px 15px
+}
+
+.opciones-izquierda ul ul ul{
+    top:0;
+    left:100%
+}
+
+.opciones-izquierda ul li:hover > ul{
+    display:block
+}
+
+/*Opciones lado Derecho*/
+
+.opciones-derecha{
+    margin-right:300px;
+}
+
+.opciones-derecha ul{
+    list-style:none;
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
+}
+
+.opciones-derecha ul a{
+    display:block;
+    color:black;
+    text-decoration:none;
+    font-weight:700;
+    font-size:12px;
+    line-height:32px;
+    padding:0 15px;
+}
+
+.opciones-derecha ul li{
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
+}
+
+.opciones-derecha ul ul{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#FFFEDF;
+    padding:0
+}
+
+.opciones-derecha ul ul li{
+    float:none;
+    width:100px
+}
+
+.opciones-derecha ul ul a{
+    line-height:120%;
+    padding:10px 15px
+}
+
+.opciones-derecha ul ul ul{
+    top:0;
+    left:-100%
+}
+
+.opciones-derecha ul li:hover > ul{
+    display:block
+}
+/*Diseño botones*/
 
 /*Contacto*/
 .Contacto:hover {
