@@ -14,12 +14,12 @@
                 <li><input type="text" placeholder="Buscar" class="search-bar"></li>
                 <li><a href="#"><i class="fas fa-search"></i></a></li>
                 <li>
-                    <% if(! isUserLogged){ %>
+                    <% if(! isUserLogger){ %>
                         <a href="/user/login"><i class="fa-regular fa-circle-user"></i></a>
                     <% } %>
                 </li>
                 <li>
-                    <% if(isUserLogged){ %>
+                    <% if(isUserLogger){ %>
                         <form action="/user/logout" method="POST">
                             <button type="submit">
                                 <i class="fa-solid fa-right-from-bracket"></i>

@@ -2,8 +2,9 @@ const path = require('path');
 const fs = require('fs');
 const usersJSON = require ('../data/users.json');
 const {validationResult} = require('express-validator');
-const {getUserByEmail} = require('../data/users');
 const bcrypt = require('bcryptjs');
+//const {getUserByEmail} = require('../data/users');
+
 
 //Controladores
 const userController = {  
@@ -23,7 +24,7 @@ const userController = {
         fs.writeFileSync('./src/data/users.json', JSON.stringify(usersTmp));
         res.redirect('/user/list');
         /*En mi caso funciona bien, si no, se pone el usersJSON con let y se reemplaza el usersTmp por usersJSON
-         para actualizar la variable (let). No olvidar cambiar el usersTmp del JSON.stringify */
+        para actualizar la variable (let). No olvidar cambiar el usersTmp del JSON.stringify */
     },
     login: function (req, res){
         if (req.session.isUserLogger){
@@ -32,27 +33,66 @@ const userController = {
         return res.render('./user/login');
     },
     loginPost: function (req, res){
+        let resultValidation = validationResult(req);
+        if (resultValidation.isEmpty()) {
+            const usersJson = fs.readFileSync ('./src/data/users.json', {encoding: 'utf-8'});
+            let users;
+            if(usersJson == ""){
+                users = [];
+            }else{
+                users = JSON.parse(usersJson);
+            }
+            let userToLogin;
+            for(let i = 0; i < users.length; i++){
+                if(users[i].email == req.body.email){
+                    if(bcrypt.compareSync(req.body.password, users[i].password)){
+                        userToLogin = users[i];
+                        break;
+                    }
+                }
+            }
+            if(userToLogin == undefined){
+                return res.render('./user/login', {
+                    resultValidation:{
+                        password:{
+                            msg: 'Credenciales invalidas'
+                        }
+                    }
+                });
+            }
+            req.session.userLogger = userToLogin;
+            res.redirect('/products');
+        }else{
+            return res.render('./user/login', {
+                errors: resultValidation.mapped(),
+                old: req.body,
+            });
+        }
+            //hasta aqui va bien, aunque no sirve al loguarese, recibe info
+            //if(req.body.keepUserLogger != undefined){
+                //res.cookie('remember',
+                //usuarioALoguearse.email, {maxAge:60000})
+            //}
+        /*
+        //VERSION CLASE
         const loginData = req.body;
         const keepUserLogger = loginData.keepUserLogger === 'true';
         const user = getUserByEmail(loginData.email);
         const isPasswordCorrect = bcrypt.compareSync (loginData.password, user.password);
-
         if (isPasswordCorrect){
             req.session.isUserLogger = true;
             req.session.emailUser = loginData.email;
         }
-
         if(keepUserLogger){
             res.cookie('userEmail', user.email)
         }
-
-        res.redirect('/products');
+        */
+        //res.redirect('/products');
     },
     logoutPost: function(req, res){
         req.session.destroy();
         res.clearCokie('userEmail');
-
-        res.redirect('/home');
+        return res.redirect('/home');
     },
     register: function (req, res){
         res.render('./user/register');
