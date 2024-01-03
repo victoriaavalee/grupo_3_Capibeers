@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const usersJSON = require ('../data/users.json');
 const {validationResult} = require('express-validator');
-const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 //const {getUserByEmail} = require('../data/users');
 
 
@@ -45,7 +45,7 @@ const userController = {
             let userToLogin;
             for(let i = 0; i < users.length; i++){
                 if(users[i].email == req.body.email){
-                    if(bcrypt.compareSync(req.body.password, users[i].password)){
+                    if(bcryptjs.compareSync(req.body.password, users[i].password)){
                         userToLogin = users[i];
                         break;
                     }
@@ -61,6 +61,10 @@ const userController = {
                 });
             }
             req.session.userLogger = userToLogin;
+            
+            if (req.body.keepUserLogger != undefined){
+                res.cookie('keepUser', userToLogin.email, {maxAge:60000})
+            }
             res.redirect('/products');
         }else{
             return res.render('./user/login', {
@@ -69,16 +73,12 @@ const userController = {
             });
         }
             //hasta aqui va bien, aunque no sirve al loguarese, recibe info
-            //if(req.body.keepUserLogger != undefined){
-                //res.cookie('remember',
-                //usuarioALoguearse.email, {maxAge:60000})
-            //}
         /*
         //VERSION CLASE
         const loginData = req.body;
         const keepUserLogger = loginData.keepUserLogger === 'true';
         const user = getUserByEmail(loginData.email);
-        const isPasswordCorrect = bcrypt.compareSync (loginData.password, user.password);
+        const isPasswordCorrect = bcryptjs.compareSync (loginData.password, user.password);
         if (isPasswordCorrect){
             req.session.isUserLogger = true;
             req.session.emailUser = loginData.email;
@@ -109,7 +109,7 @@ const userController = {
                 lastName: req.body.lastName,
                 birthdate:req.body.birthdate,
                 category: req.body.category,
-                password: req.body.password,
+                password: bcryptjs.hashSync(req.body.password, 10),
                 confPassword: req.body.confPassword,
                 image:`${file.filename}`,
             }

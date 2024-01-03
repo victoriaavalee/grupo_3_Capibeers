@@ -38,13 +38,13 @@ app.use(session({
 //Cookie Parser
 app.use(cookieParser());
 
-
 //Middlewares
 const keepUserLogger = require('./middleware/keepUserLogger'); //se fija si el user esta logueado
 const isUserLogged = require('./middleware/isUserLogged'); //este se usa para los iconos de entrada y slaida de user 
-
+const keepUserCookie =  require('./middleware/keepUserCookie'); //cookie q reuerda user
 app.use(keepUserLogger);
 app.use(isUserLogged);
+app.use(keepUserCookie);
 
 
 //Rutas 
