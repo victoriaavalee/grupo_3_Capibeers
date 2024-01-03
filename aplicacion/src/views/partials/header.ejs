@@ -4,93 +4,37 @@
         <nav class="main-nav"> 
             <!--Redes sociales-->
             <ul class="left-menu">
-                <li><a class="redes" href="https://www.instagram.com/capibeers"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a class="redes" href="https://twitter.com/capibeers"><i class="fa-brands fa-x-twitter"></i></a></li>
-                <li><a class="redes" href="https://www.facebook.com/profile.php?id=100095248490157"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a class="redes" href="https://open.spotify.com/user/31r6oywah4insuhfwfnr7junotua?si=cbc1014e57454f80"><i class="fa-brands fa-spotify"></i></a></li>
+                <li><a class="iconsSup" href="https://www.instagram.com/capibeers"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a class="iconsSup" href="https://twitter.com/capibeers"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a class="iconsSup" href="https://www.facebook.com/profile.php?id=100095248490157"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a class="iconsSup" href="https://open.spotify.com/user/31r6oywah4insuhfwfnr7junotua?si=cbc1014e57454f80"><i class="fa-brands fa-spotify"></i></a></li>
             </ul>
-            <!--Buscar, login, carrito-->
+            <!--Buscar, login, logout, carrito-->
             <ul class="right-menu">
                 <li><input type="text" placeholder="Buscar" class="search-bar"></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
+                <li><a class="iconsSup" href="#"><i class="fas fa-search"></i></a></li>
                 <li>
-                    <% if(! isUserLogger){ %>
-                        <a href="/user/login"><i class="fa-regular fa-circle-user"></i></a>
+                    <% if( isUserLogger){ %>
+                        <a class="iconsSup" href="/user/login"><i class="fa-regular fa-circle-user"></i></a>
                     <% } %>
                 </li>
                 <li>
-                    <% if(isUserLogger){ %>
+                    <% if( !isUserLogger){ %>
                         <form action="/user/logout" method="POST">
                             <button type="submit">
-                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <i class="fa-solid fa-right-from-bracket iconsSupButton"></i>
                             </button>
                         </form>
                     <% } %>
                 </li>
-                <li><a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="/products/carrito"><i class="fas fa-shopping-cart iconsSup"></i></a></li>
             </ul>
         </nav>
     </div>
-    <div >
-        <a class="logo" href="/home"><img class="logo" src="/img/banners/logo.png" alt=""></a>
+    <div>
+        <a class="buttonHeaderProducts" href="/products">PRODUCTOS</a>
     </div>
-    <!--opciones izquierda-->
-    <div class="opciones">
-        <div class="opciones-izquierda">
-            <ul>
-                <li>
-                    <a class="Contacto" href="#">CONTACTO</a>
-                    <ul>
-                        <li><a class="submenu1" href="#">TELEFONO</a></li>
-                        <li><a class="submenu2" href="#">DIRECCION</a></li>
-                        <li><a class="submenu3" href="#">HORARIOS</a></li>
-                    </ul>
-                </li>
-                <li><a class="Productos" href="/products">PRODUCTOS</a>
-                    <ul>
-                        <li><a href="#">CERVEZAS EN LATAS</a>
-                            <ul>
-                                <li><a class="submenu4" href="#">CLASICA</a></li>
-                                <li><a class="submenu5" href="#">STOUT</a></li>
-                                <li><a class="submenu6" href="#">BOCK</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">CERVEZAS EN BOTELLA</a>
-                            <ul>
-                                <li><a class="submenu4" href="#">CLASICA</a></li>
-                                <li><a class="submenu5" href="#">STOUT</a></li>
-                                <li><a class="submenu6" href="#">BOCK</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a class="Ofertas" href="#">OFERTAS</a></li>
-            </ul>
-        </div>
-        <!--opciones derecha-->
-        <div class="opciones-derecha">
-            <ul>
-                <li><a class="Indumentaria" href="#">ACCESORIOS</a>
-                    <ul>
-                        <li><a href="#">GORRAS</a></li>
-                        <li><a href="#">BOLSAS</a></li>
-                        <li><a href="#">VASOS</a></li>
-            </ul>
-            </li>
-            <li><a class="Accesorios" href="#">INDUMENTARIA</a>
-                <ul>
-                    <li><a href="#">SUPERIOR</a>
-                        <ul>
-                            <li><a href="#">REMERAS</a></li>
-                            <li><a href="#">CAMPERAS</a></li>
-                            <li><a href="#">BUZOS</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">INFERIOR</a></li>
-                </ul>
-            </li>
-            <li><a class="Preguntas" href="#">PREGUNTAS</a></li>
-            </ul>
-        </div>
+    <div>
+        <a class="logo" href="/home"><img class="logo" src="/img/banners/logo.png" alt=""></a>
     </div>
 </header>

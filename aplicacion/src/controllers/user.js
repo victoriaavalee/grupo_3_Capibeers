@@ -45,8 +45,10 @@ const userController = {
             let userToLogin;
             for(let i = 0; i < users.length; i++){
                 if(users[i].email == req.body.email){
-                    if(bcryptjs.compareSync(req.body.password, users[i].password)){
+                    let okPassword =bcryptjs.compareSync(req.body.password, users[i].password)
+                    if (okPassword){
                         userToLogin = users[i];
+                        req.session.userLogger = userToLogin;
                         break;
                     }
                 }
@@ -87,11 +89,11 @@ const userController = {
             res.cookie('userEmail', user.email)
         }
         */
+
         //res.redirect('/products');
     },
     logoutPost: function(req, res){
         req.session.destroy();
-        res.clearCokie('userEmail');
         return res.redirect('/home');
     },
     register: function (req, res){
