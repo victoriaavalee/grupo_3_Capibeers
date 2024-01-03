@@ -9,18 +9,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
     <title>Capibeers - Creacion de productos</title>
-
 </head>
 <body>
     <!HEADER/!>
         <%- include('../partials/header')%>
     
     <main>
-        <form action="/products/crear" method="post" class="form">
+        <form action="/products/crear" method="POST" class="form" enctype="multipart/form-data">
             <h2>Crear Producto</h2>
             <p class="tex_img">Imagen del Producto:</p>
             <div class="img-product">
-                <input type="file" name="new-product" id="product" required>
+                <input type="file" name="image" id="product" >
                 <label for="product">
                     <i class="material-icons">add_photo_alternate</i>
                     Choose a Photo
@@ -28,39 +27,39 @@
             </div>
             <div class="newProduct">
                 <label for="name-product">Nombre:</label>
-                <input type="text" name="new-product" id="name-product" placeholder="Nombre del Producto" required>
+                <input type="text" name="name" id="name-product" placeholder="Nombre del Producto" required>
                 <label for="price">Precio:</label>
-                <input type="text" name="new-product" id="price" placeholder="Precio" required>
+                <input type="number" name="price" id="price" placeholder="Precio" required>
             </div>
             <div class="description">
-                <label for="description">Descripción</label>
-                <input type="text" name="new-product" id="description">
+                <label for="description">Descripción:</label>
+                <textarea  name="description" rows="4" cols="50" required></textarea><br>
             </div>
             <h3>Detalles</h3>
                 <div class="details">
                     <label for="brand">Marca</label>
-                    <input type="text" name="new-product" id="brand" placeholder="Heineken" required>
+                    <input type="text" name="mark" id="brand" placeholder="Heineken" required>
                     <label for="container">Tipo de envase</label>
-                    <input type="text" name="new-product" id="container" placeholder="Lata" required>
+                    <input type="text" name="packing" id="container" placeholder="Lata" required>
                     <label for="volume">Volumen de la unidad</label>
-                    <input type="text" name="new-product" id="volume" placeholder="330 ml" required>
+                    <input type="number" name="volume" id="volume" placeholder="330 ml" required>
                     <label for="ingredients">Ingredientes</label>
-                    <input type="text" name="new-product" id="ingredients" placeholder="Uva">
+                    <input type="text" name="ingredients" id="ingredients" placeholder="Uva">
                     <label for="style">Estilo de cerveza</label>
-                    <input type="text" name="new-product" id="style" placeholder="Rubia">
+                    <input type="text" name="style" id="style" placeholder="Rubia">
                     <label for="origin">Origen</label>
-                    <input type="text" name="new-product" id="origin" placeholder="Argentina">
+                    <input type="text" name="origin" id="origin" placeholder="Argentina">
                 </div>
                 <section class="tacc">
                     <p>Sin TACC</p>
                     <div  class="radio-group">
                         <label class="radio">
-                            <input type="radio" name="new-product" id="sin-tacc" value="free-tacc">
+                            <input type="radio" name="gluten" id="sin-tacc" value="Si">
                             Sí
                             <span></span>
                         </label>
                         <label class="radio">
-                            <input type="radio" name="new-product" id="sin-tacc-no" value="free-tacc-n">
+                            <input type="radio" name="gluten" id="sin-tacc-no" value="No">
                             No
                             <span></span>
                         </label>
@@ -70,12 +69,12 @@
                     <p>Es cerveza artesanal</p>
                     <div class="radio-group">
                         <label class="radio">
-                            <input type="radio" name="new-product" id="artesanal" value="craft-beer-y">
+                            <input type="radio" name="artisanal" id="artesanal" value="Si">
                             Sí
                             <span></span>
                         </label>
                         <label class="radio">
-                            <input type="radio" name="new-product" id="artesanal-no" value="craft-beer-n">
+                            <input type="radio" name="artisanal" id="artesanal-no" value="No">
                             No
                             <span></span>
                         </label>
@@ -85,12 +84,12 @@
                     <p>Es cerveza sin alcohol</p>
                     <div class="radio-group">
                         <label class="radio">
-                            <input type="radio" name="new-product" id="alcohol-si" value="alcohol-free-y">
+                            <input type="radio" name="alcohol" id="alcohol-si" value="Si">
                             Sí
                             <span></span>
                         </label>
                         <label class="radio">
-                            <input type="radio" name="new-product" id="alcohol-no" value="alcohol-free-n">
+                            <input type="radio" name="alcohol" id="alcohol-no" value="No">
                             No
                             <span></span>
                         </label>

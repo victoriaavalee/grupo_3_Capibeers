@@ -3,42 +3,25 @@ const productsRouter = express.Router();
 const productsController = require('../controllers/products');
 const uploadFile = require('../middleware/productsMulter');
 
-//Listado de productos
-productsRouter.get('/', productsController.list); 
+// Listado de productos
+productsRouter.get('/', productsController.list);
 
+// Carrito
+productsRouter.get('/carrito', productsController.carrito);
 
-//Detalle de producto
-//productsRouter.get('/:idProducto', function (req,res){
-//    res.send('elegiste el producto ' + req.params.idProducto)
-//});
-//Detalle de comentario en un producto y comentario especifico
-//productsRouter.get('/:idProducto/comentarios/:idComentario?', function (req,res){
-//    if (req.params.idComentario == undefined){
-//        res.send('Bienvenidos a los comentarios del producto '+ req.params.idProducto )
-//    }else{
-//        res.send('Bienvenidos a los comentarios del producto '+ req.params.idProducto + ' y esta enfocado en el comentario ' + req.params.idComentario)
-//    }
-//});
+// Crear producto
+productsRouter.get('/crear', productsController.create);
+productsRouter.post('/crear', uploadFile.single("image"), productsController.postCreate);
 
+// Editar producto
+productsRouter.get('/:id/editar', productsController.edit);
+productsRouter.put('/:id/editar', uploadFile.single("image"), productsController.putEdit);
 
-//Detalle de producto
-//OPCION PAO
-//productsRouter.get('/:id', productsController.detail);
+// Detalle de producto
+// OPCION PAO
+productsRouter.get('/:id', productsController.detail);
 
-//productsRouter.delete('/delete/:id', productsController.delete);
-
-
-//carrito SACAR
-productsRouter.get('/carrito', productsController.carrito); 
-
-
-//crear producto NO ANDAN
-productsRouter.get('/crear', productsController.create); 
-//productsRouter.post('/crear',uploadFile.single("img"), productsController.postCreate); 
-
-
-//editar producto NO ANDA
-productsRouter.get('/editar/:id', productsController.edit);
-//productsRouter.put('/editar',uploadFile.single("img"), productsController.putEdit);
+// Eliminar producto
+productsRouter.delete('/:id', productsController.delete);
 
 module.exports = productsRouter;

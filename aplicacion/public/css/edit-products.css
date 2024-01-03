@@ -1,76 +1,40 @@
 body {
-background: rgb(90,46,46);
-background: radial-gradient(circle, rgba(90,46,46,1) 0%, rgba(223,186,105,1) 100%);
   margin: 0;
   padding: 0;
 }
 
-h1 {
+h2 {
   text-align: center;
-  color: #333;
-  margin-top: 20px;
+  font-size: 35px;
+  color: #434343;
+  margin-bottom: 5px;
+} 
+
+h3 {
+  text-align: center;
+  font-size: 25px;
+  color: #434343;
 }
 
 form {
   max-width: 500px;
   margin: 0 auto;
+  margin-top: 80px;
   padding: 50px;
-  background-color: #FFFEDF;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-label {
-  display: block;
-  font-weight: bold;
-  color: #333;
-  margin-top: 10px;
-}
-
-input[type="text"],
-input[type="number"],
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+  margin-bottom: 50px;
 }
 
 select {
   height: 40px;
 }
 
-input[type="radio"] {
-  margin-right: 5px;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 10px;
-}
-
 input[type="file"] {
   margin-top: 10px;
 }
 
-input[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-input[type="submit"]:hover {
-  background-color: #555;
-}
 .tipo-producto-edit{
   display: flex;
   justify-content: space-between;
@@ -89,4 +53,219 @@ input[type="submit"]:hover {
 }
 h2{
   text-align: center;
+}
+
+/*************** IMAGEN ***************/
+
+.conatainer-file{
+  padding: 15px;
+  margin-left: 60px;
+  /*background-color: #ffffff;
+  width: 60%;
+  min-width: 450px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 50px 30px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 7px;*/
+}
+
+/*.image-container{
+  width: 90%;
+  margin: 0 auto 30px auto;
+}
+
+.image-container img{
+  display: block;
+  position: relative;
+  max-width: 100%;
+  max-height: 400px;
+  margin: auto;
+}
+
+figcaption{
+  margin: 20px 0 30px 0;
+  text-align: center;
+  color: #2a292a;
+}*/
+
+input[type="file"]{
+  display: none;
+}
+
+.conatainer-file label {
+  border-radius: 4px;
+  color: white;
+  height: 60px;
+  width: 250px;
+  background-color: #5c2f2f;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 20px;
+  /*display: block;
+  position: relative;
+  background-color: #5c2f2f;
+  font-size: 12px;
+  text-align: center;
+  width: 300px;
+  padding: 18px 0;
+  border-radius: 5px;
+  margin: auto;
+  color: white;*/
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.img-product label:hover{
+  background-color: #a05151;
+}
+
+/************************** INPUT Type text ****************************/
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+form input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+textarea{
+    width: 98%;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #434343;
+}
+
+.description textarea{
+    height: 120px;
+}
+
+/************************** INPUT Type radio ****************************/
+
+#envase{
+  margin-left: 100px;
+}
+
+.radio-group{
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-left: 120px;
+}
+
+.radio{
+  font-size: 18px;
+  font-weight: 100;
+  text-transform: capitalize;
+  display: inline-block;
+  vertical-align: middle;
+  color: #434343;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.radio + .radio{
+  margin-left: 20px;
+}
+
+.radio input[type="radio"]{
+  display: none;
+}
+
+.radio span{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 3px solid #5c2f2f;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.radio span::after{
+  content: "";
+  height: 7px;
+  width: 7px;
+  background-color: #5c2f2f;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: 300ms ease-in-out 0s;
+}
+
+.radio input[type="radio"]:checked ~ span::after{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/**************************************BOTONES*******************************************/
+.buttons{
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.buttons button[type="reset"]{
+  margin-right: 30px;
+  margin-left: 10px;
+}
+
+.buttons input[type="submit"]{
+  margin-left: 20px;
+}
+
+.buttons input[type="submit"]{
+  width: 150px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 18px;
+  border-radius: 7px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons input[type="submit"]:hover{
+  background-color: #555;
+}
+
+.buttons button[type="reset"]{
+  width: 150px;
+  background-color: #5c2f2f;
+  color: #fff;
+  border: none;
+  padding: 18px;
+  border-radius: 7px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button[type="reset"]:hover{
+  background-color: #a05151;
 }

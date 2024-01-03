@@ -1,331 +1,332 @@
 /****************************************************HEADER**********************************************/
-* {
-    box-sizing: border-box;
-    margin: 0;
+*{
+    margin:0;
     padding: 0;
-}
-
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: #FFFEDF;
-    color: #000;
-    font-size: 15px;
-    line-height: 1.5;
-}
-
-a {
-    color: #262626;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-ul {
-    list-style: none;
-}
-
-.container {
-    max-width: 100;
-    padding: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-  /* Nav */
-.main-nav {
-    display: flex;
-    height: 60px;
-    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: #ebebeb;
     font-size: 16px;
-}
-.main-nav ul {
+  }
+  
+  a {
+    color: #cba349;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Nav */
+  .container {
+    /*position: fixed; Por el momento no*/
+    width: 100%;
+    background-color: #222;
+    height: 45px;
+  }
+  
+  .main-nav {
     display: flex;
-}
-.main-nav ul li {
-    padding:10px;
-} 
-.main-nav ul li a:hover {
-    border-bottom: 2px solid #262626;
-} 
-.main-nav ul.main-menu {
+  }
+  
+  .main-nav ul {
+    display: flex;
+  }
+  
+  .main-nav ul li {
+    display: flex;
+    margin-right: 15px;
+  } 
+  
+  .right-menu {
+    margin-right: 40px;
+    margin: 10px;
+  }
+  
+  .left-menu {
     flex: 1;
-    margin-left: 20px;
-}
-.logo{
-    height: 150px;
+    margin: 10px;
+    margin-left: 40px;
+  }
+  
+  .main-nav ul li a:hover {
+    border-bottom: 2px solid white;
+  } 
+  
+  .search-bar{
+    border: 1;
+  }
+  
+  /*Nav products*/
+  .logo {
+    height: 200px;
     display: flex;
     justify-content: center;
-}
-
-/*opciones al lado del logo*/
-.opciones{
+    padding: 18px;
+  }
+  
+  /*opciones al lado del logo*/
+  .opciones{
     display: flex;
-justify-content: space-between;
-    background:  #FFFEDF;
-}
-
-/*opciones lado izquierdo*/
-
-.opciones-izquierda{
+    justify-content: space-between;
+    background:  #ebebeb;;
+    ;
+  }
+  
+  /*opciones lado izquierdo*/
+  .opciones-izquierda{
     margin-left: 350px;
-}
-.opciones-izquierda ul
-{
-	list-style:none;
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0
-}
-
-.opciones-izquierda ul a
-{
-	display:block;
-	color:#000000;
-	text-decoration:none;
-	font-weight:700;
-	font-size:12px;
-	line-height:32px;
-	padding:0 15px;
-}
-
-.opciones-izquierda ul li
-{
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0
-}
-
-
-.opciones-izquierda ul ul
-{
+  }
+  
+  .opciones-izquierda ul{
+      list-style:none;
+      position:relative;
+      float:left;
+      margin:0;
+      padding:0
+  }
+  
+  .opciones-izquierda ul a{
+      display:block;
+      color:#000000;
+      text-decoration:none;
+      font-weight:700;
+      font-size:12px;
+      line-height:32px;
+      padding:0 15px;
+  }
+  
+  .opciones-izquierda ul li{
+      position:relative;
+      float:left;
+      margin:0;
+      padding:0
+  }
+  
+  
+  .opciones-izquierda ul ul{
     transition: 0.4s;
-	display:none;
-	position:absolute;
-	top:100%;
-	left:0;
-	background:#FFFEDF;
-	padding:0
-}
-
-.opciones-izquierda ul ul li
-{
+      display:none;
+      position:absolute;
+      top:100%;
+      left:0;
+      background:#FFFEDF;
+      padding:0
+  }
+  
+  .opciones-izquierda ul ul li{
     float: none;
-	width:100px
-}
-
-.opciones-izquierda ul ul a
-{
-	line-height:120%;
-	padding:10px 15px
-}
-
-.opciones-izquierda ul ul ul
-{
-	top:0;
-	left:100%
-}
-
-.opciones-izquierda ul li:hover > ul
-{
-	display:block
-}
-/*Opciones lado Derecho*/
-
-.opciones-derecha{
+      width:100px
+  }
+  
+  .opciones-izquierda ul ul a{
+      line-height:120%;
+      padding:10px 15px
+  }
+  
+  .opciones-izquierda ul ul ul{
+      top:0;
+      left:100%
+  }
+  
+  .opciones-izquierda ul li:hover > ul{
+      display:block
+  }
+  
+  /*Opciones lado Derecho*/
+  
+  .opciones-derecha{
     margin-right:300px;
-}
-.opciones-derecha ul
-{
-	list-style:none;
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0
-}
-
-.opciones-derecha ul a
-{
-	display:block;
-	color:#333;
-	text-decoration:none;
-	font-weight:700;
-	font-size:12px;
-	line-height:32px;
-	padding:0 15px;
-}
-
-.opciones-derecha ul li
-{
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0
-}
-.opciones-derecha ul ul
-{
-	display:none;
-	position:absolute;
-	top:100%;
-	left:0;
-	background:#FFFEDF;
-	padding:0
-}
-
-.opciones-derecha ul ul li
-{
-	float:none;
-	width:100px
-}
-
-.opciones-derecha ul ul a
-{
-	line-height:120%;
-	padding:10px 15px
-}
-
-.opciones-derecha ul ul ul
-{
-	top:0;
-	left:-100%
-}
-
-.opciones-derecha ul li:hover > ul
-{
-	display:block
-}
-/*Diseño botones*/
-
-
-/*Contacto*/
-
-.Contacto:hover {
-    background-color: #FFFEDF;
+  }
+  
+  .opciones-derecha ul{
+      list-style:none;
+      position:relative;
+      float:left;
+      margin:0;
+      padding:0
+  }
+  
+  .opciones-derecha ul a{
+      display:block;
+      color:black;
+      text-decoration:none;
+      font-weight:700;
+      font-size:12px;
+      line-height:32px;
+      padding:0 15px;
+  }
+  
+  .opciones-derecha ul li{
+      position:relative;
+      float:left;
+      margin:0;
+      padding:0
+  }
+  
+  .opciones-derecha ul ul{
+      display:none;
+      position:absolute;
+      top:100%;
+      left:0;
+      background:#FFFEDF;
+      padding:0
+  }
+  
+  .opciones-derecha ul ul li{
+      float:none;
+      width:100px
+  }
+  
+  .opciones-derecha ul ul a{
+      line-height:120%;
+      padding:10px 15px
+  }
+  
+  .opciones-derecha ul ul ul{
+      top:0;
+      left:-100%
+  }
+  
+  .opciones-derecha ul li:hover > ul{
+      display:block
+  }
+  /*Diseño botones*/
+  
+  
+  
+  /*Contacto*/
+  .Contacto:hover {
+    background-color: #9e6730;
     padding: 24px 10px;
-}
-.Contacto {
+  }
+  .Contacto {
     transition: 0.4s;
-    color: #000000;
+    color: black;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
-    border-radius: 10px;
-}
-.Contacto {
+    border-radius: 3px;
+  }
+  .Contacto {
     margin-top: 40px;
     padding: 24px;
     text-align: center;
-
-}
-.Contacto{
+  
+  }
+  .Contacto{
     background: #DFBA69
-}
-
-/*Producto*/
-
-.Productos:hover {
-    background-color: #FFFEDF;
+  }
+  
+  /*Producto*/
+  
+  .Productos:hover {
+    background-color: #9e6730;
     padding: 24px 10px;
-}
-.Productos {
+  }
+  .Productos {
     transition: 0.4s;
     color: #ffffff;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
-    border-radius: 10px;
-}
-.Productos {
+    border-radius: 3px;
+  }
+  .Productos {
     margin-top: 20px;
     padding: 24px;
     text-align: center;
-}
-.Productos{
+  }
+  .Productos{
     background:  #DFBA69;
-}
-
-/*Ofertas*/
-
-.Ofertas:hover {
-    background-color:#FFFEDF;
+  }
+  
+  /*Ofertas*/
+  
+  .Ofertas:hover {
+    background-color:#9e6730;
     padding: 24px 10px;
-}
-.Ofertas {
+  }
+  .Ofertas {
     transition: 0.4s;
     color: #ffffff;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
-    border-radius: 10px;
-}
-.Ofertas {
+    border-radius: 3px;
+  }
+  .Ofertas {
     padding: 24px;
     text-align: center;
-}
-.Ofertas{
+  }
+  .Ofertas{
     background: #DFBA69;
-}
-
-
-/*Indumentaria*/
-.Indumentaria:hover {
-    background-color:  #FFFEDF;
+  }
+  
+  
+  /*Indumentaria*/
+  .Indumentaria:hover {
+    background-color:  #9e6730;
     padding: 24px 10px;
-}
-.Indumentaria {
+  }
+  .Indumentaria {
     transition: 0.4s;
     color: #ffffff;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
-    border-radius: 10px;
-}
-.Indumentaria {
+    border-radius: 3px;
+  }
+  .Indumentaria {
     padding: 24px;
     text-align: center;
-}
-.Indumentaria{
+  }
+  .Indumentaria{
     background:  #DFBA69;
-}
-
-/*Accesorios*/
-
-.Accesorios:hover {
-    background-color: #FFFEDF;
+  }
+  
+  /*Accesorios*/
+  
+  .Accesorios:hover {
+    background-color: #9e6730;
     padding: 24px 10px;
-}
-.Accesorios {
+  }
+  .Accesorios {
     transition: 0.4s;
     color: #ffffff;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
-    border-radius: 10px;
-}
-.Accesorios {
+    border-radius: 3px;
+  }
+  .Accesorios {
     margin-top: 20px;
     padding: 24px;
     text-align: center;
-}
-.Accesorios{
+  
+  }
+  .Accesorios{
     background:  #DFBA69;
-}
-
-
-/*Preguntas*/
-
-
-.Preguntas:hover {
-    background-color: #FFFEDF;
+  }
+  
+  
+  /*Preguntas*/
+  
+  .Preguntas:hover {
+    background-color: #9e6730;
     padding: 24px 10px;
-}
-.Preguntas {
+  }
+  .Preguntas {
     transition: 0.4s;
     color: #ffffff;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 .Preguntas {
     margin-top: 40px;
@@ -452,60 +453,59 @@ justify-content: space-between;
 .carrito-total .btn-pagar:hover{
     scale: 1.05;
 }
-/**************************************************FOOTER**************************************/
+
+/*************************************FOOTER************************************/
 .footer{
-    background-color:#5A2E2E;
-    padding: 80px 0;
-}
-.footer-row{
+    background-color:#222;
+    padding: 20px;
+  }
+  .footer-row{
     display: flex;
     flex-wrap: wrap;
-}
-.footerlink{
+  }
+  .footerlink{
     width: 25%;
-    padding: 0 15px;
-}
-.footerlink h4 {
+  }
+  .footerlink h4 {
     font-size: 20px;
-    color: #ffffff;
+    color: #cba349;
     margin-bottom: 25px;
     font-weight: 500;
     border-bottom: 2px solid black;
     padding-bottom: 10px;
     display: inline-block;
-}
-.footerlink ul li a{
+  }
+  .footerlink ul li a{
     font-size: 18px;
     text-decoration: none;
     color: rgb(255, 255, 255); 
     display: block;
     margin-bottom: 15px;
     transition: all .3s ease;
-}
-.footerlink ul li a:hover{
+  }
+  .footerlink ul li a:hover{
     color: #FFFEDF;
     padding-left: 6px;
-}
-.social-links a{
+  }
+  .social-links a{
     display: inline-block;
     min-height: 40px;
     width: 40px;
-    background-color: #2A2C31;
     margin: 0 10px 10px 0;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
     color: white;
-    transition: all .5s ease;
-}
-.social-links a:hover{
-    background-color: #FFFEDF;
-}
-.mapa{
-    width: 300px;
-    height: 300px;
-}
-#copyright{
+    transition: all .2s ease;
+  }
+  .social-links a:hover{
+    background-color: #cba349;
+  }
+  .mapa{
+    width: 250px;
+    height: 250px;
+  }
+  #copyright{
     text-align: center;
-    margin-top: 100px;
-}
+    color:white;
+  }

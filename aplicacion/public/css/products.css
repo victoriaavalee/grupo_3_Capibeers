@@ -7,7 +7,7 @@
 }
 
 body {
-    background: white;
+    background: #ebebeb;
     font-size: 16px;
 }
 
@@ -73,7 +73,7 @@ ul {
 .opciones{
     display: flex;
     justify-content: space-between;
-    background: white;
+    background: #ebebeb;
 }
 
 /*opciones lado izquierdo*/
@@ -417,6 +417,51 @@ ul {
 
 #productosrelacionados{
     width: 200px;
+    margin: 0 auto;
+}
+
+/***************************Carrousel de cervezas*****************************/
+
+body {
+    background: #ebebeb;
+    font-size: 16px;
+}
+
+.Nuestros-productos{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.carrusel{
+    background-color: #ebebeb;
+    display: flex;
+    overflow-x: scroll;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
+.item-carrusel{
+    margin: 10px;
+    background-color: white;
+}
+.img-carrusel{ 
+    max-width: 200px;
+    max-height: 200px;
+    background-color: white;
+}
+.name-carrusel{
+    background-color: white;
+}
+.price-carrusel{
+    color:#cba349;
+    font-weight: bold;
+    background-color: white
+}
+.data-cerveza{
+    background-color: white;
+}
+.contenedor{
+    max-width: 1200px;
     margin: 0 auto;
 }
 

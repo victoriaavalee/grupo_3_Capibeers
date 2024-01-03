@@ -1,68 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capibeers-Editar Producto</title>
     <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/edit-products.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/css/edit-products.css">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <title>Capibeers-Editar Producto</title>
 </head>
 <body>
     <!HEADER/!>
     <%- include('../partials/header')%>
-    <h1>Editar Producto</h1>
-    <form action="/products/editar/<%= productEdit.id %>?_method=PUT" method="post">
-        <h2>Tipo del producto</h2><br>
-        <div class="tipo-producto-edit">
-            <label for="tipo-Podructo">Cerveza</label><br>
-            <input type="radio" id="tipo-Podructo1" name="tipo-Podructo" value="Opción B" required>
-            <label for="interes2">Accesorios</label><br>
-            <input type="radio" id="tipo-Podructo2" name="tipo-Podructo" value="Opción B" required>
-            <label for="interes3">Indumentaria</label><br>
-            <input type="radio" id="tipo-Podructo3" name="tipo-Podructo" value="Opción B" required>
-        </div><br><br>
-        <h2>Tipo de Envase</h2>
-        <div class="envase-edit">
-            <label for="tipo-Lata">Lata</label>
-            <input type="radio" id="tipo-Lata" name="tipo-Envase" value="Lata" required>
-            <label for="tipo-Botella">Botella</label>
-            <input type="radio" id="tipo-Botella" name="tipo-Envase" value="Botella" required>
-            <label for="tipo">Tipo:</label>
+
+    <form action="/products/<%= productEdit.id %>/editar?_method=PUT" method="POST" enctype="multipart/form-data">
+        <h2>Editar Producto</h2>
+        <div class="newProduct">
+            <label for="name-product">Nombre:</label>
+            <input type="text" name="name" id="name-product" value="<%=productEdit.name%>">
+            <label for="price">Precio:</label>
+            <input type="number" name="price" id="price" value="<%=productEdit.price%>" step="0.01">
         </div>
-        <select id="tipo" name="tipo" required>
-            <option value="Opción 1">...</option>
-            <option value="Opción 1">CLASICA</option>
-            <option value="Opción 2">STOUT</option>
-            <option value="Opción 3">BOCK</option>
-        </select><br><br>
-        <h2>Accesorios</h2><br>
-        <div class="accesorios-edit">
-            <label for="gorras">Gorras</label>
-            <input type="radio" id="gorras" name="tipo-Accesorio" value="Gorras" required>
-            <label for="bolsas">Bolsas</label>
-            <input type="radio" id="bolsas" name="tipo-Accesorio" value="Bolsas" required>
-            <label for="vasos">Vasos</label>
-            <input type="radio" id="vasos" name="tipo-Accesorio" value="Vasos" required>
-        </div><br><br>
-        <h2>Indumentaria</h2><br>
-        <div class="indumentaria-edit">
-            <label for="superior">Superior</label>
-            <input type="radio" id="superior" name="tipo-Indumentaria" value="Superior" required>      
-            <label for="inferior">Inferior</label>
-            <input type="radio" id="inferior" name="tipo-Indumentaria" value="Inferior" required>
-        </div><br><br>
-        <label for="descripcion">Descripción:</label>
-        <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea><br>
-        <label for="precio">Precio:</label>
-        <input type="number" id="precio" name="precio" step="0.01" required><br>
-        <label for="foto">Agregar una foto:</label>
-        <input type="file" id="foto" name="foto" accept="image/*"><br><br>
-        <input type="submit" value="Guardar">
-        <input type="submit" value="Cancelar">
+        <div>
+            <label for="descripcion">Descripción:</label>
+            <input type="text" name="description" value="<%=productEdit.description%>"
+            <textarea id="descripcion" name="description" rows="4" cols="50" value="<%=productEdit.description%>"></textarea><br>
+            </input>
+        </div>
+        <h3>Detalles</h3>
+                <div class="details">
+                    <label for="brand">Marca</label>
+                    <input type="text" name="mark" id="brand" value="<%=productEdit.mark%>">
+                    <label for="volume">Volumen de la unidad</label>
+                    <input type="number" name="volume" id="volume" value="<%=productEdit.volume%>">
+                    <label for="ingredients">Ingredientes</label>
+                    <input type="text" name="ingredients" id="ingredients" value="<%=productEdit.ingredients%>">
+                    <label for="style">Estilo de cerveza</label>
+                    <input type="text" name="style" id="style" value="<%=productEdit.style%>">
+                    <label for="origin">Origen</label>
+                    <input type="text" name="origin" id="origin" value="<%=productEdit.origin%>">
+                </div>
+        <p>Tipo de Envase</p>
+        <div  class="radio-group">
+            <label class="radio">
+                <input type="radio" name="packing" id="envase" value="Lata">
+                Lata
+                <span></span>
+            </label>
+            <label class="radio">
+                <input type="radio" name="packing" id="envase" value="Botella">
+                Botella
+                <span></span>
+            </label>
+        </div>
+        <section class="tacc">
+            <p>Sin TACC</p>
+            <div  class="radio-group">
+                <label class="radio">
+                    <input type="radio" name="gluten" id="sin-tacc" value="free-tacc">
+                    Sí
+                    <span></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="gluten" id="sin-tacc-no" value="free-tacc-n">
+                    No
+                    <span></span>
+                </label>
+            </div>
+        </section>
+        <section class="craft-beer">
+            <p>Cerveza artesanal</p>
+            <div class="radio-group">
+                <label class="radio">
+                    <input type="radio" name="artisanal" id="artesanal" value="craft-beer-y">
+                    Sí
+                    <span></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="artisanal" id="artesanal-no" value="craft-beer-n">
+                    No
+                    <span></span>
+                </label>
+            </div>
+        </section>
+        <section class="alcohol-freebeer">
+            <p>Cerveza sin alcohol</p>
+            <div class="radio-group">
+                <label class="radio">
+                    <input type="radio" name="alcohol" id="alcohol-si" value="alcohol-free-y">
+                    Sí
+                    <span></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="alcohol" id="alcohol-no" value="alcohol-free-n">
+                    No
+                    <span></span>
+                </label>
+            </div>
+        </section>
+        <div class="conatainer-file">
+            <figure class="image-conatainer">
+                <img id="chosen-image">
+                <figcaption id="file-nombre"></figcaption>
+            </figure>
+            <input type="file" name="image" id="upload-button" accept="image/*">
+            <label for="upload-button">
+                <i class="material-icons">add_photo_alternate</i> &nbsp;
+                Choose A Photo
+            </label>
+        </div>
+        <div class="buttons">
+            <button type="reset">Cancelar</button>
+            <input type="submit" value="Guardar">
+        </div>
     </form>
+<script src="/css/edit-product.js"></script>
 <!FOOTER/!>
     <%- include('../partials/footer')%>
 </body>

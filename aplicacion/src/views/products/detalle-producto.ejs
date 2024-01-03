@@ -14,85 +14,67 @@
     <!--HEADER-->
     <%- include('../partials/header')%>
     <main>
-        <div id="contenedores">
+        <div class="contenedores">
+            <div class="img">
+                <img id="image" src="/img/<%=productDetail.image%>" alt="<%=productDetail.name%>">
+            </div>
             <div id="txt">
                 <h1><%=productDetail.name%></h1>
-                <p><%= "$" + productDetail.price %></p>
+                <p><%= "$" + productDetail.price%></p>
                 <div id="cart">
                     <h2>Descripción</h2> 
                     <p><%=productDetail.description%></p>
                 </div>
             </div>
-            <img id="image" src="/img/<%=productDetail.image %>" alt="FotoDeMuestra">
             <div id="counter">0</div>
-            <div id="buttons-incremdecrem">
+            <div id="buttons-increm-decrem">
                 <button id="incrementButton">Incrementar</button>
                 <button id="decrementButton">Decrementar</button>
             </div>
-        </div>
-        <script id="incremdecrem">
-            const counterElement = document.getElementById('counter');
-            const incrementButton = document.getElementById('incrementButton');
-            const decrementButton = document.getElementById('decrementButton');   
-            let count = 0; 
-            function updateCounter() {
-                counterElement.textContent = count;
-            }  
-            incrementButton.addEventListener('click', () => {
-                count++;
-                updateCounter();
-            }); 
-            decrementButton.addEventListener('click', () => {
-                if (count > 0) {
-                    count--;
+            <script class="increm-decrem">
+                const counterElement = document.getElementById('counter');
+                const incrementButton = document.getElementById('incrementButton');
+                const decrementButton = document.getElementById('decrementButton');   
+                let count = 0; 
+                function updateCounter() {
+                    counterElement.textContent = count;
+                }  
+                incrementButton.addEventListener('click', () => {
+                    count++;
                     updateCounter();
-                }
-            });
-            updateCounter();
-        </script>
-        <div>
-            <div>
-                <button type="button" id="agregar-carrito">Agregar al carrito</button>
+                }); 
+                decrementButton.addEventListener('click', () => {
+                    if (count > 0) {
+                        count--;
+                        updateCounter();
+                    }
+                });
+                updateCounter();
+            </script>
+        </div>
+        <div class="button-carrito">
+            <button type="button" id="agregar-carrito">Agregar al carrito</button>
+        </div>
+        <div buttons>
+            <div class="delete-button">
+                <form action="/products/<%= productDetail.id %>?_method=DELETE" method="POST">
+                    <button type="submit">Eliminar</button>
+                </form>
             </div>
-
-
-            <form action="/products/delete/<%=productDetail.id %>?_method=DELETE" method="post">
-                <input type="submit" value="Eliminar">
-            </form>
-
+            <div class="edit-button">
+                <a href="/products/<%= productDetail.id %>/editar">
+                    <p>Editar</p>
+                </a>
+            </div>
+        </div>
+        <div>
             <!--Carrusel cervezas-->
-            <h1 class="Nuestros-productos">NUESTROS PRODUCTOS</h1>
-            <div class="Carrusel">
-                <div class="elementos">
-                    <img src="/img/Cervezaa.png" alt="" class="cerveza-carrusel">
-                    <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
-                    <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
-                </div>
-                <div class="elementos">
-                    <img src="/img/Cervezaa.png" alt="" class="cerveza-carrusel">
-                    <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
-                    <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
-                </div>
-                <div class="elementos">
-                    <img src="/img/Cervezaa.png" alt="" class="cerveza-carrusel">
-                    <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
-                    <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
-                </div>
-                <div class="elementos">
-                    <img src="/img/Cervezaa.png" alt="" class="cerveza-carrusel">
-                    <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
-                    <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
-                </div>
-                <div class="elementos">
-                    <img src="/img/Cervezaa.png" alt="" class="cerveza-carrusel">
-                    <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
-                    <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
-                </div>
-                <div class="elementos">
-                    <img src="/img/Cervezaa.png" alt="" class="cerveza-carrusel">
-                    <h3 class="nombre-carrusel">NOMBRE DE LA CERVEZA</h3>
-                    <p class="Datos-cerveza">"Descipcion de la cerveza"</p>
-                </div>
+            <h2 class="Nuestros-productos">Basado en tu última visita</h2>
+            <div class="carrusel">
+                <% for( let i = 0; i< products.length; i++) { %>
+                    <%- include('./product-carrusel',{product:products[i]})%>
+                <% } %>
+            </div>
         </div>
     </main>
     <!--FOOTER/-->
