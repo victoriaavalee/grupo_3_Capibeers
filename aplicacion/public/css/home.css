@@ -194,7 +194,6 @@ ul {
 }
 .footerlink ul li a{
   font-size: 15px;
-
   color: rgb(255, 255, 255); 
   display: block;
   margin-bottom: 15px;
@@ -259,7 +258,7 @@ ul {
   font-size: 18px;
 }
 
-/**************************************************VISTA CELULAR****************************************/
+/************************************************VISTA CELULAR Y PC*************************************/
 
 @media (max-width:400px){
   .main-nav .left-menu{

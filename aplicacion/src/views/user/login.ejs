@@ -13,46 +13,47 @@
     <!HEADER/!>
         <%- include('../partials/header')%>
     <main>
-        <form  method="POST" action="/user/login" >
-            <h2 class="title">ACCEDER</h2>
-            <p id="text-user-password">Ingrese su correo electrónico y su contraseña:</p>
-            <div id="div-user">
-                <!--<label form = "user"><i class="fa-solid fa-user"></i></label>-->
-                <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null %>" required>
-                <div>
-                    <% if (locals.errors && errors.email) { %>
-                        <%=  errors.email.msg %>
-                    <% } %>
+        <form  method="POST" action="/user/login"> 
+            <h2 class="titlePag">ACCEDER</h2>
+            <div class="contenedorLogin">
+                <div class="divUser" style="margin-bottom: 15px;">
+                    <p class="textLogin">Ingrese su correo electrónico:</p>
+                    <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null %>" required>
+                    <div class="errors">
+                        <% if (locals.errors && errors.email) { %>
+                            <%=  errors.email.msg %>
+                        <% } %>
+                    </div>
                 </div>
-            </div>
-            <div id="div-password">
-                <!--<label form = "clave"><i class="fa-solid fa-lock"></i></label>-->
-                <input type="password" name="password" id="password" placeholder="Contraseña" value="<%= locals.old && old.password ? old.password : null %>" required>
-                <div>
-                    <% if (locals.errors && errors.password) { %>
-                        <%=  errors.password.msg %>
-                    <% } %>
+                <div class="divPassword" style="margin-bottom: 15px;">
+                    <p class="textLogin">Ingrese su contraseña:</p>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" value="<%= locals.old && old.password ? old.password : null %>" required>
+                    <div class="errors">
+                        <% if (locals.errors && errors.password) { %>
+                            <%=  errors.password.msg %>
+                        <% } %>
+                    </div>
                 </div>
-            </div>
-            <div id="remember-user-password">
-                <label for="keepUserLogger">Mantener la sesion iniciada</label>
-                <input id="electro" type="checkbox" value="true" name="keepUserLogger" ></p>
-            </div>
+                <div id="rememberUserPassword" style="margin-bottom: 15px;">
+                    <label for="keepUserLogger">Mantener la sesion iniciada</label>
+                    <input class="inputLogin" id="electro" type="checkbox" value="true" name="keepUserLogger" ></p>
+                </div>
+                <div>
+                    <button class= buttonLogin type="submit" value="Login">
+                        INGRESAR
+                    </button>
+                </div>
+            </form>
             <div>
-                <button type="submit" value="Login">
-                    INGRESAR
-                </button>
+                <p><a class="forgotPassword" href="/user/restorePassword">¿Olvidaste tu contraseña?</a></p>
+            </div>        
+            <div>
+                <p><a class="createAccount" href="/user/register">¡Create una cuenta!</a></p>
             </div>
-        </form>
-        <div>
-            <p><a id="forgot-password" href="/user/restorePassword">¿Olvidaste tu contraseña?</a></p>
-        </div>        
-        <div>
-            <p><a id="create-account" href="/user/register">¿No tienes una cuenta? ¡Unete a nosotros!</a></p>
         </div>
     </main>
     <!FOOTER/!>
-    <%- include('../partials/footer')%>
+        <%- include('../partials/footer')%>
 </body>
 </html>
 

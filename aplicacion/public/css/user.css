@@ -5,163 +5,114 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 body {
     background: #ebebeb;
     font-size: 16px;
 }
-
 .iconsSup {
     color: #cba349;
     text-decoration: none;
     font-size: 22px;
 }
-
 .iconsSupButton{
     background-color: #333;
     color:#cba349;
     font-size: 22px;
     line-height: 0;
 }
-
 ul {
     list-style: none;
 }
-
 /* Nav */
 .container {
-    /*position: fixed; Por el momento no*/
     width: 100%;
     background-color: #222;
     height: 45px;
+    position: fixed;
+    z-index: 10;
 }
-
 .main-nav {
     display: flex;
 }
-
 .main-nav ul {
     display: flex;
 }
-
 .main-nav ul li {
     display: flex;
     margin-right: 15px;
 } 
-
 .right-menu {
     margin-right: 40px;
     margin: 10px;
 }
-
 .left-menu {
     flex: 1;
     margin: 10px;
     margin-left: 40px;
 }
-
-.main-nav ul li a:hover {
-    border-bottom: 2px solid white;
-} 
-
 .search-bar{
     border: 1;
 }
-
 .buttonHeaderProducts{
-    background-color: #cba349;
-    color: white;
-    display: inline-block;
-    text-align: center;
-    width: 80%;
-    left: 50%;
-    padding: 10px;
-    text-decoration: none;
-    transform: translate(13%);
-    border-radius: 5px;
-    font-weight: bold;
+    display: none;
 }
-
 .logo {
     height: 200px;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+}
+div a img {
+    margin-top: 45px;
 }
 
+/*******************************************MAIN LOGIN*********************************/
 
-/*******************************************MAIN LOGIN****************************/
-main {
+.titlePag{
+    color: #434343;
+    font-weight: bold;
+    margin-top: 45px;
     text-align: center;
-    font-size: 17px;
 }
-
-.title{
-    color: #434343;
-    font-size: 38px;
-    font-weight: bold;
-    margin: 20px;    
-}
-
-#text-user-password{
-    margin:15px;
-    font-size: 15px;
-}
-
-#div-user{
-    margin: 15px;
-}
-
-#div-password input{
-    width: 20%;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 5px;
-    border: 1px solid #434343;
-    color: #434343;
-}
-#div-user input{
-    width: 20%;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 5px;
-    border: 1px solid #434343;
-    color: #434343;
-}
-
-#remember-user-password{
-    text-align: center;
-    margin: 15px;
-    font-size: 14px;
-}
-
-#forgot-password{
-    font-size: 14px;
-    font-weight: bold;
-}
-
-#create-account{
-    font-size: 14px;
-    font-weight: bold;
-}
-
-button{
-    font-size: 15px;
-    font-weight: bold;
-    margin: 15px;
-    background-color:#DFBA69;
-    color: #000;
-    transition-property: background-color, color;
-    transition-duration: 0.4s;
-    padding: 15px;
+.contenedorLogin{
+    background-color: white;
     border-radius: 10px;
+    max-width: 20em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 20px;
+    padding: 50px;
 }
-
-button:hover{
-    background-color:#9e6730;
-    color:white;
+.buttonLogin{
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    transition-duration: 0.4s;
 }
-
+form div input{
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #434343;
+    color: #434343;
+    width: 100%;
+}
+.inputLogin{
+    width: auto;
+}
+.errors{
+    color: red;
+}
+.forgotPassword{
+    text-decoration: none;
+    color: #cba349;
+}
+.createAccount{
+    text-decoration: none;
+    color: #cba349;
+}
 /****************************MAIN RESTABLECER CLAVE******************************/
 
 
@@ -172,14 +123,7 @@ button:hover{
     margin-bottom: 20px;
 }
 
-form div input{
-    /*width: 20%;*/
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 5px;
-    border: 1px solid #434343;
-    color: #434343;
-}
+
 
 #ingresar{
     font-size: 15px;
@@ -338,7 +282,6 @@ form div input{
     text-align: center;
     font-size: 17px;
 }
-
 .formRegister .Google{
     margin-top: 10px;
     width: 98%;
@@ -346,7 +289,6 @@ form div input{
     color: #434343;
     font-size: 17px;
 }
-
 .formRegister .Google:hover{
     background-color: #f1cf85;
 }
@@ -357,26 +299,21 @@ form div input{
     background-color:#222;
     padding: 20px;
 }
-.footer-row{
-    display: flex;
-
-}
 .footerlink{
     width: 80%;
 }
 .footerlink h4 {
-    margin-left: 30px;
     font-size: 20px;
     color: #cba349;
+    margin-bottom: 15px;
+    margin-top: 10px;
     font-weight: 500;
-    margin-bottom: 25px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     padding-bottom: 10px;
     display: inline-block;
 }
 .footerlink ul li a{
     font-size: 15px;
-    text-decoration: none;
     color: rgb(255, 255, 255); 
     display: block;
     margin-bottom: 15px;
@@ -387,41 +324,69 @@ form div input{
     padding-left: 6px;
 }
 .social-links a{
-    font-size: 15px;
     display: inline-block;
     min-height: 40px;
     width: 150px;
     margin: 0 10px 10px 0;
-    text-align: center;
     line-height: 40px;
     border-radius: 10px;
     color: white;
     transition: all .2s ease;
 }
-.social-links a:hover{
-    background-color: #cba349;
-}
 .contac-links a{
-    font-size: 15px;
     display: inline-block;
     min-height: 40px;
     width: 250px;
     margin: 0 10px 10px 0;
-    text-align: center;
     line-height: 40px;
     border-radius: 10px;
     color: white;
     transition: all .2s ease;
 }
-.contac-links a:hover{
-    background-color: #cba349;
-}
 .mapa{
-    margin-left: 50px;
     width: 250px;
-    height: 220px;
+    height: 180px;
 }
 #copyright{
     text-align: center;
     color:white;
+}
+
+/************************************************VISTA CELULAR Y PC*************************************/
+
+@media (max-width:400px){
+    .main-nav .left-menu{
+        display: none;
+    }
+}
+@media (min-width:401px){
+    .main-nav ul li a:hover {
+        border-bottom: 2px solid white;
+    } 
+    .footer-row{
+        display: flex;
+    }
+    .footerlink h4 {
+        margin-top: 0px;
+    }
+    .social-links a:hover{
+        background-color: #cba349;
+    }
+    .contac-links a:hover{
+        background-color: #cba349;
+    }
+    .contenedorLogin{
+        background-color: white;
+        border-radius: 10px;
+        max-width: 32em;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin: 20px;
+        padding: 50px;
+    }
+    button:hover{
+        background-color:#cba349;
+    }
+    .contenedorLogin{
+        margin-left: 34%;
+    }
 }
