@@ -27,48 +27,38 @@ body {
 ul {
   list-style: none;
 }
-
 /* Nav */
 .container {
-  /*position: fixed; Por el momento no*/
   width: 100%;
   background-color: #222;
   height: 45px;
+  position: fixed;
+  z-index: 10;
 }
-
 .main-nav {
   display: flex;
 }
-
 .main-nav ul {
   display: flex;
 }
-
 .main-nav ul li {
   display: flex;
   margin-right: 15px;
 } 
-
 .right-menu {
   margin-right: 40px;
   margin: 10px;
 }
-
 .left-menu {
   flex: 1;
   margin: 10px;
   margin-left: 40px;
 }
-
-.main-nav ul li a:hover {
-  border-bottom: 2px solid white;
-} 
-
 .search-bar{
   border: 1;
 }
-
 .buttonHeaderProducts{
+  margin-top: 45px;
   background-color: #cba349;
   color: white;
   display: inline-block;
@@ -81,138 +71,68 @@ ul {
   border-radius: 5px;
   font-weight: bold;
 }
-
 .logo {
   height: 200px;
   display: flex;
   justify-content: center;
+}
+
+/***************************************HOME***************************************/
+
+.Cerveza-Bienvenida{
+  text-align: center;
+  margin-top: 5px;
+  color: black;
+}
+.Linea-alta{
+  height: 5px;
+  width: 80%;
+  background-color: #434343;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.contenidoTotal{
+  padding:20px 20px;
+}
+.contenidoImgUno img{
+  width: 100%;
+  height: auto;
+}
+.contenidoImgDos img{
+  width: 100%;
+  height: auto;
+}
+.contenidoUno{
+  margin-bottom: 20px;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #434343;
+}
+.contenidoTextoUno p{
+  text-align: justify;
+}
+.contenidoTextoDos p{
+  text-align: justify;
+}
+.contenidoDos{
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #434343;
+  margin-top: 40px;
+}
+.Linea-baja{
+  height: 5px;
+  width: 80%;
+  background-color: #434343;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
 }
 
-/****************************************************BODY**********************************************/
-
-.Linea-alta{
-  color: #000;
-  height: 5px;
-  width: 80%;
-  background-color: #000;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/****************************HOME*************************/
-.Cerveza-mas-vendida{
-  text-align: center;
-  margin-top: 80px;
-}
-.centrar-izquierda{
-  margin-top: 180px;
-}
-.centrar-derecha{
-  margin-top: 30px;
-}
-.Descripcion{
-  background-color: #ebebeb;
-  ;
-  padding: 50px 20px;
-}
-.Descripcion .fila{
-  display: flex;
-  justify-content: space-between;
-  background: #ebebeb;
-
-}
-.Descripcion .fila .col{
-  width: 49%;
-  padding: 0 20px;
-}
-
-.Descripcion .fila .item{
-  padding: 25px;
-  margin-bottom: 200px;
-  background-color: #333;
-  position: relative;
-  margin-top: 10px;
-  border-radius: 3px;
-}
-.Descripcion .fila .item .title-text{
-  display: block;
-  margin-bottom: 10px;
-  color: #DFBA69;
-}
-.Descripcion .fila .item p{
-  line-height: 24px;
-  color: rgb(255, 255, 255);
-}
-.Descripcion .fila .izq{
-  border-right: 2px solid #000000;
-  margin-right: 20px;
-}
-.Descripcion .fila .der{
-  border-left: 2px solid #000000;
-  margin-left: 20px;
-}
-.Descripcion .fila .item .conectori{
-  height: 2px;
-  background-color:#000000;
-  width: 47px;
-  position: absolute;
-  top: 50%;
-  right: -47px;
-  z-index: 5;
-}
-.Descripcion .fila .item .conectori .circuloi{
-  display: block;
-  height: 10px;
-  width: 10px;
-  border-radius:50%;
-  background-color: #000000;
-  float: right;
-  position: relative;
-  bottom: 4px;
-}
-.Descripcion .fila .item .conectord{
-  height: 2px;
-  background-color: rgb(0, 0, 0);
-  width: 47px;
-  position: absolute;
-  top: 50%;
-  left: -47px;
-  z-index: 5;
-}
-.Descripcion .fila .item .conectord .circulod{
-  display: block;
-  height: 10px;
-  width: 10px;
-  border-radius:50%;
-  background-color: rgb(0, 0, 0);
-  float: left;
-  position: relative;
-  bottom: 4px;
-}
-.foto-banner{
-  /*margin-left: 10px;
-  height: 250px;*/
-  border-radius: 3px;
-}
-
-.foto-banner-left{
-  margin-left: 12%;
-}
-.foto-banner-rigth{
-margin-left: 30px;
-}
-.Linea-baja{
-  color: #000;
-  height: 5px;
-  width: 80%;
-  background-color: #000;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-}
-
-/***************************Carrousel de cervezas*****************************/
+/********************************Carrousel de cervezas*****************************/
 
 .Nuestros-productos{
   text-align: center;
@@ -251,6 +171,69 @@ margin-left: 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
+
+
+/*************************************************FOOTER**********************************************/
+
+.footer{
+  background-color:#222;
+  padding: 20px;
+}
+.footerlink{
+  width: 80%;
+}
+.footerlink h4 {
+  font-size: 20px;
+  color: #cba349;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-weight: 500;
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+.footerlink ul li a{
+  font-size: 15px;
+
+  color: rgb(255, 255, 255); 
+  display: block;
+  margin-bottom: 15px;
+  transition: all .3s ease;
+}
+.footerlink ul li a:hover{
+  color: #FFFEDF;
+  padding-left: 6px;
+}
+.social-links a{
+  display: inline-block;
+  min-height: 40px;
+  width: 150px;
+  margin: 0 10px 10px 0;
+  line-height: 40px;
+  border-radius: 10px;
+  color: white;
+  transition: all .2s ease;
+}
+.contac-links a{
+  display: inline-block;
+  min-height: 40px;
+  width: 250px;
+  margin: 0 10px 10px 0;
+  line-height: 40px;
+  border-radius: 10px;
+  color: white;
+  transition: all .2s ease;
+}
+
+.mapa{
+  width: 250px;
+  height: 180px;
+}
+#copyright{
+  text-align: center;
+  color:white;
+}
+
 /*********************************page not-found************************************/
 .error{
   text-align: center;
@@ -276,75 +259,83 @@ margin-left: 30px;
   font-size: 18px;
 }
 
-/*************************************************FOOTER**********************************************/
+/**************************************************VISTA CELULAR****************************************/
 
-.footer{
-  background-color:#222;
-  padding: 20px;
+@media (max-width:400px){
+  .main-nav .left-menu{
+    display: none;
+  }
 }
-.footer-row{
-  display: flex;
-
-}
-.footerlink{
-  width: 80%;
-}
-.footerlink h4 {
-  font-size: 20px;
-  color: #cba349;
-  margin-bottom: 25px;
-  font-weight: 500;
-  border-bottom: 2px solid black;
-  padding-bottom: 10px;
-  display: inline-block;
-}
-.footerlink ul li a{
-  font-size: 15px;
-  text-decoration: none;
-  color: rgb(255, 255, 255); 
-  display: block;
-  margin-bottom: 15px;
-  transition: all .3s ease;
-}
-.footerlink ul li a:hover{
-  color: #FFFEDF;
-  padding-left: 6px;
-}
-.social-links a{
-  font-size: 15px;
-  display: inline-block;
-  min-height: 40px;
-  width: 150px;
-  margin: 0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 10px;
-  color: white;
-  transition: all .2s ease;
-}
-.social-links a:hover{
-  background-color: #cba349;
-}
-.contac-links a{
-  font-size: 15px;
-  display: inline-block;
-  min-height: 40px;
-  width: 250px;
-  margin: 0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 10px;
-  color: white;
-  transition: all .2s ease;
-}
-.contac-links a:hover{
-  background-color: #cba349;
-}
-.mapa{
-  width: 250px;
-  height: 220px;
-}
-#copyright{
-  text-align: center;
-  color:white;
+@media (min-width:401px){
+  .main-nav ul li a:hover {
+    border-bottom: 2px solid white;
+  } 
+  .footer-row{
+    display: flex;
+  }
+  .footerlink h4 {
+    margin-top: 0px;
+  }
+  .social-links a:hover{
+    background-color: #cba349;
+  }
+  .contac-links a:hover{
+    background-color: #cba349;
+  }
+  .contenidoUno{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+  .contenidoDos{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+  .imgUno{
+    padding: 2%;
+  }
+  .imgDos{
+    padding: 2%;
+  }
+  .contenidoTextoUno{
+    margin-right: 80px;
+    margin-top: 9%;
+    padding: 40px;
+    width: 40%;
+    height: 20%;
+    background-color: #434343;
+    border-radius: 10px;
+    box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .contenidoTextoDos{
+    margin-left: 80px;
+    margin-top: 9%;
+    padding: 40px;
+    width: 40%;
+    height: 20%;
+    background-color: #434343;
+    border-radius: 10px;
+    box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .contenidoImgUno{
+    margin-left: 80px;
+    background-color: #434343;
+    border-radius: 10px;
+    box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .contenidoImgDos{
+    margin-right: 80px;
+    background-color: #434343;
+    border-radius: 10px;
+    box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .contenidoImgUno img{
+    width: 35em;
+    height: auto;
+  }
+  .contenidoImgDos img{
+    width: 35em;
+    height: auto;
+  }
 }
