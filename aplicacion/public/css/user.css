@@ -110,7 +110,7 @@ form div input{
     text-decoration: none;
     color: #cba349;
 }
-.createAccount{
+.register{
     text-decoration: none;
     color: #cba349;
 }
@@ -174,7 +174,7 @@ form div input{
     display: inline-block;
     text-transform: uppercase;
     color: white;
-    background-color: #753c3c;
+    background-color: #5A2E2E;
     text-align: center;
     padding: 20px;
     font-size: 12px;
@@ -186,9 +186,13 @@ form div input{
     width: 48%;
     margin-left: 25%;
 }
-.img-user label:hover{
-    background-color: #5A2E2E;
-}
+
+/*********************************MAIN RESTABLECER CLAVE****************************************/
+
+
+
+
+
 
 
 
@@ -222,32 +226,11 @@ form div input{
     text-align: center;
     font-size: 17px;
 }
-.formRegister .Google{
-    margin-top: 10px;
-    width: 98%;
-    background-color: #DFBA69;
-    color: #434343;
-    font-size: 17px;
-}
-.formRegister .Google:hover{
-    background-color: #f1cf85;
-}
-/****************************MAIN RESTABLECER CLAVE******************************/
-
-
-.texto{
-    margin: 0 auto;
-    width: 35%;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
 
 
 
-#ingresar{
-    font-size: 15px;
-    font-weight: bold;
-}
+
+
 
 
 /*************************************************FOOTER**********************************************/
@@ -355,4 +338,9 @@ form div input{
         padding: 50px;
         margin-left: 34%;
     }
+    .img-user label:hover{
+        background-color: #753c3c;
+    }
+    /*restablecer clave*/
+
 }

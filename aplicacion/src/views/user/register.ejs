@@ -18,7 +18,7 @@
                 <div class="contenedorRegister">
                     <div class="divUser" style="margin-bottom: 15px;">
                         <p class="textRegister">Ingrese su correo electrónico:</p>
-                        <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null %>" required>
+                        <input type="email" name="email" id="email" placeholder="Correo electrónico"" value="<%= locals.old && old.email ? old.email : null %>" required>
                         <div class="errors">
                             <% if (locals.errors && errors.email) { %>
                                 <%=  errors.email.msg %>
@@ -52,14 +52,14 @@
                             <% } %>
                         </div>
                     </div>
-                    <div class="divUser user-profile">
+                    <div class="divUser user-profile" style="margin-bottom: 15px;">
                         <p>Perfil de usuario:</p>
                         <input type="radio" id="buyer" name="category" value="Comprador"  <%= locals.old && old.category === 'Comprador' ? 'selected' : ''; %>>
                         <label for="buyer">Cliente</label>
                         <input type="radio" id="seller" name="category" value="Administrador"  <%= locals.old && old.category === 'Administrador' ? 'selected' : ''; %>>
                         <label for="seller">Administrador</label>
                     </div>
-                    <div class="divUser img-user">
+                    <div class="divUser img-user" style="margin-bottom: 15px;">
                         <p class="textRegister" >Foto de perfil:</p>
                         <label for="img-profile"><i class="fa-solid fa-upload inputRegisterImg"></i>Upload file</label>
                         <input type="file" name="image" id="img-profile" accept=".png,.jpg">
@@ -69,15 +69,19 @@
                             <% } %>
                         </div>
                     </div>
-                    <div class="divUser">
+                    <div class="divUser" style="margin-bottom: 15px;">
+                        <p class="textRegister">Ingrese una contraseña:</p>
                         <input type="password" name="password" id="password" placeholder="Contraseña" value="<%= locals.old && old.password ? old.password : null %>" required>
                         <div class="errors">
                             <% if (locals.errors && errors.password) { %>
                                 <%=  errors.password.msg %>
                             <% } %>
                         </div>
+                    </div>
+                    <div class="divUser" style="margin-bottom: 15px;">
+                        <p class="textRegister">Confirme contraseña:</p>
                         <input type="password" name="confPassword" id="confirm-password" placeholder="Confirmar contraseña" value="<%= locals.old && old.confPassword ? old.confPassword : null %>" required>
-                        <div>
+                        <div class="errors">
                             <% if (locals.errors && errors.confPassword) { %>
                                 <%=  errors.confPassword.msg %>
                             <% } %>

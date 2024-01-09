@@ -18,7 +18,7 @@
             <div class="contenedorUser">
                 <div class="divUser" style="margin-bottom: 15px;">
                     <p class="textLogin">Ingrese su correo electrónico:</p>
-                    <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null %>" required>
+                    <input type="email" name="email" id="email" placeholder="Correo electrónico" value="<%= locals.old && old.email ? old.email : null %>" required>
                     <div class="errors">
                         <% if (locals.errors && errors.email) { %>
                             <%=  errors.email.msg %>
@@ -39,18 +39,18 @@
                     <input class="inputLogin" id="electro" type="checkbox" value="true" name="keepUserLogger" ></p>
                 </div>
                 <div>
-                    <button class= buttonUser type="submit" value="Login">
+                    <button class= "buttonUser" type="submit" value="Login">
                         INGRESAR
                     </button>
                 </div>
-            </form>
-            <div>
-                <p><a class="forgotPassword" href="/user/restorePassword">¿Olvidaste tu contraseña?</a></p>
-            </div>        
-            <div>
-                <p><a class="createAccount" href="/user/register">¡Create una cuenta!</a></p>
+                <div>
+                    <p><a class="forgotPassword" href="/user/restorePassword">¿Olvidaste tu contraseña?</a></p>
+                </div>        
+                <div>
+                    <p><a class="register" href="/user/register">¡Create una cuenta!</a></p>
+                </div>
             </div>
-        </div>
+        </form>
     </main>
     <!FOOTER/!>
         <%- include('../partials/footer')%>
