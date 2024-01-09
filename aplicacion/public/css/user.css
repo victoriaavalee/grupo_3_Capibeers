@@ -217,12 +217,52 @@ form div input{
 .infoUl{
     margin: 5px 0px;
 }
+
 /*********************************MAIN PERFIL DE USUARIO **********************************************/
 
-
-
-
-
+.contenedorPerfil{
+    background-color: white;
+    border-radius: 10px;
+    max-width: 20em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 15px 10%;
+    padding: 30px 30px 20px 30px;
+}
+.imgPerfil{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.correoPerfil{
+    color:#cba349;
+    margin-top: 5px;
+}
+.infoPerfil{
+    margin: 5px 0px;
+}
+.contenedorBotones{
+    margin-top: 18px;
+}
+.botonesPerfil{
+    width: 100%;
+    height: 40px;
+    background-color: #5A2E2E;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    transition-duration: 0.4s;
+}
+.botonEliminar{
+    width: 100%;
+    height: 40px;
+    background-color: #eb3d3d;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    transition-duration: 0.4s;
+}
 
 /*************************************************FOOTER**********************************************/
 
@@ -364,4 +404,47 @@ form div input{
         text-align: center;
     }
     /*Perfil de usuarios*/
+    .contenedorPerfil{
+        display: flex;
+        background-color: white;
+        border-radius: 10px;
+        max-width: 55%;
+        max-height: 20em;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin: 15px 25%;
+        padding: 30px 30px 20px 30px;
+    }
+    .contenedorDosPerfil{
+        margin-left: 15px;
+        width: 90%;
+    }
+    .imgPerfil{
+        margin-top: 15px;
+        width: 200px;
+        height: auto;
+        border-radius: 5px;
+    }
+    .botonesPerfil{
+        width: 100%;
+        height: 30px;
+        background-color: #5A2E2E;
+        color: #fff;
+        border: none;
+        border-radius: 7px;
+        margin-bottom: 10px;
+        transition-duration: 0.4s;
+    }
+    .botonEliminar{
+        width: 100%;
+        height: 30px;
+        background-color: #d83838;
+        color: #fff;
+        border: none;
+        border-radius: 7px;
+        margin-bottom: 10px;
+        transition-duration: 0.4s;
+    }
+    .botonEliminarSup button:hover{
+        background-color:#ff5151;
+    }
 }
