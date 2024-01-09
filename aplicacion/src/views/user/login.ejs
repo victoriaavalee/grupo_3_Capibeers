@@ -13,9 +13,9 @@
     <!HEADER/!>
         <%- include('../partials/header')%>
     <main>
+        <h2 class="titlePag">ACCEDER</h2>
         <form  method="POST" action="/user/login"> 
-            <h2 class="titlePag">ACCEDER</h2>
-            <div class="contenedorLogin">
+            <div class="contenedorUser">
                 <div class="divUser" style="margin-bottom: 15px;">
                     <p class="textLogin">Ingrese su correo electrónico:</p>
                     <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null %>" required>
@@ -39,7 +39,7 @@
                     <input class="inputLogin" id="electro" type="checkbox" value="true" name="keepUserLogger" ></p>
                 </div>
                 <div>
-                    <button class= buttonLogin type="submit" value="Login">
+                    <button class= buttonUser type="submit" value="Login">
                         INGRESAR
                     </button>
                 </div>
