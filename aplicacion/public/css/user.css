@@ -188,45 +188,36 @@ form div input{
 }
 
 /*********************************MAIN RESTABLECER CLAVE****************************************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*********BOTONES*************/
-
-.buttons{
-    margin-top: 20px;
+/*no hay nada nuevo*/
+/*********************************MAIN USER LIST **********************************************/
+.searchBarUserList{
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 25%;
+    margin-top: 15px;
 }
-
-.formRegister button{
-    width: 98%;
-    background-color: #753c3c;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    color: #efefef;
-    font-size: 17px;
+.contenedorUL{
+    background-color: white;
+    border-radius: 10px;
+    max-width: 20em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 15px 10%;
+    padding: 30px 30px 20px 30px;
 }
-
-.formRegister button:hover{
-    background-color:  #a05151;
+.imgPerfilUL{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
-
-.formRegister .separador{
-    text-align: center;
-    font-size: 17px;
+.correoUL{
+    color:#cba349;
+    margin-top: 5px;
 }
-
+.infoUl{
+    margin: 5px 0px;
+}
+/*********************************MAIN PERFIL DE USUARIO **********************************************/
 
 
 
@@ -342,5 +333,35 @@ form div input{
         background-color: #753c3c;
     }
     /*restablecer clave*/
-
+    /*no hay nada nuevo*/
+    /*Listado de usuarios*/
+    .contenedorUL{
+        display: flex;
+        background-color: white;
+        border-radius: 10px;
+        max-width: 50%;
+        max-height: 20em;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin: 15px 28%;
+        padding: 30px 30px 20px 30px;
+    }
+    .contDosUL{
+        margin-left: 15px;
+        width: 90%;
+    }
+    .imgPerfilUL{
+        width: 180px;
+        height: auto;
+        border-radius: 5px;
+    }
+    .infoUl{
+        margin: 10px 5px 70px 0px;
+    }
+    .correoUL{
+        color:#cba349;
+        font-weight:500;
+        margin-top: 5px;
+        text-align: center;
+    }
+    /*Perfil de usuarios*/
 }

@@ -13,20 +13,28 @@
     <!--Header/-->
     <%- include('../partials/header')%>
     <main>
-        <h2 class="title">LISTADO DE USUARIOS</h2>
-        <input type="text" name="search" value="<%=usersList.email %>" id="name" placeholder="Buscar por email" required>
-        <ul>
+        
+        <h2 class="titlePag">LISTADO DE USUARIOS</h2>
+        <input class="searchBarUserList" type="text" name="search" placeholder=" Correo electronico" value="<%=usersList.email %>" id="name"  required>
+        <a class="iconsUserList" href="#"><i class="fas fa-search"></i></a>
+        <ul class="ulUserList">
             <% for (let i = 0; i < usersList.length; i++) { %>
-            <li>
-                <img src="/img/users/<%= usersList[i].image||'placeholder.jpg' %>"></img></a>
-                <p><%=usersList[i].email%></p>
-                <p><%=usersList[i].name +" "+ usersList[i].lastName  %></p>
-                <p><%=usersList[i].category %></p>
-                <form method="GET" action="/user/profile/<%=usersList[i].id%>">
-                    <button type="submit">
-                        Ver perfil
-                    </button>
-                </form>
+            <li class="contenedorUL">
+                <div class="contUnoUL">
+                    <img class="imgPerfilUL" src="/img/users/<%= usersList[i].image||'placeholder.jpg' %>"></img></a>
+                </div>
+                <div class="contDosUL">
+                    <p class="correoUL textUL"><%=usersList[i].email%></p>
+                    <div class="infoUl">
+                        <p class="textUL"><%=usersList[i].name +" "+ usersList[i].lastName  %></p>
+                        <p class="textUL"><%=usersList[i].category %></p>
+                    </div>
+                    <form method="GET" action="/user/profile/<%=usersList[i].id%>">
+                        <button class="buttonUser" type="submit">
+                            Ver perfil
+                        </button>
+                    </form>
+                </div>
             </li>
             <% } %> 
         </ul>

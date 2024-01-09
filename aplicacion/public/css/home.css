@@ -107,7 +107,7 @@ ul {
   margin-bottom: 20px;
   color: white;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #434343;
 }
 .contenidoTextoUno p{
@@ -119,7 +119,7 @@ ul {
 .contenidoDos{
   color: white;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #434343;
   margin-top: 40px;
 }
@@ -209,7 +209,7 @@ ul {
   width: 150px;
   margin: 0 10px 10px 0;
   line-height: 40px;
-  border-radius: 10px;
+  border-radius: 5px;
   color: white;
   transition: all .2s ease;
 }
@@ -219,7 +219,7 @@ ul {
   width: 250px;
   margin: 0 10px 10px 0;
   line-height: 40px;
-  border-radius: 10px;
+  border-radius: 5px;
   color: white;
   transition: all .2s ease;
 }
@@ -314,19 +314,19 @@ ul {
     width: 40%;
     height: 20%;
     background-color: #434343;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   .contenidoImgUno{
     margin-left: 80px;
     background-color: #434343;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   .contenidoImgDos{
     margin-right: 80px;
     background-color: #434343;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   .contenidoImgUno img{
