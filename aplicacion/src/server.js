@@ -28,6 +28,9 @@ app.use(methodOverride('_method'));
 const morgan = require('morgan');
 app.use(morgan('dev'));
 
+
+
+/////////////////////////////////////DESDE AQUI no esta nada en el video
 //Express-session
 app.use(session({
     secret: "topSecret",
@@ -45,7 +48,7 @@ const keepUserCookie =  require('./middleware/keepUserCookie'); //cookie q reuer
 app.use(keepUserLogger);
 app.use(isUserLogged);
 app.use(keepUserCookie);
-
+///////////////////////////////////////////HASTA AQUI
 
 //Rutas 
 app.use ('/',router);

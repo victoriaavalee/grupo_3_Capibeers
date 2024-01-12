@@ -1,24 +1,13 @@
 [
-  {
-    "id": 1,
-    "email": "admin1@gmail.com",
-    "name": "administradorae",
-    "lastName": "admin",
-    "birthdate": "2001-01-01",
-    "category": "Administrador",
-    "password": "$2a$10$dmd6LG9iwcCQL6wrdIsfL.j8oP4xos0KFEJKX2DjM9/tWniDZFi8u",
-    "confPassword": "admin1",
-    "image": "1704260364902-image.jpg"
-  },
-  {
-    "id": 3,
-    "email": "prueba2@gamil.com",
-    "name": "pru",
-    "lastName": "eba",
-    "birthdate": "2003-03-03",
-    "category": "Comprador",
-    "password": "$2a$10$WrX4adwP6N6A5dwNBFuneu40xEqnhAV0uqP3vZSz50TaUj3.jEzz.",
-    "confPassword": "33333",
-    "image": "1704785014547-image.jpg"
-  }
+    {
+        "id": 1,
+        "email": "correo1@gmail.com",
+        "name": "asd",
+        "lastName": "asdf",
+        "birthdate": "2000-02-02",
+        "category": "Comprador",
+        "password": "$2a$10$FffW0Fpg.61BKZwlvHZnP.ke2T.32h0CLldTVmvuaWhor3MJtXeKm",
+        "confPassword": "asdfasdf",
+        "image": "1705041122170-image.jpg"
+    }
 ]

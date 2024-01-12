@@ -5,8 +5,12 @@ const userRouter = express.Router();
 const upload = require('../middleware/usersMulter');
 const userValidationRegister = require('../middleware/userValidationRegister');
 const userValidationLogin = require('../middleware/userValidationLogin');
+
+
+/////////////////////////DESDE AQUI NO ESTA NADA
 const guestMiddleware = require('../middleware/guestMiddleware');
 //const authMiddleware = require('../middleware/authMiddleware'); // hasta el momento sin uso
+/////////////////////////HASTA AQUI
 
 //Rutas
 userRouter.get('/profile/:id', userController.profile);
