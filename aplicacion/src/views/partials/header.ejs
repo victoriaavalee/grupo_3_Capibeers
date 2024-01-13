@@ -14,18 +14,7 @@
                 <li><input type="text" placeholder="Buscar" class="search-bar"></li>
                 <li><a class="iconsSup" href="#"><i class="fas fa-search"></i></a></li>
                 <li>
-                    <% if( isUserLogger){ %>
-                        <a href="/user/login"><i class="iconsSup fa-regular fa-circle-user"></i></a>
-                    <% } %>
-                </li>
-                <li>
-                    <% if( !isUserLogger){ %>
-                        <form action="/user/logout" method="POST">
-                            <button type="submit">
-                                <i class="fa-solid fa-right-from-bracket iconsSupButton"></i>
-                            </button>
-                        </form>
-                    <% } %>
+                    <a href="/user/login"><i class="iconsSup fa-regular fa-circle-user"></i></a>
                 </li>
                 <li><a href="/products/carrito"><i class="fas fa-shopping-cart iconsSup"></i></a></li>
             </ul>

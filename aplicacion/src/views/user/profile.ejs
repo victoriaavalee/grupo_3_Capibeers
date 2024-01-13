@@ -27,6 +27,11 @@
                         <p class="textPerfil">Categoría: <%=user.category %></p>
                     </div>
                     <div class="contenedorBotones">
+                        <form action="/user/logout" method="POST">
+                            <button class="botonesPerfil" type="submit">
+                                CERRAR SESION
+                            </button>
+                        </form>
                         <form method="GET" action="/user/restorePassword" >
                             <button class="botonesPerfil" type="submit">
                                 CAMBIAR CONTRASEÑA

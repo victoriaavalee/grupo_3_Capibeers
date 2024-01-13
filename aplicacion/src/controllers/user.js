@@ -6,58 +6,7 @@ const User = require('../models/UserMod');
 const bcryptjs = require('bcryptjs');
 
 //Controladores
-const userController = {  
-    profile: function (req, res){
-        const userId = +req.params.id;
-        const user = usersJSON.find((u)=>u.id === userId); 
-        res.render ('./user/profile',{'user' : user,});
-    },
-    profileDelete: function (req, res){
-        const userId = +req.params.id;
-        const imageDelete = usersJSON.find((u)=>u.id ==userId);
-        const imageD = path.join (__dirname, '../../public/img/users/' + imageDelete.image);
-        if(fs.existsSync(imageD)){
-            fs.unlinkSync(imageD)
-        };
-        const usersTmp = usersJSON.filter((u)=>u.id !== userId);
-        fs.writeFileSync('./src/data/users.json', JSON.stringify(usersTmp));
-        res.redirect('/user/list');
-        /*En mi caso funciona bien, si no, se pone el usersJSON con let y se reemplaza el usersTmp por usersJSON
-        para actualizar la variable (let). No olvidar cambiar el usersTmp del JSON.stringify */
-    },
-    login: function (req, res){
-        if (req.session.isUserLogger){
-            return res.redirect('/products');
-        }
-        return res.render('./user/login');
-    },
-    loginPost: function (req, res){
-        const userToLogin = User.findByField('email', req.body.email);
-        if(userToLogin){
-            const isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if(isOkThePassword){
-                return res.send('Ok puedes seguir')
-            }
-            return res.render('./user/login',{
-                errors: {
-                    email:{
-                        msg:'Las credenciales son inválidas.'
-                    }
-                },
-            });
-        }
-        return res.render('./user/login',{
-            errors: {
-                email:{
-                    msg:'No se encuentra este correo electrónico registrado en nuestra base de datos.'
-                }
-            },
-        });
-    },
-    logoutPost: function(req, res){
-        req.session.destroy();
-        return res.redirect('/home');
-    },
+const userController = {
     register: function (req, res){
         res.render('./user/register');
     },
@@ -88,6 +37,59 @@ const userController = {
                 old: req.body,
             });
         }
+    },
+    login: function (req, res){
+        return res.render('./user/login');
+    },
+    loginPost: function (req, res){
+        const userToLogin = User.findByField('email', req.body.email);
+        if(userToLogin){
+            const isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if(isOkThePassword){
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                return res.redirect('/user/profile');
+            }
+            return res.render('./user/login',{
+                errors: {
+                    email:{
+                        msg:'Las credenciales son inválidas.'
+                    }
+                },
+            });
+        }
+        return res.render('./user/login',{
+            errors: {
+                email:{
+                    msg:'No se encuentra este correo electrónico registrado en nuestra base de datos.'
+                }
+            },
+        });
+    },
+    logoutPost: function(req, res){
+        req.session.destroy();
+        return res.redirect('/home');
+    },
+    profile: function (req, res){
+        res.render('./user/profile',{
+            user: req.session.userLogged
+        });
+    },
+
+
+
+    profileDelete: function (req, res){
+        const userId = +req.params.id;
+        const imageDelete = usersJSON.find((u)=>u.id ==userId);
+        const imageD = path.join (__dirname, '../../public/img/users/' + imageDelete.image);
+        if(fs.existsSync(imageD)){
+            fs.unlinkSync(imageD)
+        };
+        const usersTmp = usersJSON.filter((u)=>u.id !== userId);
+        fs.writeFileSync('./src/data/users.json', JSON.stringify(usersTmp));
+        res.redirect('/user/list');
+        /*En mi caso funciona bien, si no, se pone el usersJSON con let y se reemplaza el usersTmp por usersJSON
+        para actualizar la variable (let). No olvidar cambiar el usersTmp del JSON.stringify */
     },
     restorePassword: function (req, res){
         res.render('./user/restorePassword');

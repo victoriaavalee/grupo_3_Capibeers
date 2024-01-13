@@ -1,7 +1,7 @@
 const express = require ('express');
 const router = require('./routes');
+//Session
 const session = require('express-session');
-const cookieParser = require('cookie-parser');
 
 const homeRouter = require ('./routes/home');
 const productsRouter = require('./routes/products');
@@ -28,27 +28,34 @@ app.use(methodOverride('_method'));
 const morgan = require('morgan');
 app.use(morgan('dev'));
 
+//Middlewares
+const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
 
-
-/////////////////////////////////////DESDE AQUI no esta nada en el video
-//Express-session
+//Session
 app.use(session({
     secret: "topSecret",
     resave: false,
     saveUninitialized: false,
 }));
 
-//Cookie Parser
-app.use(cookieParser());
+//app middlewares
+app.use(userLoggedMiddleware);
 
-//Middlewares
+
+
+
+/////////////////////////////////////DESDE AQUI no esta nada en el video
+//Cookie Parser
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
 const keepUserLogger = require('./middleware/keepUserLogger'); //se fija si el user esta logueado
-const isUserLogged = require('./middleware/isUserLogged'); //este se usa para los iconos de entrada y slaida de user 
 const keepUserCookie =  require('./middleware/keepUserCookie'); //cookie q reuerda user
 app.use(keepUserLogger);
-app.use(isUserLogged);
 app.use(keepUserCookie);
 ///////////////////////////////////////////HASTA AQUI
+
+
+
 
 //Rutas 
 app.use ('/',router);
