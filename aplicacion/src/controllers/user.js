@@ -48,6 +48,9 @@ const userController = {
             if(isOkThePassword){
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
+                if(req.body.remember_user){
+                    res.cookie('userEmail', req.body.email, {maxAge:1000*60*60*24*7})
+                }
                 return res.redirect('/user/profile');
             }
             return res.render('./user/login',{
@@ -67,17 +70,21 @@ const userController = {
         });
     },
     logoutPost: function(req, res){
+        res.clearCookie('userEmail')
         req.session.destroy();
+        //res.cookie('userEmail',req.body.email, {maxAge: 0});
+        // delete res.locals;
         return res.redirect('/home');
     },
     profile: function (req, res){
+        console.log(req.cookies.userEmail);
         res.render('./user/profile',{
             user: req.session.userLogged
         });
     },
 
 
-
+    
     profileDelete: function (req, res){
         const userId = +req.params.id;
         const imageDelete = usersJSON.find((u)=>u.id ==userId);

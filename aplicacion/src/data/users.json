@@ -4,7 +4,7 @@
         "email": "correo1@gmail.com",
         "name": "prueba",
         "lastName": "correo1",
-        "birthdate": "2000-02-02",
+        "birthdate": "2001-01-01",
         "category": "Comprador",
         "password": "$2a$10$gznXI4JRmpCjrW8Y5BuUieMP9JPlnl67NkS3C03HgzK9ih1D4QEci",
         "confPassword": "asdfasdf",
@@ -22,10 +22,21 @@
         "image": "1705112103309-image.jpg"
     },
     {
+        "id": 3,
+        "email": "correo3@gmail.com",
+        "name": "prueba",
+        "lastName": "correo3",
+        "birthdate": "2003-03-03",
+        "category": "Comprador",
+        "password": "$2a$10$gznXI4JRmpCjrW8Y5BuUieMP9JPlnl67NkS3C03HgzK9ih1D4QEci",
+        "confPassword": "asdfasdf",
+        "image": "1705112103309-image.jpg"
+    },
+    {
         "id": 4,
         "email": "correo4@gmail.com",
         "name": "correo4",
-        "lastName": "ejemplo$",
+        "lastName": "ejemplo4",
         "birthdate": "2004-04-04",
         "category": "Comprador",
         "password": "$2a$10$3sqs2/JMeE0e6jxCoUMEIOO0d0Bb4oGGFw2tVFkfmaJcZvtaD3/lC",
