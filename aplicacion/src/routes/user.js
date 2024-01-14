@@ -16,6 +16,7 @@ userRouter.get('/login', guestMiddleware, userController.login);
 userRouter.post('/login', userValidationLogin, userController.loginPost);
 userRouter.post('/logout', userController.logoutPost);
 userRouter.get('/profile', authMiddleware, userController.profile);
+userRouter.get('/edit/:id', userController.edit);
 
 userRouter.get('/list', userController.list);
 
@@ -25,7 +26,7 @@ userRouter.post('/profile', userController.profileDelete);
 
 userRouter.get('/restorePassword', userController.restorePassword); //falta cambiar clave segun correo o por Id
 userRouter.get('/search', userController.search); //no sirve
-userRouter.get('/edit/:id', userController.edit);
+
 userRouter.put('/edit/:id', upload.single("image"), userController.editPut);
 
 module.exports = userRouter;

@@ -2,45 +2,23 @@
     {
         "id": 1,
         "email": "correo1@gmail.com",
-        "name": "prueba",
-        "lastName": "correo1",
+        "name": "prueba1",
+        "lastName": "prueba1",
         "birthdate": "2001-01-01",
         "category": "Comprador",
-        "password": "$2a$10$gznXI4JRmpCjrW8Y5BuUieMP9JPlnl67NkS3C03HgzK9ih1D4QEci",
-        "confPassword": "asdfasdf",
-        "image": "1705112103309-image.jpg"
+        "password": "$2a$10$5YYWZ4BLuetdrZoh6w1.KO/.ff7LdtZ54crcDE.CWAg85h0s.aHjG",
+        "confPassword": "11111",
+        "image": "1705196742334-image.jpg"
     },
     {
         "id": 2,
         "email": "correo2@gmail.com",
-        "name": "prueba",
-        "lastName": "correo2",
+        "name": "prueba2",
+        "lastName": "prueba2",
         "birthdate": "2000-02-02",
         "category": "Comprador",
-        "password": "$2a$10$gznXI4JRmpCjrW8Y5BuUieMP9JPlnl67NkS3C03HgzK9ih1D4QEci",
-        "confPassword": "asdfasdf",
-        "image": "1705112103309-image.jpg"
-    },
-    {
-        "id": 3,
-        "email": "correo3@gmail.com",
-        "name": "prueba",
-        "lastName": "correo3",
-        "birthdate": "2003-03-03",
-        "category": "Comprador",
-        "password": "$2a$10$gznXI4JRmpCjrW8Y5BuUieMP9JPlnl67NkS3C03HgzK9ih1D4QEci",
-        "confPassword": "asdfasdf",
-        "image": "1705112103309-image.jpg"
-    },
-    {
-        "id": 4,
-        "email": "correo4@gmail.com",
-        "name": "correo4",
-        "lastName": "ejemplo4",
-        "birthdate": "2004-04-04",
-        "category": "Comprador",
-        "password": "$2a$10$3sqs2/JMeE0e6jxCoUMEIOO0d0Bb4oGGFw2tVFkfmaJcZvtaD3/lC",
-        "confPassword": "asdfasdf",
-        "image": "1705119220284-image.jpg"
+        "password": "$2a$10$E35TBOweqU61gTVCMBbRnO4rj7SQ0Rr85zvYCEZ.gPUpCe7f.ZKSC",
+        "confPassword": "22222",
+        "image": "1705196793572-image.jpg"
     }
 ]

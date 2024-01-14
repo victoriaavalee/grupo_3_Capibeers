@@ -82,9 +82,14 @@ const userController = {
             user: req.session.userLogged
         });
     },
-
-
-    
+    edit: function (req, res){
+        res.render('./user/profileEdit',{
+            user: req.session.userLogged
+        });
+        //const userId = +req.params.id;
+        //const user = usersJSON.find((u)=>u.id === userId); 
+        //res.render('./user/profileEdit', {'user':user});
+    },
     profileDelete: function (req, res){
         const userId = +req.params.id;
         const imageDelete = usersJSON.find((u)=>u.id ==userId);
@@ -95,9 +100,7 @@ const userController = {
         const usersTmp = usersJSON.filter((u)=>u.id !== userId);
         fs.writeFileSync('./src/data/users.json', JSON.stringify(usersTmp));
         res.redirect('/user/list');
-        /*En mi caso funciona bien, si no, se pone el usersJSON con let y se reemplaza el usersTmp por usersJSON
-        para actualizar la variable (let). No olvidar cambiar el usersTmp del JSON.stringify */
-    },
+    }, 
     restorePassword: function (req, res){
         res.render('./user/restorePassword');
     },
@@ -105,11 +108,6 @@ const userController = {
         const archivoUsuario = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
         usuarios = JSON.parse(archivoUsuario);
         res.render('./user/userList', {'usersList':usuarios});
-    },
-    edit: function (req, res){
-        const userId = +req.params.id;
-        const user = usersJSON.find((u)=>u.id === userId); 
-        res.render('./user/profileEdit', {'user':user});
     },
     editPut: function (req, res){
         const id = req.params.id;
@@ -122,7 +120,7 @@ const userController = {
                     userEdit.lastName = lastName;
                     userEdit.image = `${file.filename}`
                 };
-        });;
+        });
         fs.writeFileSync(
             path.join(__dirname, "../data/users.json"),
             JSON.stringify(usersJSON, null, 2),
