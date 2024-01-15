@@ -1,6 +1,7 @@
-let products = require ('../data/products.json');
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs');
+let products = require ('../data/products.json');
+
 
 const productsController = {
 
@@ -44,7 +45,7 @@ const productsController = {
 
     postCreate: function (req, res){
         const newId = products[(products.length - 1)].id + 1;
-        //let file = req.image;
+        let file = req.file;
         const newProduct = {
             id: newId,
             //image: `${file.filename}`,
@@ -60,9 +61,16 @@ const productsController = {
             alcohol: req.body.alcohol,
             ingredients: req.body.ingredients,
             description:req.body.description,
+            image:`${file.filename}`,
         };
         products.push(newProduct);
-        fs.writeFileSync('./src/data/products.json', JSON.stringify(products, null, 3), {encoding: 'utf-8'})
+            fs.writeFileSync(
+                path.join(__dirname, "../data/products.json"),
+                JSON.stringify(products, null, 3),
+                {
+                    encoding: 'utf-8',
+                }
+            );
         res.redirect('/products');
     },//sí funciona :D pero no file :(*
 

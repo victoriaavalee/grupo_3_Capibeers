@@ -142,5 +142,17 @@
         "price": 1600,
         "image": "lata-stellaArtois.jpg",
         "description": "Con su maravilloso aroma floral, dulzor de malta bien equilibrado, amargor de lúpulo crujiente y un final suave y seco, Stella Artois es la cerveza perfecta para acompañar comida y amigos."
+    },
+    {
+        "id": 14,
+        "name": "cerveza",
+        "price": "2500",
+        "mark": "corona",
+        "style": "",
+        "packing": "lata",
+        "volume": "2300",
+        "origin": "",
+        "ingredients": "",
+        "description": "sdfsdf\r\n\r\n\r\n\r\n"
     }
 ]

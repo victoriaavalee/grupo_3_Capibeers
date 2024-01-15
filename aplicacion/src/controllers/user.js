@@ -2,16 +2,93 @@ const path = require('path');
 const fs = require('fs');
 const usersJSON = require ('../data/users.json');
 const {validationResult} = require('express-validator');
+const User = require('../models/UserMod');
 const bcryptjs = require('bcryptjs');
-//const {getUserByEmail} = require('../data/users');
-
 
 //Controladores
-const userController = {  
+const userController = {
+    register: function (req, res){
+        res.render('./user/register');
+    },
+    registerPost: function (req, res) {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length == 0 ) {
+            const userInDb = User.findByField('email', req.body.email);
+            if (userInDb){
+                return res.render('./user/register', {
+                    errors:{
+                        email:{
+                            msg:'Este correo electrónico ya está registrado.'
+                        }
+                    },
+                    old: req.body,
+                });
+            }
+            const userToCreate = {
+                ...req.body,
+                image: req.file.filename,
+                password: bcryptjs.hashSync(req.body.password, 10),
+            }
+            const userCreated = User.create(userToCreate);
+            return res.redirect('./login');
+        }else{
+            return res.render('./user/register', {
+                errors: resultValidation.mapped(),
+                old: req.body,
+            });
+        }
+    },
+    login: function (req, res){
+        return res.render('./user/login');
+    },
+    loginPost: function (req, res){
+        const userToLogin = User.findByField('email', req.body.email);
+        if(userToLogin){
+            const isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if(isOkThePassword){
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                if(req.body.remember_user){
+                    res.cookie('userEmail', req.body.email, {maxAge:1000*60*60*24*7})
+                }
+                return res.redirect('/user/profile');
+            }
+            return res.render('./user/login',{
+                errors: {
+                    email:{
+                        msg:'Las credenciales son inválidas.'
+                    }
+                },
+            });
+        }
+        return res.render('./user/login',{
+            errors: {
+                email:{
+                    msg:'No se encuentra este correo electrónico registrado en nuestra base de datos.'
+                }
+            },
+        });
+    },
+    logoutPost: function(req, res){
+        res.clearCookie('userEmail')
+        req.session.destroy();
+        //res.cookie('userEmail',req.body.email, {maxAge: 0});
+        // delete res.locals;
+        return res.redirect('/home');
+    },
     profile: function (req, res){
-        const userId = +req.params.id;
-        const user = usersJSON.find((u)=>u.id === userId); 
-        res.render ('./user/profile',{'user' : user,});
+        console.log(req.cookies.userEmail);
+        res.render('./user/profile',{
+            user: req.session.userLogged
+        });
+    },
+    edit: function (req, res){
+        res.render('./user/profileEdit',{
+            user: req.session.userLogged
+        });
+        //const userId = +req.params.id;
+        //const user = usersJSON.find((u)=>u.id === userId); 
+        //res.render('./user/profileEdit', {'user':user});
     },
     profileDelete: function (req, res){
         const userId = +req.params.id;
@@ -23,145 +100,7 @@ const userController = {
         const usersTmp = usersJSON.filter((u)=>u.id !== userId);
         fs.writeFileSync('./src/data/users.json', JSON.stringify(usersTmp));
         res.redirect('/user/list');
-        /*En mi caso funciona bien, si no, se pone el usersJSON con let y se reemplaza el usersTmp por usersJSON
-        para actualizar la variable (let). No olvidar cambiar el usersTmp del JSON.stringify */
-    },
-    login: function (req, res){
-        if (req.session.isUserLogger){
-            return res.redirect('/products');
-        }
-        return res.render('./user/login');
-    },
-    loginPost: function (req, res){
-        let resultValidation = validationResult(req);
-        if (resultValidation.isEmpty()) {
-            const usersJson = fs.readFileSync ('./src/data/users.json', {encoding: 'utf-8'});
-            let users;
-            if(usersJson == ""){
-                users = [];
-            }else{
-                users = JSON.parse(usersJson);
-            }
-            let userToLogin;
-            for(let i = 0; i < users.length; i++){
-                if(users[i].email == req.body.email){
-                    let okPassword =bcryptjs.compareSync(req.body.password, users[i].password)
-                    if (okPassword){
-                        userToLogin = users[i];
-                        req.session.userLogger = userToLogin;
-                        break;
-                    }
-                }
-            }
-            if(userToLogin == undefined){
-                return res.render('./user/login', {
-                    resultValidation:{
-                        password:{
-                            msg: 'Credenciales invalidas'
-                        }
-                    }
-                });
-            }
-            req.session.userLogger = userToLogin;
-            
-            if (req.body.keepUserLogger != undefined){
-                res.cookie('keepUser', userToLogin.email, {maxAge:60000})
-            }
-            res.redirect('/products');
-        }else{
-            return res.render('./user/login', {
-                errors: resultValidation.mapped(),
-                old: req.body,
-            });
-        }
-            //hasta aqui va bien, aunque no sirve al loguarese, recibe info
-        /*
-        //VERSION CLASE
-        const loginData = req.body;
-        const keepUserLogger = loginData.keepUserLogger === 'true';
-        const user = getUserByEmail(loginData.email);
-        const isPasswordCorrect = bcryptjs.compareSync (loginData.password, user.password);
-        if (isPasswordCorrect){
-            req.session.isUserLogger = true;
-            req.session.emailUser = loginData.email;
-        }
-        if(keepUserLogger){
-            res.cookie('userEmail', user.email)
-        }
-        */
-
-        //res.redirect('/products');
-    },
-    logoutPost: function(req, res){
-        req.session.destroy();
-        return res.redirect('/home');
-    },
-    register: function (req, res){
-        res.render('./user/register');
-    },
-    registerPost: function (req, res) {
-        let resultValidation = validationResult(req);
-        if (resultValidation.errors.length == 0 ) {
-            const newId = usersJSON[(usersJSON.length - 1 )].id + 1;
-            let file = req.file;
-            let usuario = {
-                id: newId,
-                email: req.body.email,
-                name: req.body.name,
-                lastName: req.body.lastName,
-                birthdate:req.body.birthdate,
-                category: req.body.category,
-                password: bcryptjs.hashSync(req.body.password, 10),
-                confPassword: req.body.confPassword,
-                image:`${file.filename}`,
-            }
-            usersJSON.push(usuario);
-            fs.writeFileSync(
-                path.join(__dirname, "../data/users.json"),
-                JSON.stringify(usersJSON, null, 3),
-                {
-                    encoding: 'utf-8',
-                }
-            );
-            res.redirect('/user/list');
-        }else{
-            return res.render('./user/register', {
-                errors: resultValidation.mapped(),
-                old: req.body,
-            });
-        }
-        //res.redirect('/user/list');
-        //VERSION ORIGINAL + CLASE
-        /*
-        const archivoUsuarios = fs.readFileSync ('./src/data/users.json', {encoding: 'utf-8'});
-        let newId = usersJSON[(usersJSON.length - 1 )].id + 1; 
-        let file = req.file;
-        let usuario = {
-            id: newId,
-            email: req.body.email,
-            name: req.body.name,
-            lastName: req.body.lastName,
-            birthdate:req.body.birthdate,
-            category: req.body.category,
-            password: req.body.password,
-            confPassword: req.body.confPassword,
-            image:`img/${file.filename}`
-        }
-        //const usuario = req.body;
-        //usuario.id = new Date().getTime(); //pone un id diferente a cada user ingresado
-        let usuarios;
-        if(archivoUsuarios == ""){
-            usuarios = [];
-        }else{
-            usuarios = JSON.parse(archivoUsuarios);
-        }
-        usuarios.push(usuario);
-        usuariosJSON = JSON.stringify(usuarios, null, 2);
-        fs.writeFileSync('./src/data/users.json', usuariosJSON);
-        res.redirect('/user/userList');
-        res.render('./user/register');
-        */
-    },
+    }, 
     restorePassword: function (req, res){
         res.render('./user/restorePassword');
     },
@@ -169,11 +108,6 @@ const userController = {
         const archivoUsuario = fs.readFileSync('./src/data/users.json', {encoding: 'utf-8'});
         usuarios = JSON.parse(archivoUsuario);
         res.render('./user/userList', {'usersList':usuarios});
-    },
-    edit: function (req, res){
-        const userId = +req.params.id;
-        const user = usersJSON.find((u)=>u.id === userId); 
-        res.render('./user/profileEdit', {'user':user});
     },
     editPut: function (req, res){
         const id = req.params.id;
@@ -186,7 +120,7 @@ const userController = {
                     userEdit.lastName = lastName;
                     userEdit.image = `${file.filename}`
                 };
-        });;
+        });
         fs.writeFileSync(
             path.join(__dirname, "../data/users.json"),
             JSON.stringify(usersJSON, null, 2),

@@ -2,6 +2,7 @@ const express = require ('express');
 const productsController = require('../controllers/products');
 const productsRouter = express.Router();
 const uploadFile = require('../middleware/productsMulter');
+const categoryMiddleware = require ('../middleware/categoryMiddleware');
 
 // Listado de productos
 productsRouter.get('/', productsController.list);
@@ -10,7 +11,7 @@ productsRouter.get('/', productsController.list);
 productsRouter.get('/carrito', productsController.carrito);
 
 // Crear producto
-productsRouter.get('/crear', productsController.create);
+productsRouter.get('/crear', categoryMiddleware, productsController.create);
 productsRouter.post('/crear', uploadFile.single("image"), productsController.postCreate);
 
 // Editar producto

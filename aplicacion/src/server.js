@@ -1,7 +1,7 @@
 const express = require ('express');
 const router = require('./routes');
 const session = require('express-session');
-const cookieParser = require('cookie-parser');
+const cookies = require('cookie-parser');
 
 const homeRouter = require ('./routes/home');
 const productsRouter = require('./routes/products');
@@ -10,6 +10,21 @@ const userRouter = require('./routes/user');
 const app = express ();
 const PORT = 8000;
 
+//Middlewares
+const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
+
+//Session
+app.use(session({
+    secret: "topSecret",
+    resave: false,
+    saveUninitialized: false,
+}));
+
+//app middlewares
+app.use(cookies());
+app.use(userLoggedMiddleware);
+
+//
 app.use(express.static('public'));
 
 //Template engine
@@ -27,25 +42,6 @@ app.use(methodOverride('_method'));
 //Morgan
 const morgan = require('morgan');
 app.use(morgan('dev'));
-
-//Express-session
-app.use(session({
-    secret: "topSecret",
-    resave: false,
-    saveUninitialized: false,
-}));
-
-//Cookie Parser
-app.use(cookieParser());
-
-//Middlewares
-const keepUserLogger = require('./middleware/keepUserLogger'); //se fija si el user esta logueado
-const isUserLogged = require('./middleware/isUserLogged'); //este se usa para los iconos de entrada y slaida de user 
-const keepUserCookie =  require('./middleware/keepUserCookie'); //cookie q reuerda user
-app.use(keepUserLogger);
-app.use(isUserLogged);
-app.use(keepUserCookie);
-
 
 //Rutas 
 app.use ('/',router);

@@ -1,9 +1,8 @@
 function guestMiddleware (req, res, next){
-    if(req.session.userLogger == undefined){
-        next();
-    }else{
-        return res.redirect("../products")
+    if(req.session.userLogged){
+        return res.redirect('./profile')
     }
+    next();
 }
 
 module.exports = guestMiddleware;
