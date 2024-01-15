@@ -25,44 +25,44 @@
                     <h2 class="h2-detalle">Descripción</h2> 
                     <p><%=productDetail.description%></p>
                 </div>
-            </div>
-            <h3 class="h3-detalle">Detalles</h3>
-            <div class="details">
+                <h3 class="h3-detalle">Detalles</h3>
+                <div class="details">
+                    <div>
+                        <span>Marca: </span>
+                        <span><%=productDetail.mark%></span>
+                    </div>
                 <div>
-                    <span>Marca</span>
-                    <span><p><%=productDetail.mark%></p></span>
+                    <span>Volumen: </span>
+                    <span><%=productDetail.volume%></span>
                 </div>
                 <div>
-                    <span>Volumen</span>
-                    <p><%=productDetail.volume%></p>
+                    <span>Ingredientes: </span>
+                    <span><%=productDetail.ingredients%></span>
                 </div>
                 <div>
-                    <span>Ingredientes</span>
-                    <p><%=productDetail.ingredients%></p>
+                    <span>Estilo: </span>
+                    <span><%=productDetail.style%></span>
                 </div>
                 <div>
-                    <span>Estilo</span>
-                    <p><%=productDetail.style%></p>
+                    <span>Origen: </span>
+                    <span><%=productDetail.origin%></span>
                 </div>
                 <div>
-                    <span>Origen</span>
-                    <p><%=productDetail.origin%></p>
-                </div>
-                <div>
-                    <span>Envase</span>
-                    <p><%=productDetail.packing%></p>
+                    <span>Envase: </span>
+                    <span><%=productDetail.packing%></span>
                 </div>
                 <div>
                     <span>¿Es sin TAAC?</span>
-                    <p><%=productDetail.gluten%></p>
+                    <span><%=productDetail.gluten%></span>
                 </div>
                 <div>
                     <span>¿Es cerveza artesanal?</span>
-                    <p><%=productDetail.artisanal%></p>
+                    <span><%=productDetail.artisanal%></span>
                 </div>
                 <div>
                     <span>¿Es cerveza sin alcohol?</span>
-                    <p><%=productDetail.alcohol%></p>
+                    <span><%=productDetail.alcohol%></span>
+                </div>
                 </div>
             </div>
             <div id="counter">0</div>
@@ -91,9 +91,6 @@
                 updateCounter();
             </script>
         </div>
-        <div class="button-carrito">
-            <button type="button" id="agregar-carrito">Agregar al carrito</button>
-        </div>
         <div buttons>
             <div class="delete-button">
                 <form action="/products/<%= productDetail.id %>?_method=DELETE" method="POST">
@@ -102,7 +99,7 @@
             </div>
             <div class="edit-button">
                 <a href="/products/<%= productDetail.id %>/editar">
-                    <p>Editar</p>
+                    <button>Editar</button>
                 </a>
             </div>
         </div>

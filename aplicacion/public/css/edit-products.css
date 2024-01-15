@@ -218,7 +218,7 @@ select {
   margin-bottom: 20px;
 }
 
-.buttons button[type="reset"]{
+.buttons .reset {
   margin-right: 30px;
   margin-left: 10px;
 }
@@ -243,7 +243,7 @@ select {
   background-color: #555;
 }
 
-.buttons button[type="reset"]{
+.buttons .reset {
   width: 150px;
   background-color: #5c2f2f;
   color: #fff;
@@ -255,6 +255,6 @@ select {
   transition: background-color 0.3s ease;
 }
 
-.buttons button[type="reset"]:hover{
+.buttons .reset:hover{
   background-color: #a05151;
 }

@@ -4,334 +4,78 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-
-body {
+  }
+  
+  body {
     background: #ebebeb;
     font-size: 16px;
-}
-
-a {
+  }
+  
+  .iconsSup {
     color: #cba349;
     text-decoration: none;
     font-size: 22px;
-}
-
-ul {
+  }
+  
+  .iconsSupButton{
+    background-color: #333;
+    color:#cba349;
+    font-size: 22px;
+    line-height: 0;
+  }
+  
+  ul {
     list-style: none;
-}
-
-/* Nav */
-.container {
-    /*position: fixed; Por el momento no*/
+  }
+  /* Nav */
+  .container {
     width: 100%;
     background-color: #222;
     height: 45px;
-}
-
-.main-nav {
+    position: fixed;
+    z-index: 10;
+  }
+  .main-nav {
     display: flex;
-}
-
-.main-nav ul {
+  }
+  .main-nav ul {
     display: flex;
-}
-
-.main-nav ul li {
+  }
+  .main-nav ul li {
     display: flex;
     margin-right: 15px;
-} 
-
-.right-menu {
+  } 
+  .right-menu {
     margin-right: 40px;
     margin: 10px;
-}
-
-.left-menu {
+  }
+  .left-menu {
     flex: 1;
     margin: 10px;
     margin-left: 40px;
-}
-
-.main-nav ul li a:hover {
-    border-bottom: 2px solid white;
-} 
-
-.search-bar{
+  }
+  .search-bar{
     border: 1;
-}
-
-/*Nav products*/
-.logo {
+  }
+  .buttonHeaderProducts{
+    margin-top: 45px;
+    background-color: #cba349;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    width: 80%;
+    left: 50%;
+    padding: 10px;
+    text-decoration: none;
+    transform: translate(13%);
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .logo {
     height: 200px;
     display: flex;
     justify-content: center;
-    padding: 18px;
-}
-
-/*opciones al lado del logo*/
-.opciones{
-    display: flex;
-    justify-content: space-between;
-    background: #ebebeb;
-}
-
-/*opciones lado izquierdo*/
-.opciones-izquierda{
-    margin-left: 350px;
-}
-
-.opciones-izquierda ul{
-    list-style:none;
-    position:relative;
-    float:left;
-    margin:0;
-    padding:0
-}
-
-.opciones-izquierda ul a{
-    display:block;
-    color:#000000;
-    text-decoration:none;
-    font-weight:700;
-    font-size:12px;
-    line-height:32px;
-    padding:0 15px;
-}
-
-.opciones-izquierda ul li{
-    position:relative;
-    float:left;
-    margin:0;
-    padding:0
-}
-
-
-.opciones-izquierda ul ul{
-    transition: 0.4s;
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    background:#FFFEDF;
-    padding:0
-}
-
-.opciones-izquierda ul ul li{
-    float: none;
-    width:100px
-}
-
-.opciones-izquierda ul ul a{
-    line-height:120%;
-    padding:10px 15px
-}
-
-.opciones-izquierda ul ul ul{
-    top:0;
-    left:100%
-}
-
-.opciones-izquierda ul li:hover > ul{
-    display:block
-}
-
-/*Opciones lado Derecho*/
-
-.opciones-derecha{
-    margin-right:300px;
-}
-
-.opciones-derecha ul{
-    list-style:none;
-    position:relative;
-    float:left;
-    margin:0;
-    padding:0
-}
-
-.opciones-derecha ul a{
-    display:block;
-    color:black;
-    text-decoration:none;
-    font-weight:700;
-    font-size:12px;
-    line-height:32px;
-    padding:0 15px;
-}
-
-.opciones-derecha ul li{
-    position:relative;
-    float:left;
-    margin:0;
-    padding:0
-}
-
-.opciones-derecha ul ul{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    background:#FFFEDF;
-    padding:0
-}
-
-.opciones-derecha ul ul li{
-    float:none;
-    width:100px
-}
-
-.opciones-derecha ul ul a{
-    line-height:120%;
-    padding:10px 15px
-}
-
-.opciones-derecha ul ul ul{
-    top:0;
-    left:-100%
-}
-
-.opciones-derecha ul li:hover > ul{
-    display:block
-}
-/*Diseño botones*/
-
-/*Contacto*/
-.Contacto:hover {
-    background-color: #9e6730;
-    padding: 24px 10px;
-}
-.Contacto {
-    transition: 0.4s;
-    color: black;
-    text-decoration: none;
-    padding: 0 10px;
-    margin: 0 10px;
-    border-radius: 3px;
-}
-.Contacto {
-    margin-top: 40px;
-    padding: 24px;
-    text-align: center;
-
-}
-.Contacto{
-    background: #DFBA69
-}
-
-/*Producto*/
-
-.Productos:hover {
-    background-color: #9e6730;
-    padding: 24px 10px;
-}
-.Productos {
-    transition: 0.4s;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0 10px;
-    margin: 0 10px;
-    border-radius: 3px;
-}
-.Productos {
-    margin-top: 20px;
-    padding: 24px;
-    text-align: center;
-}
-.Productos{
-    background:  #DFBA69;
-}
-
-/*Ofertas*/
-
-.Ofertas:hover {
-    background-color:#9e6730;
-    padding: 24px 10px;
-}
-.Ofertas {
-    transition: 0.4s;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0 10px;
-    margin: 0 10px;
-    border-radius: 3px;
-}
-.Ofertas {
-    padding: 24px;
-    text-align: center;
-}
-.Ofertas{
-    background: #DFBA69;
-}
-
-
-/*Indumentaria*/
-.Indumentaria:hover {
-    background-color:  #9e6730;
-    padding: 24px 10px;
-}
-.Indumentaria {
-    transition: 0.4s;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0 10px;
-    margin: 0 10px;
-    border-radius: 3px;
-}
-.Indumentaria {
-    padding: 24px;
-    text-align: center;
-}
-.Indumentaria{
-    background:  #DFBA69;
-}
-
-/*Accesorios*/
-
-.Accesorios:hover {
-    background-color: #9e6730;
-    padding: 24px 10px;
-}
-.Accesorios {
-    transition: 0.4s;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0 10px;
-    margin: 0 10px;
-    border-radius: 3px;
-}
-.Accesorios {
-    margin-top: 20px;
-    padding: 24px;
-    text-align: center;
-
-}
-.Accesorios{
-    background:  #DFBA69;
-}
-
-/*Preguntas*/
-
-.Preguntas:hover {
-    background-color: #9e6730;
-    padding: 24px 10px;
-}
-.Preguntas {
-    transition: 0.4s;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0 10px;
-    margin: 0 10px;
-    border-radius: 3px;
-}
-.Preguntas {
-    margin-top: 40px;
-    padding: 24px;
-    text-align: center;
-}
-.Preguntas{
-    background:  #DFBA69;
-}
+  }
 
 /************************************************MAIN*******************************/
 /********************************Listado de Productos*******************************/
@@ -358,13 +102,36 @@ body {
 .ul-products {
     list-style: none;
     padding: 0;
-    display: flex; /* Cambio aquí para utilizar flexbox */
+    display: flex; 
     flex-wrap: wrap; 
 }
 
 .li-products {
-    margin-right: 100px; /* Espaciado entre los elementos */
+    margin-right: 100px;
     margin-bottom: 40px;
+}
+
+#icon-plus {
+    margin-right: 10px;
+}
+
+.li-products h1{
+    font-size: 16px;
+}
+
+.product-create {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #5c2f2f;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-create:hover {
+    background-color: #440402;
 }
 
 .product-button {
@@ -395,7 +162,7 @@ body {
 }
 
 .main-detalle {
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
@@ -415,6 +182,7 @@ body {
 .img img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px; 
 }
 
 .txt {
@@ -423,6 +191,8 @@ body {
 
 .h1-detalle {
     color: #333;
+    font-size: 1.8em; 
+    margin-bottom: 10px; 
 }
 
 .details .txt p {
@@ -443,6 +213,7 @@ body {
     flex: 1;
     text-align: center;
     font-size: 1.5em;
+    margin: 20px 0; 
 }
 
 #buttons-increm-decrem {
@@ -461,15 +232,11 @@ body {
     border-radius: 5px;
     margin: 5px 0;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Added smooth transition */
 }
 
 #buttons-increm-decrem button:hover {
     background-color: #0056b3;
-}
-
-.button-carrito button {
-    text-align: center;
-    margin-top: 20px;
 }
 
 .delete-button,
@@ -478,7 +245,7 @@ body {
 }
 
 .delete-button button,
-.edit-button a {
+.edit-button button {
     background-color: #dc3545;
     color: #fff;
     padding: 10px;
@@ -487,6 +254,7 @@ body {
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    transition: background-color 0.3s ease; /* Added smooth transition */
 }
 
 .delete-button button:hover,
@@ -494,7 +262,6 @@ body {
     background-color: #bb2c3b;
 }
 
-/* Otros estilos adicionales pueden ser necesarios según tus preferencias y requisitos */
 
 
 /***************************Carrousel de cervezas*****************************/
