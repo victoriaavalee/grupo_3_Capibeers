@@ -12,46 +12,21 @@
     <!--HEADER/!-->
         <%- include('../partials/header')%>
     <main>
-        <h1 id="title">Conocé nuestros productos!</h1>
-        <h1 ><%=products.name%></h1>
-            <div class="articles">
-                <% for( let i = 0; i< products.length; i++) { %>
-                    <%- include('./product-card',{product:products[i]})%>
-                <% } %>
-
-<!--               <div id="article">
-                    <img height="350px" src="/img/cerveza-basica.png" alt="cerveza-clasica">
-                    <div id="conteiner">
-                        <p id="price">$2.600</p>
-                        <p id="name">Cerveza Clásica </p>
-                        <p>Descripción corta del producto</p>
-                    </div>
-                </div>
-                <div id="article">
-                    <img id="lata" height="350px" src="/img/carpinbeer.png" alt="cerveza-lata">
-                    <div id="conteiner">
-                        <p id="price">$1.750</p>
-                        <p id="name">Cerveza Negra </p>
-                        <p>Descripción corta del producto</p>
-                    </div>
-                </div>
-                <div id="article">
-                    <img height="350px" src="/img/cerveza-basica.png" alt="cerveza-clasica">
-                    <div id="conteiner">
-                        <p id="price">$2.650</p>
-                        <p id="name">Cerveza Rubia </p>
-                        <p>Descripción corta del producto</p>
-                    </div>
-                </div>
-                <div id="article">
-                    <img id="lata" height="350px" src="/img/carpinbeer.png" alt="cerveza-lata">
-                    <div id="conteiner">
-                        <p id="price">$1.600</p>
-                        <p id="name">Cerveza Roja </p>
-                        <p>Descripción corta del producto</p>
-                    </div>
-                </div>-->
-            </div> 
+        <div class="product-container">
+            <h1 id="title">Conocé nuestros productos!</h1>
+        <ul class="ul-products">
+            <% for( let i = 0; i< products.length; i++) { %>
+                <li class="li-products">
+                    <a class="product-button" href="/products/<%= products[i].id %>">
+                        <h1><%=products.name%></h1>
+                        <%- include('./product-card',{product:products[i]})%>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+        </div>
+        
+    </main>
     <!--FOOTER/!-->
     <%- include('../partials/footer')%>
 </body>

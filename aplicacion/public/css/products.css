@@ -335,90 +335,167 @@ ul {
 
 /************************************************MAIN*******************************/
 /********************************Listado de Productos*******************************/
-#title{
-    color: #434343;
-    font-size: 38px;
-    font-weight: bold;
-    margin: 20px;
+body {
+    font-family:'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.product-container {
+    max-width: 1500px;
+    margin: 50px auto;
+    background-color: #ebebeb;
+    padding-right: 10px;
+    padding-left: 65px;
+}
+
+#title {
+    color: #333;
     text-align: center;
 }
 
-#article{
-    text-align: center;
-    background-color: white;
-    padding: 30px;
-    width: 40%;
-    border-radius: 8px;
-    margin: auto;
-    background-color: #DFBA69;
-    box-shadow: 0px 0px 20px rgb(37, 37, 37);
+.ul-products {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Cambio aquí para utilizar flexbox */
+    flex-wrap: wrap; 
+}
+
+.li-products {
+    margin-right: 100px; /* Espaciado entre los elementos */
+    margin-bottom: 40px;
+}
+
+.product-button {
+    text-decoration: none;
+    color: #5c2f2f;
+    display: block;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
-}
-#article{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    transition: background-color 0.5s ease;
 }
 
-#lata{
-    background-color: white;
+.product-button:hover {
+    background-color: #5c2f2f;
+    color: #fff;
 }
 
-#name{
-    font-weight: bold;
-    font-size: 17px;
-}
-
-#price{
-    font-weight: bold;
-    color:rgb(28, 193, 28);
-    font-size: 18px;
+h1 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 /***************************Poducto detalle *****************************/
-#contenedores{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-#txt{
-    margin-left: 50px;
-}
-
-#cart {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin: 1rem;
-}
-
-#image{
-    width: 350px;
-    height: 310px;
-}
-.cart h2 {
-    margin-top: 0;
-}
-
-#cart-items {
-    list-style: none;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 0;
 }
 
-#item {
+.main-detalle {
+    max-width: 1500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedores {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
 }
 
-#cart-total {
-    text-align: right;
-    margin-top: 1rem;
+.img {
+    flex: 1;
+    margin-right: 20px;
 }
 
-#productosrelacionados{
-    width: 200px;
-    margin: 0 auto;
+.img img {
+    max-width: 100%;
+    height: auto;
 }
+
+.txt {
+    flex: 2;
+}
+
+.h1-detalle {
+    color: #333;
+}
+
+.details .txt p {
+    margin: 10px 0;
+}
+
+.description {
+    margin-top: 20px;
+}
+
+.h3-detalle {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+#counter {
+    flex: 1;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#buttons-increm-decrem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#buttons-increm-decrem button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+#buttons-increm-decrem button:hover {
+    background-color: #0056b3;
+}
+
+.button-carrito button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.delete-button,
+.edit-button {
+    margin-top: 20px;
+}
+
+.delete-button button,
+.edit-button a {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.delete-button button:hover,
+.edit-button a:hover {
+    background-color: #bb2c3b;
+}
+
+/* Otros estilos adicionales pueden ser necesarios según tus preferencias y requisitos */
+
 
 /***************************Carrousel de cervezas*****************************/
 

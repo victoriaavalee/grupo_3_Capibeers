@@ -14,7 +14,7 @@
     <!HEADER/!>
     <%- include('../partials/header')%>
 
-    <form action="/products/<%= productEdit.id %>/editar?_method=PUT" method="POST" enctype="multipart/form-data">
+    <form class="form-edit" action="/products/<%= productEdit.id %>/editar?_method=PUT" method="POST" enctype="multipart/form-data">
         <h2>Editar Producto</h2>
         <div class="newProduct">
             <label for="name-product">Nombre:</label>
@@ -25,7 +25,7 @@
         <div>
             <label for="descripcion">Descripción:</label>
             <input type="text" name="description" value="<%=productEdit.description%>"
-            <textarea id="descripcion" name="description" rows="4" cols="50" value="<%=productEdit.description%>"></textarea><br>
+            id="descripcion" name="description" rows="4" cols="50" value="<%=productEdit.description%>"><br>
             </input>
         </div>
         <h3>Detalles</h3>
@@ -115,7 +115,7 @@
             <input type="submit" value="Guardar">
         </div>
     </form>
-<script src="/css/edit-product.js"></script>
+<script src="/aplicacion/public/js/edit-product.js"></script>
 <!FOOTER/!>
     <%- include('../partials/footer')%>
 </body>

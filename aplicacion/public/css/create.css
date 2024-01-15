@@ -9,7 +9,7 @@ main {
     margin-bottom: 15px;
 }
 
-form {
+.form-create {
     font-size: 16px;
     color: #434343;
     border-radius: 10px;
@@ -65,7 +65,7 @@ h3 {
 
 /*****************************************/
 
-.form input[type="text"],
+.form-create input[type="text"],
 input[type="number"]{
     width: 98%;
     padding: 15px;

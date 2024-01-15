@@ -13,17 +13,56 @@
 <body>
     <!--HEADER-->
     <%- include('../partials/header')%>
-    <main>
+    <main class="main-detalle">
         <div class="contenedores">
             <div class="img">
-                <img id="image" src="/img/<%=productDetail.image%>" alt="<%=productDetail.name%>">
+                <img id="image" src="/img/products/<%=productDetail.image%>" alt="<%=productDetail.name%>">
             </div>
-            <div id="txt">
-                <h1><%=productDetail.name%></h1>
+            <div class="txt">
+                <h1 class="h1-detalle"><%=productDetail.name%></h1>
                 <p><%= "$" + productDetail.price%></p>
-                <div id="cart">
-                    <h2>Descripción</h2> 
+                <div class="description">
+                    <h2 class="h2-detalle">Descripción</h2> 
                     <p><%=productDetail.description%></p>
+                </div>
+            </div>
+            <h3 class="h3-detalle">Detalles</h3>
+            <div class="details">
+                <div>
+                    <span>Marca</span>
+                    <span><p><%=productDetail.mark%></p></span>
+                </div>
+                <div>
+                    <span>Volumen</span>
+                    <p><%=productDetail.volume%></p>
+                </div>
+                <div>
+                    <span>Ingredientes</span>
+                    <p><%=productDetail.ingredients%></p>
+                </div>
+                <div>
+                    <span>Estilo</span>
+                    <p><%=productDetail.style%></p>
+                </div>
+                <div>
+                    <span>Origen</span>
+                    <p><%=productDetail.origin%></p>
+                </div>
+                <div>
+                    <span>Envase</span>
+                    <p><%=productDetail.packing%></p>
+                </div>
+                <div>
+                    <span>¿Es sin TAAC?</span>
+                    <p><%=productDetail.gluten%></p>
+                </div>
+                <div>
+                    <span>¿Es cerveza artesanal?</span>
+                    <p><%=productDetail.artisanal%></p>
+                </div>
+                <div>
+                    <span>¿Es cerveza sin alcohol?</span>
+                    <p><%=productDetail.alcohol%></p>
                 </div>
             </div>
             <div id="counter">0</div>
