@@ -9,7 +9,7 @@ const User = {
     },
     generateId: function(){
         let allUsers = this.findAll();
-        let lastUser = allUsers.pop();
+        let lastUser = allUsers.pop();//creo q se comenta
         if(lastUser){
             return lastUser.id + 1;
         }
