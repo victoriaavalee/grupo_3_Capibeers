@@ -40,8 +40,8 @@ const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
 //Morgan
-const morgan = require('morgan');
-app.use(morgan('dev'));
+//const morgan = require('morgan');
+//app.use(morgan('dev'));
 
 //Rutas 
 app.use ('/',router);
